@@ -1,0 +1,28 @@
+October 22, 2015
+Meeting Notes
+Starting Time: 4pm
+
+Notes for site:
+- The targets will be mainly senior citizens, also for other who need an app for planning social events
+- Site should be like MealTrain but with improved communication/contact, must have an easy interface
+- Should promote healthy/active lifestyles by showing support
+- Profiles and networks somewhat like facebook but more private - only certain members should be able to contact others?
+- Wants a reminder for events such as scholarship luncheons (possibly though text or call)
+- Financial schedule to show past and future costs for events
+- Log of when/where events take place, maybe also pictures and other info
+- Free/paid version and languages/translations (through google maybe) - maybe not enough time
+
+Additional notes:
+- Contact target groups, ask about necessities (seniors and international students mainly)
+- Check yelp/urbanspoon, find high-rated restaurants
+- Contact restaurants, ask about discounts (for frequent visits or group events)
+
+Questions for Dr. Chueh:
+- Ask about networks; how should we determine which mebers can contact others? by name?
+- What can we do to make it more private? Would an accept/ignore option work?
+- Where will the site be hosted?
+- What are the core requirements?
+
+Next meeting scheduled 10/28/15 at 4pm, Bouillon 106
+
+End time: 5:10pm
