@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>CAKE Site</title>
+<meta charset="uf-8"> 
+<meta name="viewport" content="width-device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<style>
+
+h2 {
+	border-radius:15px;
+	background:#B2F0FF;
+	padding:20px;
+	text-align:center;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+	<h2>(logo) C.A.K.E.</h2>
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#home">Home</a></li>
+		<li><a href="#op1">PIE Project</a></li>
+		<li><a href="#op2">Client Info</a></li>
+		<li><a href="#op3">Team Member Info</a></li>
+		<li><a href="#op4">Scheduling and Info</a></li>
+	</ul>
+
+	<div class="tab-content">
+		<div id="home" class="tab-pane fade in active">
+<!------------------------------------------------------------------------------------------------>
+			<h3>Home page title</h3>
+			<p>This is the home page's text</p>
+		</div>
+<!------------------------------------------------------------------------------------------------>
+		<div id="op1" class="tab-pane fade">
+			<h3>PIE Project</h3>
+			<p>This should include a brief description of the project and a vision statement</p>
+		</div>
+<!------------------------------------------------------------------------------------------------>
+		<div id="op2" class="tab-pane fade">
+			<h3>Client Information</h3>
+			<p>Information about Dr. Chueh</p>
+		</div>
+<!------------------------------------------------------------------------------------------------>
+		<div id="op3" class="tab-pane fade">
+			<h3>Team Member Information</h3>
+			<p>Include mail-links for each member</p>
+		</div>
+<!------------------------------------------------------------------------------------------------>
+		<div id="op4" class="tab-pane fade">
+			<h3>Scheduling and Additional information</h3>
+			<p>Include repository, schedule information, weekly updates of assigned, completed, and current tasks, note forseen difficulties</p>
+		</div>
+<!------------------------------------------------------------------------------------------------>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
+});
+</script>
+
+</body>
+</html>
