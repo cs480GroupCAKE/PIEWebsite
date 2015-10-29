@@ -1,0 +1,10 @@
+Requirements-Iteration 1
+1.	The hardware and software that will be necessary to build and maintain the project would be a computer that is “decent” enough. A computer that has an Intel core i3+ plus processor or an equivalent processor from a different manufacturer with at least 6GB RAM with a hard drive/solid state drive of at least 400GB is recommended. In terms of software, one would need at a minimum a Notepad++ for basic HTML, JavaScript, and CSS coding. Another software that one could use is Sublime Text2. Having a web browser is a must, preferably Firefox and Google Chrome. Both browsers are good for debugging and are used by most individuals.
+2.	Will be added later
+3.	The program for the user is straight forward. The user will be able to interact with the website by seeing other people in their area that want to participate in the meal plan. Whether they be the host or looking for a family or a group to have a meal with. This information will be on the main page of the site for fast accessibility. The user will also be able to upload pictures or videos that they desire. Preferably content that has to do with their PIE experiences or a fun outdoor place. This will act as a testimonial? The user will also have the ability to fill out a form for when they want to volunteer and host a meal or vice versa.
+4.	One of the requirements of the system will be to enable speech/text translator as part of our demographic target is going to be international students. We may use a Goolge API for their speech/text translator and incorporate that on our website.
+Requirements of the system:
+•	We need to host the website on a server
+•	We need a database to store information for the forms
+•	Computer with at least 6GB RAM, 400GB of hard drive/solid state drive, Firefox or Google Chrome browser
+5.	
