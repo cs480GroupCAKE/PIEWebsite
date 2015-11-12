@@ -7,21 +7,23 @@
 <h2> Vision Statement</h2>
 
 <p> Developing a website to aid a section of the elderly community that is facing social isolation. <br> This website will promote social activities and personal outings. Furthermore, <br> the simple design should aid with navigation and scheduling, and more. </p>
-<form>
-  User name:<br>
-  <input type="text" name="firstname">
-  <br>
-  Password name:<br>
-  <input type="password" name="lastname">
-</form>
 
 <div>
-<button type="buttonlogin" id="login">Log in</button>
-</div>
+<form action="login.php" method="post">
+  User name:<br>
+  <input type="text" name="username" required placeholder>
+  <br>
+  Password name:<br>
+  <input type="password" name="password" required placeholder>
+  <input type="submit" name="login" value="Login">
+</form>
 
 <form>
-<button type="buttonsign" id="signup" onClick="window.open('sign up.html')"> Sign Up</button>
+<button type="buttonsign" id="signup" onClick="window.open('register.php')"> Sign Up</button>
 </form>
+
+</div>
+
 
 
 </body>

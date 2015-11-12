@@ -1,5 +1,6 @@
 <?php
-echo "hello ";
+//code commed out below for testing
+//echo "hello ";
 /*
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
@@ -36,7 +37,7 @@ if($check->num_rows==0){
 	VALUES ('$user', '$password', '$firstname', '$lastname', '$email')";
 	echo "OK";
 	if($conn->query($sql)===TRUE){
-		echo "SUCESS! Your username is: ".$user;
+		echo "Success! Your username is: ".$user;
 	} else{
 		echo "error ".$sql."<br>".$conn->error;
 	}
