@@ -6,7 +6,7 @@ will lock account for y minutes. User will have option for email reset.
 
 For now, will be relatively empty and only redirect to dummy welcome page.
 */
-session_start();
+//session_start();
 $username =  $_POST["username"];
 $password = $_POST["password"];
 header("Location:welcome.html");
