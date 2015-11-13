@@ -1,10 +1,10 @@
 <?php
-//code commed out below for testing/echo "hello ";
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('dispaly_startup_errors', '1');
 echo ini_get('display_errors');
 ?>
+
 <?php
 $user = $_POST["username"];
 $firstname = $_POST["firstname"];
@@ -45,7 +45,6 @@ if(!$row){
 		echo "error ".$sql."<br>".$conn->error;
 	}
 }else{
-	//echo $user. " is taken. ";
 	//sends user back to page if taken, must be a way to repopulate the info, currently linking
 	//to dummy page	
 	header("Location: usernameTaken.html");
