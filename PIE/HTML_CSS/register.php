@@ -1,16 +1,11 @@
 <?php
-//echo "HELLO";
-
 //code commed out below for testing/echo "hello ";
-
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('dispaly_startup_errors', '1');
 echo ini_get('display_errors');
-
 ?>
 <?php
-//echo "HELLO";
 $user = $_POST["username"];
 $firstname = $_POST["firstname"];
 $lastname = $_POST["lastname"];
@@ -25,24 +20,17 @@ checks if mysqli installed, troubleshooting
       echo 'we gots it';
  }
 */
-//echo "test0";
 
 $servername = "localhost";
-$myuser = "christian";
-$word = "jimbob";
+$myuser = "";
+$word = "";
 $dbname = "pie";
 
-//echo "Test1";
-
 $conn = new mysqli($servername, $myuser, $word, $dbname);
-
-//echo "test2";
-
 if($conn->connect_error){
 	die("dead ".$conn->connect_error);
 }
 
-//echo "TEST";
 $qtest = "SELECT username FROM userInfo WHERE username = '$user'";
 $check = mysqli_query($conn, $qtest);
 $row = mysqli_fetch_row($check);
@@ -63,10 +51,6 @@ if(!$row){
 	header("Location: usernameTaken.html");
 
 }
-/*	echo ="GOT";
-}else{
-}
-*/
 
 $conn->close();
 ?>
