@@ -11,3 +11,10 @@ p{
 	clear: right;
 	display: block;
 }
+
+
+img.displayCenter{
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
