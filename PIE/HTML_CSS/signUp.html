@@ -14,16 +14,18 @@ First Name:<br>
   <input type="text" name="lastname">
   <br>
    Username:<br>
-  <input type="text" name="username">
+  <input type="text" name="username" required placeholder>
+<!--- ?php $reasons = array("password" =>"UsernameTaken", "blank" => ""); if ($_GET["loginFailed"]) echo $reasons[$_GET["reason"]];? --->
   <br>
  Email:<br>
   <input type="text" name="email">
+<!--- ?php $reasons = array("password" =>"UsernameTaken", "blank" => ""); if ($_GET["loginFailed"]) echo $reasons[$_GET["reason"]];? --->
   <br>
   Password:<br>
-  <input type="password" name="password">
+  <input type="password" name="password" required placeholder>
   <br>
    Re-enter Password:<br>
-  <input type="password" name="passwordVerify">
+  <input type="password" name="passwordVerify" required placeholder>
   <br>
  Birthday Month:<br>
   <input type="text" name="BdayMM">

@@ -12,12 +12,23 @@ $lastname = $_POST["lastname"];
 $email = $_POST["email"];
 $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
+if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+	die(header("Location:signUp.php?signUpFailedEmail=true&reason1=invalidEmail"));
+	//exit();
+	//echo $emailErr;
+}
+
+if(!password_verify($_POST["passwordVerify"],$password)){
+	die(header("Location:signUp.php?signUpFailedPassword=true&reason=passwordsDontMatch"));
+	//exit();
+}
+
 /*
 checks if mysqli installed, troubleshooting
  if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
       echo 'no mysqli :(';
  } else {
-      echo 'we gots it';
+      echo 'we've got it';
  }
 */
 
@@ -45,9 +56,9 @@ if(!$row){
 		echo "error ".$sql."<br>".$conn->error;
 	}
 }else{
-	//sends user back to page if taken, must be a way to repopulate the info, currently linking
-	//to dummy page	
-	header("Location: usernameTaken.html");
+	//sends user back to page if username
+	//taken, must be a way to repopulate the info
+	die(header("Location: signUp.php?signUpFailed=true&reason=usernameTaken"));
 
 }
 
