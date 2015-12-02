@@ -6,7 +6,7 @@ body {
 	font-family: Verdana, Arial, Helvetica, Sans-Serif;
 	color: #5d717e;
 	text-align: center;
-  min-width: 800px;
+	min-width: 800px;
 }
 
 #cssmenu {
@@ -132,10 +132,19 @@ body {
   #cred{
     text-align:center;   
 	float: right;
+	min-height: 500px;
+	min-width:200px;
+  }
+  
+  #divLeft{
+	  float:left;
+	  min-width:200px;
+	  text-align:center;
+	  min-height:500px;
   }
 
 #image{
-  margin-right: auto;
-  margin-left: 220px;
+  margin: auto;
+ 
   display: block;
 }

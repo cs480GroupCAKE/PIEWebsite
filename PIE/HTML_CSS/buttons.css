@@ -23,6 +23,7 @@
     transition: all 0.15s ease;
 }
 
+
 .green {
     color: #000000;
  
@@ -62,7 +63,7 @@
 }
 
 .big {
-    padding: 0 40px;
+    padding: 0 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     height: 45px;
