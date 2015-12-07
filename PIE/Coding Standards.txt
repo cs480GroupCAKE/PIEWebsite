@@ -1,0 +1,21 @@
+Close all html elements
+
+Always use alt attribute with images (in case there is no display or disabilities)
+
+Avoid code lines over 80 characters
+
+HTML5 does not require <html> and <body> tags - older versions may still need them
+
+Language and character coding should be definied at the head
+
+Comments should be used as necessary to describe complex code
+
+The same naming conventions should be used in JavaScript, HTML, and php to avoid confusion
+
+Lower case file names should be used - some web servers are case sensitive, some are not
+
+Save with the right extension - HTML .html, CSS .css, JavaScript .js
+
+
+
+http://www.w3schools.com/html/html5_syntax.asp
