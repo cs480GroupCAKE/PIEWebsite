@@ -6,22 +6,22 @@ echo ini_get('display_errors');
 ?>
 
 <?php
-$user = $_POST["username"];
-$firstname = $_POST["firstname"];
-$lastname = $_POST["lastname"];
-$email = $_POST["email"];
-$password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+    $user = $_POST["username"];
+    $firstname = $_POST["firstname"];
+    $lastname = $_POST["lastname"];
+    $email = $_POST["email"];
+    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-	die(header("Location:signUp.php?signUpFailedEmail=true&reason1=invalidEmail"));
-	//exit();
+    if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+        die(header("Location:signUp.php?signUpFailedEmail=true&reason1=invalidEmail"));
+	exit();
 	//echo $emailErr;
-}
+    }
 
-if(!password_verify($_POST["passwordVerify"],$password)){
-	die(header("Location:signUp.php?signUpFailedPassword=true&reason=passwordsDontMatch"));
-	//exit();
-}
+    if(!password_verify($_POST["passwordVerify"],$password)){
+        die(header("Location:signUp.php?signUpFailedPassword=true&reason=passwordsDontMatch"));
+	exit();
+    }
 
 /*
 checks if mysqli installed, troubleshooting
@@ -32,35 +32,35 @@ checks if mysqli installed, troubleshooting
  }
 */
 
-$servername = "localhost";
-$myuser = "";
-$word = "";
-$dbname = "pie";
+    $servername = "localhost";
+    $myuser = "";
+    $word = "";
+    $dbname = "pie";
 
-$conn = new mysqli($servername, $myuser, $word, $dbname);
-if($conn->connect_error){
-	die("dead ".$conn->connect_error);
-}
+    $conn = new mysqli($servername, $myuser, $word, $dbname);
+    if($conn->connect_error){
+        header("Location:databaseDown.html");
+        die("dead ".$conn->connect_error);
+    }
 
-$qtest = "SELECT username FROM userInfo WHERE username = '$user'";
-$check = mysqli_query($conn, $qtest);
-$row = mysqli_fetch_row($check);
+    $qtest = "SELECT username FROM userInfo WHERE username = '$user'";
+    $check = mysqli_query($conn, $qtest);
+    $row = mysqli_fetch_row($check);
 
-//check if username is taken, if not, insert new user, else print error and return to form
-if(!$row){
-	$sql = "INSERT INTO userInfo (username, password, firstName, lastName, email)
-	VALUES ('$user', '$password', '$firstname', '$lastname', '$email')";
-	if($conn->query($sql)===TRUE){
-		printf("Success! Your username is: %s\n ",$user);// $row);this needs work
-	} else{
-		echo "error ".$sql."<br>".$conn->error;
-	}
-}else{
-	//sends user back to page if username
-	//taken, must be a way to repopulate the info
-	die(header("Location: signUp.php?signUpFailed=true&reason=usernameTaken"));
+    //check if username is taken, if not, insert new user, else print error and return to form
+    if(!$row){
+        $sql = "INSERT INTO userInfo (username, password, firstName, lastName, email)
+        VALUES ('$user', '$password', '$firstname', '$lastname', '$email')";
+        if($conn->query($sql)===TRUE){
+            printf("Success! Your username is: %s\n ",$user);// $row);this needs work
+        }else{
+        echo "error ".$sql."<br>".$conn->error;
+        }
+    }else{
+        //sends user back to page if username
+        //taken, must be a way to repopulate the info
+        die(header("Location: signUp.php?signUpFailed=true&reason=usernameTaken"));
+    }
 
-}
-
-$conn->close();
+    $conn->close();
 ?>
