@@ -1,9 +1,14 @@
+<!DOCTYPE PHP>
+
+/*
+KEEP IN CODE AND COMMENTED OUT UNLESS DEBUGGING
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('dispaly_startup_errors', '1');
 echo ini_get('display_errors');
 ?>
+*/
 
 <?php
     $user = $_POST["username"];
@@ -24,6 +29,7 @@ echo ini_get('display_errors');
     }
 
 /*
+DO NOT REMOVE KEEP COMMENTED OUT UNLESS NEEDED FOR DEBUGGING
 checks if mysqli installed, troubleshooting
  if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
       echo 'no mysqli :(';
