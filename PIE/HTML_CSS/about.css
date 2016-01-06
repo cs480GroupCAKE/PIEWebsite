@@ -17,7 +17,7 @@ ul#tabs li a {
     text-decoration: none; 
     font-size:24px; 
     background-color: #000000; 
-    background: linear-gradient(to top, #ffffff 90%, #000000 100%);
+    background: linear-gradient(to top, #ffffff 100%, #000000 00%);
 }
 
 ul#tabs li a:hover { 
@@ -30,7 +30,7 @@ ul#tabs li a.selected {
     border-bottom: none;
     font-weight: bold; 
     padding: 0.3em 0.3em 0.38em 0.3em; 
-    background: linear-gradient(to bottom, #ffffff 80%, #000000 100%);
+    background: linear-gradient(to bottom, #ffffff 100%, #000000 00%);
 }
 
 div.tabContent { 
