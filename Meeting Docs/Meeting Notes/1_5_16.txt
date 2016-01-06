@@ -1,0 +1,23 @@
+January 5, 2016
+Meeting Notes
+Starting Time: 4pm
+
+Notes for the site:
+- The tabs should be reworked for the about page
+- Make the tabs similar to the navigation tabs at the top
+- We should add a placeholder for the footer
+
+Additional notes:
+- Meetings have been scheduled with Dr. Lulofs & Dr. Chueh
+- The local deals page could use groupon API
+- To use groupon, we need to have the site hosted and apply to be affiliates
+- https://partner.groupon.com/login ; https://partner-api.groupon.com/help/deal-api
+- Tasks have been assigned; due on January 11, 2016; listed below
+- Christian: Comment code placeholders & fix tabs
+- Tim: Abstract navigation bar
+- Zach: Improve the template & quality assurance
+- Colin: Finish coding standards & create footer
+
+Next meeting scheduled January 11, 2016 at 4pm with Dr. Lulofs, Hebeler 208
+
+End time: 5pm
