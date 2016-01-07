@@ -17,45 +17,47 @@ if successful success message is displayed, otherwise password or username erro$
 ?>
 
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="buttons.css">
-        <link rel="stylesheet" type="text/css" href="template">
-        <div id='cssmenu'>
-            <?php include 'header.php'?>
-        </div>
-    </head>
+<head>
+    <link rel="stylesheet" type="text/css" href="buttons.css">
+    <link rel="stylesheet" type="text/css" href="template">
+    <div id='cssmenu'>
+        <?php include 'header.php'?>
+    </div>
+</head>
     
-    <body> 
-        <form action="login.php" method="post">
-        Username:
-        <br>
+<body> 
+    <form action="login.php" method="post">
+        Username:<br>
         <input type="text" name="username" required placeholder>
         <a style="color:red">
             <?php $reasons = array("UsernameDNE" =>"Username does not exist",
-            "blank" => "USERNAME ERROR");
+                                   "blank" => "USERNAME ERROR");
                 if ($_GET["loginFailedUsername"]) echo $reasons[$_GET["reason"]];
-             ?>
+            ?>
         </a>
         <br>
         Password:
         <br>
+		
         <input type="password" name="password" required placeholder></br>
         <a style="color:red">
             <?php $reasons = array("invalidPass" => "invalid password. Please re-enter.",
-            "blank" => "PASSWORD ERROR");
+                                   "blank" => "PASSWORD ERROR");
                 if ($_GET["loginFailedPass"]) echo $reasons[$_GET["reason"]];
             ?>
         </a>
+		
         <input type="submit" name="login" value="Login" class="button big blue"> 
-        </form>
+    </form>
 
-        <form action = "signUp.html">
-            <input type="submit" name="signUp" value="sign up" class="button big green">
-        </form>
+    <form action = "signUp.html">
+        <input type="submit" name="signUp" value="sign up" class="button big green">
+    </form>
         
-    </body>
+</body>
 </html>
-<?php
 
+<!-- Placeholder for more php -->
+<?php
 
 ?>
