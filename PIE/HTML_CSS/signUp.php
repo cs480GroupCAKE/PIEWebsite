@@ -11,8 +11,6 @@
     </head>
 
     <body>
-        <form action="register.php" method="post">
-
             First Name:<br>
             <input type="text" name="firstname"><!---add required place holders--->
             <br>

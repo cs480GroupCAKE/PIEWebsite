@@ -11,6 +11,7 @@ echo ini_get('display_errors');
 */
 
 <?php
+    <form action="register.php" method="post">
     $user = $_POST["username"];
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
