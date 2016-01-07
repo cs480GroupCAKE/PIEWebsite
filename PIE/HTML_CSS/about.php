@@ -4,6 +4,7 @@ This file contains the about page. This is a page that can be seen by all visito
 Contains one image and several tabs (currently three) describing the PIE project. Will still need
 significant work before launch adding details to tabbed sections and cleaning style.
 */
+
 <html>
 <head>
     <title>About</title>
@@ -22,14 +23,12 @@ significant work before launch adding details to tabbed sections and cleaning st
 
 </head>
 
-//load the tabs section when body of page is loaded.
+//Loads the tabs section when body of page is loaded.
 <body onload="init()">
 
     <div id='image'>
         <img class="displayCenter" src="pie.jpg" alt="PIE" style="width:400px;height:228px;">
     </div>
-
-	
 
     <ul id="tabs">
         <li><a href="#vision">Our Vision</a></li>
@@ -49,7 +48,6 @@ significant work before launch adding details to tabbed sections and cleaning st
                easy-to-use website.</p>
         </div>
     </div>
-
 	
 	//This section may change or add least needs content added.
     <div class="tabContent" id="impact">
