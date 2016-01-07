@@ -1,10 +1,10 @@
-.button{
-        display: inline-block;
-        position: relative;
-        margin: 10px;
-        padding: 0 20px;
-        text-align: center;
-        text-decoration: none;
+.button {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
 	font: bold 12px/25px Arial, sans-serif;
 	text-shadow: 1px 1px 1px rgba(255,255,255, .22);
  
@@ -25,8 +25,7 @@
 
 
 .green {
-    color: #000000;
- 
+    color: #000000; /* Must set to preferred green hex color */
     background: #a5cd4e; /* Old browsers */
     background: -moz-linear-gradient(top,  #a5cd4e 0%, #6b8f1a 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a5cd4e), color-stop(100%,#6b8f1a)); /* Chrome,Safari4+ */
@@ -37,8 +36,7 @@
 }
 
 .red {
-    color: #000000;
- 
+    color: #000000; /* Must set to preferred red hex color */
     background: #dc143c; /* Old browsers */
     background: -moz-linear-gradient(top,  #dc143c 0%, #8a8a8a 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d3d3), color-stop(100%,#8a8a8a)); /* Chrome,Safari4+ */
@@ -48,11 +46,8 @@
     background: linear-gradient(top,  #dc143c 0%,#8a8a8a 100%); /* W3C */
 }
  
-/* Blue Color */
- 
 .blue {
-    color: #000000;
- 
+    color: #000000; /* Must set to preferred blue hex color */
     background: #70c9e3; /* Old browsers */
     background: -moz-linear-gradient(top,  #70c9e3 0%, #39a0be 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#70c9e3), color-stop(100%,#39a0be)); /* Chrome,Safari4+ */
