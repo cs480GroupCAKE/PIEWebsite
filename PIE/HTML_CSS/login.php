@@ -26,9 +26,9 @@ if successful success message is displayed, otherwise password or username error
 
     $conn = new mysqli($servername, $myuser, $word, $dbname);
 
-    if($conn->connect_error){
+    if($conn->connect_error) {
         die(header("Location:databaseDown.html"));
-        }
+    }
 
     $query = "SELECT * FROM userInfo WHERE username = '$username'";
 
@@ -36,18 +36,18 @@ if successful success message is displayed, otherwise password or username error
     $currentPass  = $getPass['password'];
 
     //check if username is in database if not return error message
-    if($getPass['username']==null){
+    if($getPass['username']==null) {
         die(header("Location:loginSignUp.php?loginFailedUsername=true&reason=UsernameDNE"));
         exit();
     }
 
-    if(password_verify($password, $currentPass)){
+    if(password_verify($password, $currentPass)) {
         header("Location:profile");//work to be done here, should redirect and such, right now simple
-    }else{
+    } else {
         //will return to page and error message shown
-	die(header("Location:loginSignUp.php?loginFailedPass=true&reason=invalidPass"));
+	    die(header("Location:loginSignUp.php?loginFailedPass=true&reason=invalidPass"));
     }
 
     //header("Location:welcome.html");
     $conn.close();
-    ?>
+?>
