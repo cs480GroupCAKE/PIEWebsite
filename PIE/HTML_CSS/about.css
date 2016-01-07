@@ -2,6 +2,7 @@
 CSS stylesheet for about page tabs. Currently produces border under tab actively
 hovered over. Should be identical to header transition. Needs work
 */
+
 ul#tabs { 
     list-style-type: none; 
     margin: 50px 0 0 0; 
@@ -33,15 +34,15 @@ ul#tabs li a:before {
     transition: width .5s;
 }
 
-ul#tabs li.active a{
+ul#tabs li.active a {
     border-bottom-color: #000000;
 }
 
-ul#tabs li.active a:before{
+ul#tabs li.active a:before {
     width 100%;
 }
 
-ul#tabs li a:after{
+ul#tabs li a:after {
     right: -3px;
     width: 6px;
     
