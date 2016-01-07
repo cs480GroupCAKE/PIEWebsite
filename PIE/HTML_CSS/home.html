@@ -1,66 +1,52 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Pie Home</title>
-<link rel="stylesheet" type="text/css" href="buttons.css">
-<link rel="stylesheet" type="text/css" href="template.css">       
-<div id='cssmenu'>
+    <title>Pie Home</title>
+    <link rel="stylesheet" type="text/css" href="buttons.css">
+    <link rel="stylesheet" type="text/css" href="template.css">       
+    <div id='cssmenu'>
         <ul>
              <li><a href="home.html">Home</a></li>
              <li><a href="about.html">About</a></li>
              <li><a href="helpPage.html">Help</a></li>
         </ul>
- </div>
-
-
-<h1>Welcome to PIE</h1>
+    </div>
+	
+    <h1>Welcome to PIE</h1>
 </head>
+
 <body>
+<!-- The class cred is meant to enable us to "move" everything to the top right side of the page so it looks like a normal site for log in. -->
+<!-- Added action to form, submit button and required place holders. -->
+    <div id='cred'>
 
-<!--the class cred is meant to enable us to "move" everything to the top right side of the page so it looks like a normal site for log in-->
+        <form action="login.php" method="post">
+            Username:<br>
+            <input type="text" name="username" required placeholder><br>
+            Password:<br>
+            <input type="password" name="password" required placeholder></br>
+            <input type="submit" name="login" value="Login" class="button big blue">
+        </form>
 
-<!--added action to form, submit button and required place holders-->
-  <div id='cred'>
+        <form action = "signUp.html">
+            <input type="submit" name="signUp" value="sign up" class="button big green"> 
+		</form>
+    </div>
 
-<form action="login.php" method="post">
-  Username:<br>
-  <input type="text" name="username" required placeholder>
-  <br>
-  Password:<br>
-  <input type="password" name="password" required placeholder></br>
-  <input type="submit" name="login" value="Login" class="button big blue">
+	<!-- Placeholder for left sidebar -->
+    <div id ='divLeft'>
+    </div>
 
-</form>
+    <!-- Added line from basic webpage.html -->
+    <div id='image'>
+        <img class="displayCenter" src="homepic.png" alt="PIE" style="width:304px;height:228px;">
+    </div>
 
+    <h2> Vision Statement</h2>
 
-<form action = "signUp.html">
-  
-<input type="submit" name="signUp" value="sign up" class="button big green"> 
-</div>
-
-</form>
-
-<div id = divLeft>
-</div>
-
-
-<!-- added line from basic webpage.html-->
-
-<div id='image'>
-<img class="displayCenter" src="homepic.png" alt="PIE" style="width:304px;height:228px;">
-</div>
-
-<h2> Vision Statement</h2>
-
-
-<p> Developing a website to aid a section of the elderly community that is facing social isolation. 
-This website will promote social activities and personal outings. Furthermore, 
-the simple design should aid with navigation and scheduling, and more. </p>
-
-
-
-
+    <p>Developing a website to aid a section of the elderly community that is facing social isolation. 
+       This website will promote social activities and personal outings. Furthermore, 
+       the simple design should aid with navigation and scheduling, and more.</p>
 
 </body>
 </html>
