@@ -1,3 +1,7 @@
+/*
+
+TODO: OLD CODE USED FOR NAVIGATION BAR. LOT OF BULK CODE NOT NEEDED. DELETE AFTER GROUP REVIEWS.;
+
 body {
     width: auto;
     margin: 0 auto;
@@ -12,6 +16,7 @@ body {
 #cssmenu {
     background: #0CF;
     width: auto;
+    height: 85px;
 }
 
 #cssmenu ul {
@@ -20,7 +25,7 @@ body {
     padding: 0;
     line-height: 1;
     display: block;
-    zoom: 1;
+    zoom: 2;
 }
 
 #cssmenu ul:after {
@@ -121,7 +126,7 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 200px) {
     #cssmenu ul li {
         float: none;
         display: block;
@@ -147,7 +152,51 @@ body {
     #cssmenu ul li a:before {
         display: none;
     }
+}*/
+
+body {
+    width: auto;
+    margin: 0 auto;
+    background-color: #FFF;
+    font-size: 17px;
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    color: #5d717e;
+    text-align: center;
+    min-width: 800px;
 }
+
+#cssmenu {
+    width: auto;
+    height: 50px;
+}
+
+#cssmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0CF;
+}
+
+#cssmenu li {
+    float: left;
+    font-size: 150%;
+}
+
+#cssmenu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+#cssmenu li a:hover {
+    background-color: #5d717e;
+}
+
+/*  TODO: NEW CODE ENDED;*/
 
 #cred {
     text-align:center;   
