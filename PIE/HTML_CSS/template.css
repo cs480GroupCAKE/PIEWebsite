@@ -215,10 +215,15 @@ body {
 #image {
     margin: auto; 
     display: block;
+
 }
 
 #footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.image-edge-fade{
+    box-shadow: 0 0 8px 8px whit inset;
 }
