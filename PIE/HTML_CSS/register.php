@@ -1,14 +1,19 @@
 <!DOCTYPE PHP>
-
-/*
-KEEP IN CODE AND COMMENTED OUT UNLESS DEBUGGING
 <?php
+/*
+This page takes the registration information and creates an entry in the database if username
+is available. Boots back to signup form if name taken, else redirects to successful login. Needs
+additional error handling code.
+
+
+KEEP IN CODE AND COMMENTED OUT UNLESS DEBUGGING
+
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('dispaly_startup_errors', '1');
 echo ini_get('display_errors');
-?>
 */
+?>
 
 <?php
     <form action="register.php" method="post">
@@ -21,7 +26,6 @@ echo ini_get('display_errors');
     if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
         die(header("Location:signUp.php?signUpFailedEmail=true&reason1=invalidEmail"));
 	exit();
-	//echo $emailErr;
     }
 
     if(!password_verify($_POST["passwordVerify"],$password)){

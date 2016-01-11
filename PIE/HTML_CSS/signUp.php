@@ -1,4 +1,9 @@
 <!DOCTYPE php>
+<?php
+/*This page contains the form for the new user sign up. All fields should be required, currently
+only a few are to make testing database code easier. Should catch handle and print errors. Incomplete
+*/ 
+?>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="template.css">

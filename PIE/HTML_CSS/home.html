@@ -1,11 +1,16 @@
 <!DOCTYPE html>
+<!--Home page for PIE site. All visitors will see this page. Small introduction and image. Links
+to other areas of site included in navigation bar-->
 <html>
 <head>
     <title>Pie Home</title>
     <link rel="stylesheet" type="text/css" href="buttons.css">
     <link rel="stylesheet" type="text/css" href="template.css">       
-    <div id='cssmenu'>
-        <ul>
+    
+	<div id='cssmenu'>
+		<?php include 'header.php'?>
+        <!--List to be deleted with navigation bar abstraction-->
+		<ul>
              <li><a href="home.html">Home</a></li>
              <li><a href="about.html">About</a></li>
              <li><a href="helpPage.html">Help</a></li>

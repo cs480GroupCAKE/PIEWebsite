@@ -1,4 +1,4 @@
-
+/*Tabs code for about page. Can use for other pages if needed.*/
     var tabLinks = new Array();
     var contentDivs = new Array();
 

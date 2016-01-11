@@ -9,6 +9,7 @@ currently verifies username is in database and checks if password entered is ma$
 if successful success message is displayed, otherwise password or username erro$
 */
 /*
+KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
     ini_set('dispaly_startup_errors', '1');
@@ -57,7 +58,3 @@ if successful success message is displayed, otherwise password or username erro$
 </body>
 </html>
 
-<!-- Placeholder for more php -->
-<?php
-
-?>
