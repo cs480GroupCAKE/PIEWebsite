@@ -1,0 +1,35 @@
+January 11, 2015
+Lulofs Meeting Notes
+Starting Time: 4pm
+
+Notes for the group:
+- Presentation Feb 4
+- QA needs to be done by next week
+- Add github issues to Trello so we can get notifications
+- Unnecessary comments should be moved to the "unused" folder
+- Confirm with Chueh that meetings will still be every other week (not weekly)
+- Mobile will be done in the last iteration
+- Iteration report (3) will be done in the last week before presentations
+- Roles will switch on Jan 25 and Feb 15
+- Lulofs meetings are changed to Weds. at 4pm
+- Team meetings are changed to Mon. at 1pm
+
+Notes for the site:
+- Test server should hopefully be up tomorrow (check with Zac)
+- There is a possibility of finding free hosting (check with other groups and online)
+- We should be looking into SauceLabs for testing browser compatibility
+- Update the template for potentially bolder fonts and add boxes/lines for login/sign up buttons
+- Message people for testing (Colin) - Audrey and Alicia are potential sociology majors,
+  Logan and Tonya potentially have Elmview testers.
+- Header/Nav on the "about" page needs the login/sign up buttons
+- Footer needs contacts, copyright, and a feedback page (up by February)
+  change it from fixed to always at the bottom of the page & test color schemes
+- We need to add a link to the team website in the "about" page
+- Consider more tabs for the about page; otherwise take out the tabs
+- PHP profile page should be completed by February
+  Calendar placeholder; Events on the Profile page; There will be a new page w/ the same layout for the calendar
+  redirect instead of new window/tab for the profile. Add a "back" button. Should include the name, 
+  description, date, and time on the profiles (can be dummy for February oral iteration)
+- Add an events page to create events - use the CWU site as a template
+
+
