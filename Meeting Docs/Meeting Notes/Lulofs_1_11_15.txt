@@ -32,4 +32,6 @@ Notes for the site:
   description, date, and time on the profiles (can be dummy for February oral iteration)
 - Add an events page to create events - use the CWU site as a template
 
+Next meeting scheduled January 12, 2016 at 4pm with Dr. Chueh, Bouillon 106
 
+End time: 4:50pm
