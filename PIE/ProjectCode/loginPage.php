@@ -19,14 +19,18 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
 
 <html>
 <head>
+    <title>Login</title>
     <link rel="stylesheet" type="text/css" href="buttons.css">
-    <link rel="stylesheet" type="text/css" href="template">
+    <link rel="stylesheet" type="text/css" href="template.css">
+
     <div id='cssmenu'>
         <?php include 'header.php'?>
     </div>
 </head>
+
     
 <body> 
+    <br>
     <form action="login.php" method="post">
         Username:<br>
         <input type="text" name="username" required placeholder>
@@ -51,9 +55,6 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
         <input type="submit" name="login" value="Login" class="button big blue"> 
     </form>
 
-    <form action = "signUp.html">
-        <input type="submit" name="signUp" value="sign up" class="button big green">
-    </form>
         
 </body>
 </html>

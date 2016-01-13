@@ -52,7 +52,7 @@ only a few are to make testing database code easier. Should catch handle and pri
 	            if ($_GET["signUpFailedPassword"]) echo $reasons[$_GET["reason"]];?>
   	    </a>
             <br>
-
+            
             Birthday Month:<br>
             <input type="text" name="BdayMM">
             <br>
@@ -65,7 +65,7 @@ only a few are to make testing database code easier. Should catch handle and pri
             <input type="text" name="BdayYYYY">
             <br>
 
-           <input type="submit" name="submit" value="Create Profile">
+           <input type="submit" name="submit" value="Create Profile" class="big button blue">
         </form>
     </body>
 </html>

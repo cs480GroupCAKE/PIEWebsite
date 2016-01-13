@@ -44,7 +44,7 @@ checks if mysqli installed, troubleshooting
 */
 
     $servername = "localhost";
-    $myuser = "";
+    $myuser = "caketeamcwu";
     $word = "";
     $dbname = "pie";
 
