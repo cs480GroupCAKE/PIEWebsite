@@ -1,0 +1,26 @@
+January 12, 2016
+Chueh Meeting Notes
+Starting Time: 4pm
+
+Meeting notes:
+- The test server is up; information should be forwarded to our e-mails
+- Adding contacts to groups will be an option on user profiles
+- For event invitations, we should be able to invite groups as well as individuals
+- There should be an option for public and private events
+  - If private, only allow admin to invite; if public, allow all invited users to invite others
+  - We should discuss admin rights; can they allow specific users to invite?
+- "Networks" will be based around events
+- Chueh wants a chart to show group sizes (and overlap?); we decided upon a pie chart
+  - We could add a link to each section of the chart to display members of the group
+- Chueh is okay with a free host for the final iteration
+  - If the number of users gets large, a paid site may be necessary
+
+Notes for Dr. Chueh:
+- We can only do a limited amount by the end of the quarter:
+  - We promised a site with contacts, profiles, user info database, and events database/calendar
+  - We will have the site hosted (likely a free host)
+  - Existing deals will be displayed (need to find a local site to populate local deals)
+
+Next meeting scheduled January 18, 2016 at 1pm with the CAKE team, Hebeler Hall
+
+End Time: 4:30pm
