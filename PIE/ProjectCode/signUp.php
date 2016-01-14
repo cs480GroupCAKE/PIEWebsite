@@ -7,7 +7,7 @@ only a few are to make testing database code easier. Should catch handle and pri
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="template.css">
-        <link rel="stylesheer" type="text/css" href="buttons.css">
+        <link rel="stylesheet" type="text/css" href="buttons.css">
             
         <div id='cssmenu'>
             <?php include 'header.php' ?>
@@ -16,6 +16,7 @@ only a few are to make testing database code easier. Should catch handle and pri
     </head>
 
     <body>
+        <form action="register.php" method="post">
             First Name:<br>
             <input type="text" name="firstname"><!---add required place holders--->
             <br>
@@ -37,8 +38,9 @@ only a few are to make testing database code easier. Should catch handle and pri
             <input type="text" name="email" required placeholder>
 	    <a style="color:red">
 	        <?php $reasons = array("invalidEmail" =>"Email entered is invalid", "blank" => "EMAIL ERROR"); 
-	            if ($_GET["signUpFailedEmail"]) echo $reasons[$_GET["reason1"]];?>
- 	    </a>
+ 	            if ($_GET["signUpFailedEmail"]) echo "\r\n"; echo $reasons[$_GET['reason1']]; ?>
+
+            </a>
 	    <br>
 
             Password:<br>
