@@ -1,0 +1,13 @@
+/*
+CSS stylesheet for a sidebar. This will be used for the profile page and possibly others.
+Needs a lot of work. This is just a placeholder, but we can use javascript or jQuery for
+animation and a more professional display.
+*/
+
+#sidebar
+{
+    float: left;
+	width: 200px;
+	background: #cccccc;
+	min-height: 100%
+}
