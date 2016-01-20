@@ -18,20 +18,6 @@ to other areas of site included in navigation bar-->
 <!-- The class cred is meant to enable us to "move" everything to the top right side of the page so it looks like a normal site for log in. -->
 <!-- Added action to form, submit button and required place holders. -->
     <div id='divRight'>
-    <!--//TODO: NO LONGER NEEDED BECAUSE WE MOVED LOGIN/SIGNUP TO THE NAV BAR. JUST HERE FOR CODE REFERENCE NOW. Seems like this div should be called divRight. 1/10/16 Z.R.-->
-    <!--
-        <form action="login.php" method="post">
-            Username:<br>
-            <input type="text" name="username" required placeholder><br>
-            Password:<br>
-            <input type="password" name="password" required placeholder></br>
-            <input type="submit" name="login" value="Login" class="button big blue">
-        </form>
-
-        <form action = "signUp.html">
-            <input type="submit" name="signUp" value="sign up" class="button big green"> 
-		</form>
-    -->
     </div>
 
 	<!-- Placeholder for left sidebar -->

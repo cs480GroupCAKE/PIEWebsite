@@ -204,7 +204,14 @@ body {
     min-height: 500px;
     min-width:200px;
 }
-  
+
+#divRight{
+    float:right;
+    min-width:200px;
+    text-align:center;
+    min-height:500px;
+}  
+
 #divLeft {
     float:left;
     min-width:200px;
