@@ -7,10 +7,10 @@ to other areas of site included in navigation bar-->
     <link rel="stylesheet" type="text/css" href="buttons.css">
     <link rel="stylesheet" type="text/css" href="template.css">       
     
-	<div id='cssmenu'>
-		<?php include 'header.php'?>
-        </div>
-	
+    <div id='cssmenu'>
+        <?php include 'header.php'?>
+    </div>
+    
     <h1>Welcome to PIE</h1>
 </head>
 
@@ -20,7 +20,7 @@ to other areas of site included in navigation bar-->
     <div id='divRight'>
     </div>
 
-	<!-- Placeholder for left sidebar -->
+    <!-- Placeholder for left sidebar -->
     <div id ='divLeft'>
     </div>
 
@@ -36,6 +36,7 @@ to other areas of site included in navigation bar-->
        the simple design should aid with navigation and scheduling, and more.</p>
 
 </body>
+
 </html>
 
 

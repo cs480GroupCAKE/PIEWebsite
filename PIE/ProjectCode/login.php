@@ -45,7 +45,7 @@ if successful success message is displayed, otherwise password or username error
         header("Location:profile");//work to be done here, should redirect and such, right now simple
     } else {
         //will return to page and error message shown
-	    die(header("Location:loginSignUp.php?loginFailedPass=true&reason=invalidPass"));
+        die(header("Location:loginSignUp.php?loginFailedPass=true&reason=invalidPass"));
     }
 
     //header("Location:welcome.html");

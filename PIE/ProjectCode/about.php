@@ -13,11 +13,10 @@ the impact of the project to the current point. More work needs to be done on th
     
     <script src="tabs.js"></script>
 
-	
     <div id='cssmenu'>
         <?php include'header.php'?>
     </div>
-	
+
     <h1>Making Outings as Easy as PIE</h1>
 
 </head>
@@ -27,8 +26,6 @@ the impact of the project to the current point. More work needs to be done on th
     <div id='image'>
         <img class="displayCenter" src="pie.jpg" alt="PIE" style="width:400px;height:228px;">
     </div>
-
-	
 
     <ul id="tabs">
         <li><a href="#vision">Our Vision</a></li>
@@ -46,9 +43,9 @@ the impact of the project to the current point. More work needs to be done on th
                more difficult for this group. This project proposes a simple solution to 
                this problem: the promotion of networking and social outings via an 
                easy-to-use website.</p>
-			<p>We welcome you to contact us on this site through our help page. Or check
-			   out our <a href="http://caketeamcwu.wix.com/cake">team website</a> and find 
-			   out who we are.</p>
+            <p>We welcome you to contact us on this site through our help page. Or check
+               out our <a href="http://caketeamcwu.wix.com/cake">team website</a> and find 
+               out who we are.</p>
         </div>
     </div>
 

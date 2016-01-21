@@ -24,12 +24,12 @@ echo ini_get('display_errors');
 
     if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
         die(header("Location:signUp.php?signUpFailedEmail=true&reason1=invalidEmail"));
-	exit();
+    exit();
     }
 
     if(!password_verify($_POST["passwordVerify"],$password)){
         die(header("Location:signUp.php?signUpFailedPassword=true&reason=passwordsDontMatch"));
-	exit();
+    exit();
     }
 
 /*

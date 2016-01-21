@@ -7,7 +7,7 @@ animation and a more professional display.
 #sidebar
 {
     float: left;
-	width: 200px;
-	background: #cccccc;
-	min-height: 100%
+    width: 200px;
+    background: #cccccc;
+    min-height: 100%
 }

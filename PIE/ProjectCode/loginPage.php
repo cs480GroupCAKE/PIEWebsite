@@ -32,7 +32,8 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
 <body> 
     <br>
     <form action="login.php" method="post">
-        Username:<br>
+        Username:
+        <br>
         <input type="text" name="username" required placeholder>
         <a style="color:red">
             <?php $reasons = array("UsernameDNE" =>"Username does not exist",
@@ -43,7 +44,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
         <br>
         Password:
         <br>
-		
+        
         <input type="password" name="password" required placeholder></br>
         <a style="color:red">
             <?php $reasons = array("invalidPass" => "invalid password. Please re-enter.",
@@ -51,7 +52,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
                 if ($_GET["loginFailedPass"]) echo $reasons[$_GET["reason"]];
             ?>
         </a>
-		
+        
         <input type="submit" name="login" value="Login" class="button big blue"> 
     </form>
 
