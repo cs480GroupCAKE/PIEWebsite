@@ -23,9 +23,9 @@ Currently needs links and header added and repositioning.
     <script src="sidebar.js"></script>
 
     <div id='cssmenu'>
-        <!-- We will need a different header if we want to keep consistency but have a "logout" button
-        <?php include 'header.php' ?>
-        -->
+
+        <?php include 'headerLogged.php' ?>
+
     </div>
     
     <h1>Welcome back!</h1>
