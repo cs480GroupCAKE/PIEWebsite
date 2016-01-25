@@ -73,6 +73,6 @@ the impact of the project to the current point. More work needs to be done on th
            a connection between the businesses of the community and its senior residents.</p>
         <p><a href="SampleEvent.html">Here is what a typical Event may look like</a></p>
     </div>
-
+    
 </body>
 </html>

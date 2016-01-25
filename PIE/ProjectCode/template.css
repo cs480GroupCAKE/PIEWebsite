@@ -58,7 +58,8 @@ body {
 }  
 
 #divLeft {
-    float:left;
+    position:absolute;
+    top:200px;
     min-width:200px;
     text-align:center;
     min-height:500px;
@@ -66,9 +67,12 @@ body {
 }
 
 #divCenter {
-    margin:auto;
     text-align:center;
     min-height:500px;
+    min-width:600px;
+    display:block;
+    padding-left:300px;
+    padding-right:300px;
 }
 
 #image {

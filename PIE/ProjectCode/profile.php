@@ -33,35 +33,11 @@ Currently needs links and header added and repositioning.
 </head>
 
 <body onload="init()">
-    
-    <!-- This is the dropdown menu. Needs links to each page. CSS will need changing for color and font. -->
-    <div id='divLeft'>
-        <div id='cssside'>
-    
-            <img src="profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">
 
-            <ul>
-                <li><a href='#'>Create Event</a></li>
-                <li class='active has-sub'><a href='#'>Edit Profile</a>
-                    <ul>
-                        <li class='has-sub'><a href='#'>Edit Photos</a></li>
-                        <li class='has-sub'><a href='#'>Edit Description</a></li>
-                    </ul>
-                </li>
-                <li class='active has-sub'><a href='#'>Connections</a>
-                    <ul>
-                        <li class='has-sub'><a href='#'>Add Connection</a></li>
-                        <li class='has-sub'><a href='#'>View Connections</a></li>
-                    </ul>
-                </li>
-                <li><a href='#'>Help</a></li>
-            </ul>
-        </div>
-    </div>
-    
     <!-- Description will go here. Need to update template CSS for positioning. -->
     
     <!-- This is the tabs. Uses the same CSS and script as the about page. -->
+
     <div id='divCenter'>
         <ul id="tabs">
             <li><a href="#events">Events</a></li>
@@ -86,6 +62,31 @@ Currently needs links and header added and repositioning.
         <div class="tabContent" id="photos">
             <h2>Event Photos</h2>
             <p>Add event photos here</p>
+        </div>
+    </div>
+    
+    <!-- This is the dropdown menu. Needs links to each page. CSS will need changing for color and font. -->
+    <div id='divLeft'>
+    
+        <img src="profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">
+    
+        <div id='cssside'>
+            <ul>
+                <li><a href='#'>Create Event</a></li>
+                <li class='active has-sub'><a href='#'>Edit Profile</a>
+                    <ul>
+                        <li class='has-sub'><a href='#'>Edit Photos</a></li>
+                        <li class='has-sub'><a href='#'>Edit Description</a></li>
+                    </ul>
+                </li>
+                <li class='active has-sub'><a href='#'>Connections</a>
+                    <ul>
+                        <li class='has-sub'><a href='#'>Add Connection</a></li>
+                        <li class='has-sub'><a href='#'>View Connections</a></li>
+                    </ul>
+                </li>
+                <li><a href='#'>Help</a></li>
+            </ul>
         </div>
     </div>
 
