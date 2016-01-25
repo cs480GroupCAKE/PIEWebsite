@@ -1,8 +1,8 @@
 (function($){
 $(document).ready(function(){
 
-$('#cssmenu li.active').addClass('open').children('ul').show();
-	$('#cssmenu li.has-sub>a').on('click', function(){
+$('#cssside li.active').addClass('open').children('ul').show();
+	$('#cssside li.has-sub>a').on('click', function(){
 		$(this).removeAttr('href');
 		var element = $(this).parent('li');
 		if (element.hasClass('open')) {

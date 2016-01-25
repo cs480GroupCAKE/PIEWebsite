@@ -35,7 +35,7 @@ Currently this shows a dummy/commented layout that will be written when we add t
     
 	<!-- This is the dropdown menu. Needs links to each page. CSS will need changing for color and font. -->
 	<div id='divLeft'>
-        <div id='cssmenu'>
+        <div id='cssside'>
 	
 	        <img src="profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">
 		
