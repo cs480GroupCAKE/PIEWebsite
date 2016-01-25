@@ -48,7 +48,7 @@ Currently needs links and header added and repositioning.
                         <li class='has-sub'><a href='#'>Edit Description</a></li>
                     </ul>
                 </li>
-		    	<li class='active has-sub'><a href='#'>Manage Connections</a>
+		    	<li class='active has-sub'><a href='#'>Connections</a>
                     <ul>
 		    		    <li class='has-sub'><a href='#'>Add Connection</a></li>
                         <li class='has-sub'><a href='#'>View Connections</a></li>
