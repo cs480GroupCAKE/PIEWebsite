@@ -20,12 +20,10 @@
 </head>
 <body>
     <form>
-        <p>Name:</p>
-        <input type="text" name="firstname">
-        
-        <p>Email:</p>
-        <input type="text" name="email">
-    
+
+        <p>Event Name:</p>
+        <input type="text" name="eventName">
+
         <p>Requested Date:</p>
         <input type="text" name="requestDate">
 
@@ -37,6 +35,15 @@
     </form>
 
     <button type="button">Submit</button>
+
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        function goBack(){
+        window.history.back();
+        }
+    </script>
+
 
 </body>
 
