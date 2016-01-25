@@ -34,28 +34,31 @@ Currently this shows a dummy/commented layout that will be written when we add t
 <body onload="init()">
     
 	<!-- This is the dropdown menu. Needs links to each page. CSS will need changing for color and font. -->
-    <div id='cssmenu'>
+	<div id='divLeft'>
+        <div id='cssmenu'>
 	
-	    <img src="profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">
+	        <img src="profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">
 		
-        <ul>
-            <li><a href='#'>Create Event</a></li>
-            <li class='active has-sub'><a href='#'>Edit Profile</a>
-                <ul>
-				    <li class='has-sub'><a href='#'>Add Photos</a></li>
-                    <li class='has-sub'><a href='#'>Edit Photos</a></li>
-                    <li class='has-sub'><a href='#'>Edit Description</a></li>
-                </ul>
-            </li>
-			<li class='active has-sub'><a href='#'>Manage Connections</a>
-                <ul>
-				    <li class='has-sub'><a href='#'>Add Connection</a></li>
-                    <li class='has-sub'><a href='#'>View Connections</a></li>
-                </ul>
-            </li>
-            <li><a href='#'>Help</a></li>
-        </ul>
-    </div>
+            <ul>
+                <li><a href='#'>Create Event</a></li>
+                <li class='active has-sub'><a href='#'>Edit Profile</a>
+                    <ul>
+		    		    <li class='has-sub'><a href='#'>Edit Photos</a></li>
+                        <li class='has-sub'><a href='#'>Edit Description</a></li>
+                    </ul>
+                </li>
+		    	<li class='active has-sub'><a href='#'>Manage Connections</a>
+                    <ul>
+		    		    <li class='has-sub'><a href='#'>Add Connection</a></li>
+                        <li class='has-sub'><a href='#'>View Connections</a></li>
+                    </ul>
+                </li>
+                <li><a href='#'>Help</a></li>
+            </ul>
+        </div>
+	</div>
+	
+	<!-- Description will go here. Need to update template CSS for positioning. -->
 	
 	<!-- This is the tabs. Uses the same CSS and script as the about page. -->
     <ul id="tabs">
