@@ -1,7 +1,7 @@
 <!DOCTYPE PHP>
 <!--
 This file contains the profile page. This page will be populated through information stored in the database.
-Currently this shows a dummy/commented layout that will be written when we add the database to the server.
+Currently needs links and header added and repositioning.
 -->
 
 <html>
@@ -9,7 +9,8 @@ Currently this shows a dummy/commented layout that will be written when we add t
     <title>Profile</title>
     
     <link rel="stylesheet" type="text/css" href="template.css">
-    <link rel="stylesheet" type="text/css" href="buttons.css">
+    <!-- Could use this for sign out button <link rel="stylesheet" type="text/css" href="buttons.css"> -->
+	<link rel="stylesheet" type="text/css" href="about.css"> <!-- Used for tabs -->
 	
     <script src="tabs.js"></script>
 	
