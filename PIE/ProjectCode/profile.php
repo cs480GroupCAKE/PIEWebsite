@@ -39,6 +39,10 @@ Currently needs links and header added and repositioning.
     <!-- This is the tabs. Uses the same CSS and script as the about page. -->
 
     <div id='divCenter'>
+        <br/>
+        <p>This is where the user description will go. We can add a form to a page linked to the "Edit Description" tab
+           in the sidebar that will submit the user's description to the user database.</p>
+    
         <ul id="tabs">
             <li><a href="#events">Events</a></li>
             <li><a href="#charts">Charts</a></li>
