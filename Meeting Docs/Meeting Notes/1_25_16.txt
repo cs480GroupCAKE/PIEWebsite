@@ -1,0 +1,17 @@
+Starting Time: 1pm
+
+Notes for the group:
+- We can use putty to access and edit the files on the server
+- We can use WinSCP to have a graphical view of the files on our server
+  To find the project directory go to WinSCP/root/var/www
+  "nano" command can be used to edit files (^ means ctrl -- ie. "ctrl + o" saves/writes the changes to the file, "ctrl + x" exits)
+  These files are on the server -- NOT GITHUB, so if you use this, be sure to copy the files to your repository to push changes!
+- To view our pages, go to cake.cs.cwu.edu on any Hebeler computer (on any browser)
+- To view our mySQL tables, use "mysql -p" command to connect on putty
+  commands while the databases are open require a semicolon (;) at the end of the command
+  "use pie;" command accesses our PIE database
+  "show tables;" command lists the tabes in the database
+
+Next meeting scheduled January 26, 2016 at 4pm with Dr. Chueh, Bouillon 106
+
+End time: Varied by group member. Last left past 3:00pm

@@ -1,0 +1,18 @@
+January 20, 2016
+Lulofs Meeting Notes
+Starting Time: 4:05pm
+
+Notes:
+- template.css "divLeft" should be used for the profile page
+- Events should have a scoll/swipe layout
+- Add description above tabs in the profile page
+- Add categories to the help page
+- Create link and send button on the help page
+- The birth date should be a dropdown menu on the register form (to avoid invalid dates)
+- There should be a "back" button on events (this was handled by using the "home" button)
+- jQuery can be used for animation (easy scripts and open source files can be found online.)
+- We need to begin working on a chart builder (for pie charts on friend group information)
+
+Next meeting scheduled January 26, 2016 at 1pm with CAKE group, Bouillon 106
+
+End time: 4:30pm
