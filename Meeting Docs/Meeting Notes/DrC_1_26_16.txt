@@ -1,0 +1,21 @@
+January 26, 2016
+Meeting Notes
+Start Time: 4pm
+
+Notes for the site:
+- May want to add the option to sign up for google (for calendar API - could use "hasGoogle" boolean in user database)
+- Dropdown menus should be used for all areas where date is entered (to prevent invalid dates)
+- Next Steps:
+  - PIE chart
+  - Database queries
+  - Adding deals
+  - Pending events tab (could be added to event slider with options to accept/deny)
+- Profile needs to be editable - can use jQuery/JS to do it on the same page
+- Considered "multistage" events; admin should probably have the right to accept event timing to prevent confusion
+  - Users should be able to add comments to events so they can be altered by the admin
+- We could add a "recurring events" section to the user database for recurring events
+- Next Dr. Chueh meetings will be in Hebeler (meet outside of 218)
+
+Next meeting scheduled January 27, 2016 at 4pm with Dr. Lulofs, Hebeler 208
+
+End Time: 4:35pm
