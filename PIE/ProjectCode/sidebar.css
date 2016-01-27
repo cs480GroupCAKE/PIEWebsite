@@ -35,13 +35,13 @@
   font-size: 16px;
   text-decoration: none;
   color: #ffffff;
-  background: #3ab4a6;
+  background: #0CF;
   -webkit-transition: color .2s ease;
   -o-transition: color .2s ease;
   transition: color .2s ease;
 }
 #cssside > ul > li > a:hover {
-  color: #d8f3f0;
+  color: #00b7e5;
 }
 #cssside ul > li.has-sub > a:after {
   position: absolute;
@@ -88,8 +88,8 @@
   z-index: 2;
   font-size: 14px;
   text-decoration: none;
-  color: #dddddd;
-  background: #49505a;
+  color: #ffffff;
+  background: #5d717e;
   -webkit-transition: color .2s ease;
   -o-transition: color .2s ease;
   transition: color .2s ease;
@@ -103,9 +103,9 @@
 #cssside ul ul > li.has-sub > a:after {
   top: 16px;
   right: 26px;
-  background: #dddddd;
+  background: #ffffff;
 }
 #cssside ul ul > li.has-sub > a:before {
   top: 20px;
-  background: #dddddd;
+  background: #ffffff;
 }
