@@ -79,14 +79,14 @@ Currently needs links and header added and repositioning.
                 <li><a href='#'>Create Event</a></li>
                 <li class='active has-sub'><a href='#'>Edit Profile</a>
                     <ul>
-                        <li class='has-sub'><a href='#'>Edit Photos</a></li>
-                        <li class='has-sub'><a href='#'>Edit Description</a></li>
+                        <li><a href='#'>Edit Photos</a></li>
+                        <li><a href='#'>Edit Description</a></li>
                     </ul>
                 </li>
                 <li class='active has-sub'><a href='#'>Connections</a>
                     <ul>
-                        <li class='has-sub'><a href='#'>Add Connection</a></li>
-                        <li class='has-sub'><a href='#'>View Connections</a></li>
+                        <li><a href='#'>Add Connection</a></li>
+                        <li><a href='#'>View Connections</a></li>
                     </ul>
                 </li>
                 <li><a href='#'>Help</a></li>
