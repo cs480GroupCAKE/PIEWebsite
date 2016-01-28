@@ -8,7 +8,7 @@
             
             <!--TODO: MAKE SURE TO HAVE THE SIGN OUT BUTTON ACTUALLY SIGN USERS OUT Z.R. 1/25/16-->
             <ul style="float:right; list-style-type:none;">
-                <li><a href="home.php">Sign Out</a></li>
+                <li style="border-left: 1px solid #ffffff"><a href="home.php">Sign Out</a></li>
             </ul>
 
         </ul>

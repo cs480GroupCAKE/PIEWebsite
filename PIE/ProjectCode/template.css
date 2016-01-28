@@ -18,9 +18,9 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-	font-weight: bold;
+    font-weight: bold;
     overflow: hidden;
-    background-color: #0CF;
+    background-color: #006D89;/*was #0CF*/
 }
 
 #cssmenu li {

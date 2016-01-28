@@ -73,7 +73,7 @@ div.tabContent {
     border: 1px #000000; 
     margin-top: 14px;
     padding: 10px; 
-    background-color: #0CF;
+    background-color: #006D89;/*was #0cf*/
     color: #fff; 
     border-radius: 25px;
     max-width: 800px;
