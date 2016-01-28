@@ -59,7 +59,7 @@ body {
 
 #divLeft {
     position:absolute;
-    top:200px;
+    top:100px;
     min-width:200px;
     text-align:center;
     min-height:500px;
@@ -78,7 +78,6 @@ body {
 #image {
     margin: auto; 
     display: block;
-
 }
 
 #footer {
