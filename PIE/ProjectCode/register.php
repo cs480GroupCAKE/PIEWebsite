@@ -44,7 +44,7 @@ checks if mysqli installed, troubleshooting
 
     $servername = "localhost";
     $myuser = "caketeamcwu";
-    $word = "";
+    $word = "password";
     $dbname = "pie";
 
     $conn = new mysqli($servername, $myuser, $word, $dbname);
@@ -59,7 +59,7 @@ checks if mysqli installed, troubleshooting
 
     //check if username is taken, if not, insert new user, else print error and return to form
     if(!$row){
-        $sql = "INSERT INTO userInfo (username, password, firstName, lastName, email)
+        $sql = "INSERT INTO user (username, password, firstname, lastname, email)
         VALUES ('$user', '$password', '$firstname', '$lastname', '$email')";
         if($conn->query($sql)===TRUE){
             printf("Success! Your username is: %s\n ",$user);// $row);this needs work

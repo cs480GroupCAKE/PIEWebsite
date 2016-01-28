@@ -15,29 +15,42 @@ if successful success message is displayed, otherwise password or username error
 ?>
 
 <?php
+
+  
+
     $username =  $_POST["username"]; 
     $password = $_POST["password"];
 
     //connect to database and check if password matches password for user
     $servername = "localhost";
-    $myuser = "";
-    $word = "";
+    $myuser = "caketeamcwu";
+    $word = "password";
     $dbname = "pie";
 
+	 /*
+DO NOT REMOVE KEEP COMMENTED OUT UNLESS NEEDED FOR DEBUGGING
+checks if mysqli installed, troubleshooting
+
+ if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
+      echo 'no mysqli :(';
+ } else {
+      echo 'we ve got it';
+ }
+*/	
     $conn = new mysqli($servername, $myuser, $word, $dbname);
 
     if($conn->connect_error) {
         die(header("Location:databaseDown.html"));
     }
 
-    $query = "SELECT * FROM userInfo WHERE username = '$username'";
+    $query = "SELECT * FROM user WHERE username = '$username'";
 
     $getPass = mysqli_fetch_assoc(mysqli_query($conn, $query));
     $currentPass  = $getPass['password'];
 
     //check if username is in database if not return error message
     if($getPass['username']==null) {
-        die(header("Location:loginSignUp.php?loginFailedUsername=true&reason=UsernameDNE"));
+        die(header("Location:loginPage.php?loginFailedUsername=true&reason=UsernameDNE"));
         exit();
     }
 
@@ -45,7 +58,7 @@ if successful success message is displayed, otherwise password or username error
         header("Location:profile");//work to be done here, should redirect and such, right now simple
     } else {
         //will return to page and error message shown
-        die(header("Location:loginSignUp.php?loginFailedPass=true&reason=invalidPass"));
+        die(header("Location:loginPage.php?loginFailedPass=true&reason=invalidPass"));
     }
 
     //header("Location:welcome.html");
