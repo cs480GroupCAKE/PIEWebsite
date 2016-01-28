@@ -21,6 +21,7 @@ echo ini_get('display_errors');
     $lastname = $_POST["lastname"];
     $email = $_POST["email"];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+	$bday = $_POST["DOBYear"];
 
     if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
         die(header("Location:signUp.php?signUpFailedEmail=true&reason1=invalidEmail"));
@@ -62,7 +63,7 @@ checks if mysqli installed, troubleshooting
         $sql = "INSERT INTO user (username, password, firstname, lastname, email)
         VALUES ('$user', '$password', '$firstname', '$lastname', '$email')";
         if($conn->query($sql)===TRUE){
-            printf("Success! Your username is: %s\n ",$user);// $row);this needs work
+            printf("Success! Your username is: %s\n Born year: %s\n",$user, $bday);// $row);this needs work
         }else{
         echo "error ".$sql."<br>".$conn->error;
         }
