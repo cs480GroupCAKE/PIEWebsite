@@ -47,7 +47,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
         
         <input type="password" name="password" required placeholder></br>
         <a style="color:red">
-            <?php $reasons = array("invalidPass" => "invalid password. Please re-enter.",
+            <?php $reasons = array("invalidPass" => "Invalid password. Please re-enter.",
                                    "blank" => "PASSWORD ERROR");
                 if ($_GET["loginFailedPass"]) echo $reasons[$_GET["reason"]];
             ?>

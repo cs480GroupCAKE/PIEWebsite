@@ -14,6 +14,8 @@ if successful success message is displayed, otherwise password or username error
     echo ini_get('display_errors');
 ?>
 
+<?php require 'database.php';?>
+
 <?php
 
   
@@ -21,11 +23,6 @@ if successful success message is displayed, otherwise password or username error
     $username =  $_POST["username"]; 
     $password = $_POST["password"];
 
-    //connect to database and check if password matches password for user
-    $servername = "localhost";
-    $myuser = "caketeamcwu";
-    $word = "password";
-    $dbname = "pie";
 
 	 /*
 DO NOT REMOVE KEEP COMMENTED OUT UNLESS NEEDED FOR DEBUGGING
@@ -37,15 +34,11 @@ checks if mysqli installed, troubleshooting
       echo 'we ve got it';
  }
 */	
-    $conn = new mysqli($servername, $myuser, $word, $dbname);
-
-    if($conn->connect_error) {
-        die(header("Location:databaseDown.html"));
-    }
+ 
 
     $query = "SELECT * FROM user WHERE username = '$username'";
 
-    $getPass = mysqli_fetch_assoc(mysqli_query($conn, $query));
+    $getPass = mysqli_fetch_assoc(mysqli_query($database, $query));
     $currentPass  = $getPass['password'];
 
     //check if username is in database if not return error message
@@ -62,5 +55,5 @@ checks if mysqli installed, troubleshooting
     }
 
     //header("Location:welcome.html");
-    $conn.close();
+    $database.close();
 ?>

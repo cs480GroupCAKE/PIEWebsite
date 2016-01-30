@@ -7,13 +7,16 @@ additional error handling code.
 
 
 KEEP IN CODE AND COMMENTED OUT UNLESS DEBUGGING
-
+*/
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('dispaly_startup_errors', '1');
 echo ini_get('display_errors');
-*/
+
+    
 ?>
+
+<?php include 'database.php';?>
 
 <?php
     $user = $_POST["username"];
@@ -42,30 +45,25 @@ checks if mysqli installed, troubleshooting
       echo 'we've got it';
  }
 */
-
-    $servername = "localhost";
-    $myuser = "caketeamcwu";
-    $word = "password";
-    $dbname = "pie";
-
+/*
     $conn = new mysqli($servername, $myuser, $word, $dbname);
     if($conn->connect_error){
         header("Location:databaseDown.html");
         die("dead ".$conn->connect_error);
     }
-
+*/
     $qtest = "SELECT username FROM userInfo WHERE username = '$user'";
-    $check = mysqli_query($conn, $qtest);
+    $check = mysqli_query($database, $qtest);
     $row = mysqli_fetch_row($check);
 
     //check if username is taken, if not, insert new user, else print error and return to form
     if(!$row){
         $sql = "INSERT INTO user (username, password, firstname, lastname, email, datejoined)
         VALUES ('$user', '$password', '$firstname', '$lastname', '$email',NOW())";
-        if($conn->query($sql)===TRUE){
+        if($database->query($sql)===TRUE){
             printf("Success! Your username is: %s\n Born year: %s\n",$user, $bday);// $row);this needs work
         }else{
-        echo "error ".$sql."<br>".$conn->error;
+        echo "error ".$sql."<br>".$database->error;
         }
     }else{
         //sends user back to page if username
@@ -73,5 +71,5 @@ checks if mysqli installed, troubleshooting
         die(header("Location: signUp.php?signUpFailed=true&reason=usernameTaken"));
     }
 
-    $conn->close();
+    $database->close();
 ?>
