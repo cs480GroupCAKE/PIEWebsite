@@ -18,7 +18,7 @@ if successful success message is displayed, otherwise password or username error
 
 <?php
 
-  
+    session_start();
 
     $username =  $_POST["username"]; 
     $password = $_POST["password"];
@@ -48,6 +48,7 @@ checks if mysqli installed, troubleshooting
     }
 
     if(password_verify($password, $currentPass)) {
+        $_SESSION['username'] = $username;
         header("Location:profile.php");//work to be done here, should redirect and such, right now simple
     } else {
         //will return to page and error message shown
