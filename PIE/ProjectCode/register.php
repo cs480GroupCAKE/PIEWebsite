@@ -60,8 +60,8 @@ checks if mysqli installed, troubleshooting
 
     //check if username is taken, if not, insert new user, else print error and return to form
     if(!$row){
-        $sql = "INSERT INTO user (username, password, firstname, lastname, email)
-        VALUES ('$user', '$password', '$firstname', '$lastname', '$email')";
+        $sql = "INSERT INTO user (username, password, firstname, lastname, email, datejoined)
+        VALUES ('$user', '$password', '$firstname', '$lastname', '$email',NOW())";
         if($conn->query($sql)===TRUE){
             printf("Success! Your username is: %s\n Born year: %s\n",$user, $bday);// $row);this needs work
         }else{

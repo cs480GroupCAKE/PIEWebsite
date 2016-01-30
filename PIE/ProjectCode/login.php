@@ -55,7 +55,7 @@ checks if mysqli installed, troubleshooting
     }
 
     if(password_verify($password, $currentPass)) {
-        header("Location:profile");//work to be done here, should redirect and such, right now simple
+        header("Location:profile.php");//work to be done here, should redirect and such, right now simple
     } else {
         //will return to page and error message shown
         die(header("Location:loginPage.php?loginFailedPass=true&reason=invalidPass"));

@@ -6,6 +6,11 @@ Currently needs links and header added and repositioning.
 
 <html>
 <head>
+    <?php 
+	    session_start();
+    	$current_user = $_SESSION['username'];
+		$username = mysqli_real_escape_string($database,$_REQUST['username']);
+    ?>
     <title>Profile</title>
     
     <link rel="stylesheet" type="text/css" href="template.css">
