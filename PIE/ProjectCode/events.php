@@ -15,7 +15,10 @@
     
     <script>
         $(function() {
-            $( "#datepicker" ).datepicker();
+            $( "#datepicker" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+            });
         });
     </script>
     
