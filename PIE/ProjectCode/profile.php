@@ -18,6 +18,7 @@ Currently needs links and header added and repositioning.
 <html>
 <head>
     <?php 
+
         require 'database.php';
         include 'profileQueries.php';
         $current_user = $_SESSION['username'];
@@ -71,7 +72,7 @@ Currently needs links and header added and repositioning.
         <div class="tabContent" id="events">
             <h2>Events</h2>
             <div>
-                <p>Events will be posted here</p>
+                <p><?php echo "Event Name: $eventname"?></p>
             </div>
         </div>
 
@@ -95,7 +96,7 @@ Currently needs links and header added and repositioning.
     
         <div id='cssside'>
             <ul>
-                <li><a href='#'>Create Event</a></li>
+                <li><a href='events.php'>Create Event</a></li>
                 <li class='active has-sub'><a href='#'>Edit Profile</a>
                     <ul>
                         <li><a href='#'>Edit Photos</a></li>
