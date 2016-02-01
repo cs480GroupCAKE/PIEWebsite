@@ -1,4 +1,15 @@
 <!DOCTYPE PHP>
+<?php
+/*
+KEEP IN CODE AND COMMENTED OUT UNLESS DEBUGGING
+*/
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+ini_set('dispaly_startup_errors', '1');
+echo ini_get('display_errors');
+
+    
+?>
 <!--
 This file contains the profile page. This page will be populated through information stored in the database.
 Currently needs links and header added and repositioning.
@@ -8,7 +19,7 @@ Currently needs links and header added and repositioning.
 <head>
     <?php 
         require 'database.php';
-        session_start();
+        include 'profileQueries.php';
         $current_user = $_SESSION['username'];
         //$user_description = $_SESSION['description'];
         //$username = mysqli_real_escape_string($database,$_REQUST['username']);
@@ -47,8 +58,9 @@ Currently needs links and header added and repositioning.
 
     <div id='divCenter'>
         <br/>
-        <p>This is where the user description will go. We can add a form to a page linked to the "Edit Description" tab
-           in the sidebar that will submit the user's description to the user database.</p>
+        <p>
+        <?php echo $descRes; ?>
+        </p>
     
         <ul id="tabs">
             <li><a href="#events">Events</a></li>
@@ -100,8 +112,6 @@ Currently needs links and header added and repositioning.
             </ul>
         </div>
     </div>
-
-    <?php session_destroy(); ?>
     
 </body>
 </html>

@@ -38,9 +38,10 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
         <a style="color:red">
             <?php $reasons = array("UsernameDNE" =>"Username does not exist",
                                    "blank" => "USERNAME ERROR");
-                if ($_GET["loginFailedUsername"]) echo $reasons[$_GET["reason"]];
+                if ($_GET["loginFailedUsername"]) echo "<br>".$reasons[$_GET["reason"]];
             ?>
         </a>
+      
         <br>
         Password:
         <br>
@@ -49,7 +50,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
         <a style="color:red">
             <?php $reasons = array("invalidPass" => "Invalid password. Please re-enter.",
                                    "blank" => "PASSWORD ERROR");
-                if ($_GET["loginFailedPass"]) echo $reasons[$_GET["reason"]];
+                if ($_GET["loginFailedPass"]) echo $reasons[$_GET["reason"]]."<br>";
             ?>
         </a>
         
