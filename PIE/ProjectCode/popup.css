@@ -22,7 +22,7 @@ img#close {
     cursor:pointer
 }
 
-div#popupContact {
+div#popupDescription {
     position:absolute;
     left:50%;
     top:17%;
