@@ -21,10 +21,13 @@ only a few are to make testing database code easier. Should catch handle and pri
     <script>
         $(function() {
             $( "#datepicker" ).datepicker({
-            changeMonth: true,
-            changeYear: true
+                changeMonth: true,
+                changeYear: true
             });
+            
+            $( ".selector" ).datepicker( "option", "yearRange", "2002:2012" );
         });
+        
     </script>
             
     <div id='cssmenu'>
