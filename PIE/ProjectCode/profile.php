@@ -18,7 +18,10 @@ Currently needs links and header added and repositioning.
 <html>
 <head>
     <?php 
-
+        session_start();
+        if(isset($_SESSION['username'])){
+            echo "Session Active".$_SESSION['username'];
+        }
         require 'database.php';
         include 'profileQueries.php';
         $current_user = $_SESSION['username'];

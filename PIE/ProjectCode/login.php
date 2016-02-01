@@ -19,6 +19,7 @@ if successful success message is displayed, otherwise password or username error
 <?php
 
     session_start();
+    $_SESSION['username'] = 'username';
 
     $username =  $_POST["username"]; 
     $password = $_POST["password"];
