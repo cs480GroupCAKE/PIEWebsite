@@ -19,7 +19,8 @@ echo ini_get('display_errors');
 <?php include 'database.php';?>
 
 <?php
-    $user = $_POST["username"];
+    session_start();
+    $username = $_POST["username"];
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
     $email = $_POST["email"];
@@ -62,9 +63,10 @@ checks if mysqli installed, troubleshooting
     //check if username is taken, if not, insert new user, else print error and return to form
     if(!$row){
         $sql = "INSERT INTO user (username, password, firstname, lastname, email, birthdate, datejoined)
-        VALUES ('$user', '$password', '$firstname', '$lastname', '$email', '$dob',NOW())";
+        VALUES ('$username', '$password', '$firstname', '$lastname', '$email', '$dob',NOW())";
         if($database->query($sql)===TRUE){
-            printf("Success! Your username is: %s\n Born year: %s\n",$user, $dob);// $row);this needs work
+            header("Location:profile.php");
+            //printf("Success! Your username is: %s\n Born year: %s\n",$user, $dob);// $row);this needs work
         }else{
         echo "error ".$sql."<br>".$database->error;
         }
@@ -75,4 +77,5 @@ checks if mysqli installed, troubleshooting
     }
 
     $database->close();
+   
 ?>
