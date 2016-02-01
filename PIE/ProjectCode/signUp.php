@@ -83,7 +83,7 @@ only a few are to make testing database code easier. Should catch handle and pri
 
         <br>    
         Birth Date: 
-        <p><input type="text" id="datepicker"></p>
+        <p><input type="text" name="dob" id="datepicker"></p>
         
         <br>
         <input type="submit" name="submit" value="Create Profile" class="big button blue">

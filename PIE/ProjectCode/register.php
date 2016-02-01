@@ -24,7 +24,10 @@ echo ini_get('display_errors');
     $lastname = $_POST["lastname"];
     $email = $_POST["email"];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-	$bday = $_POST["DOBYear"];
+	$birthdate = $_POST["dob"];
+    //split bday into proper format for sql insertion
+    $dobArray = explode("/", $birthdate);
+    $dob = $dobArray[2]."-".$dobArray[0]."-".$dobArray[1];
 
     if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
         die(header("Location:signUp.php?signUpFailedEmail=true&reason1=invalidEmail"));
@@ -58,10 +61,10 @@ checks if mysqli installed, troubleshooting
 
     //check if username is taken, if not, insert new user, else print error and return to form
     if(!$row){
-        $sql = "INSERT INTO user (username, password, firstname, lastname, email, datejoined)
-        VALUES ('$user', '$password', '$firstname', '$lastname', '$email',NOW())";
+        $sql = "INSERT INTO user (username, password, firstname, lastname, email, birthdate, datejoined)
+        VALUES ('$user', '$password', '$firstname', '$lastname', '$email', '$dob',NOW())";
         if($database->query($sql)===TRUE){
-            printf("Success! Your username is: %s\n Born year: %s\n",$user, $bday);// $row);this needs work
+            printf("Success! Your username is: %s\n Born year: %s\n",$user, $dob);// $row);this needs work
         }else{
         echo "error ".$sql."<br>".$database->error;
         }
