@@ -10,6 +10,7 @@ Currently needs links and header added and repositioning.
         require 'database.php';
         session_start();
         $current_user = $_SESSION['username'];
+        //$user_description = $_SESSION['description'];
         //$username = mysqli_real_escape_string($database,$_REQUST['username']);
     ?>
     <title>Profile</title>
