@@ -69,15 +69,15 @@
     <form action="createEvent.php" method="post">
 
         <p>Event Name:</p>
-        <input type="text" name="eventName">
+        <input type="text" name="eventname">
 
         <p>Event Date:</p>
         <!--<form action="" name="eventDate">-->
-        <select id="daydropdown">
+        <select id="daydropdown" name="day">
     </select> 
-        <select id="monthdropdown">
+        <select id="monthdropdown" name="mos">
     </select> 
-        <select id="yeardropdown">
+        <select id="yeardropdown" name="year">
     </select> 
     
         <!--</form>-->
