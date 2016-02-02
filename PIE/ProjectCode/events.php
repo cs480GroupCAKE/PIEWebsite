@@ -1,9 +1,11 @@
 <!DOCTYPE PHP>
 <?php   
     session_start();
+    /*
     if(isset($_SESSION['username'])){
         echo "Session Active".$_SESSION['username'];
     }
+    */
 ?>
 <html>
 <head>

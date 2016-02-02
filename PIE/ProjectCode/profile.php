@@ -2,12 +2,12 @@
 <?php
 /*
 KEEP IN CODE AND COMMENTED OUT UNLESS DEBUGGING
-*/
+
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('dispaly_startup_errors', '1');
 echo ini_get('display_errors');
-
+*/
     
 ?>
 <!--
@@ -19,9 +19,11 @@ Currently needs links and header added and repositioning.
 <head>
     <?php 
         session_start();
+        /*Code for debugging
         if(isset($_SESSION['username'])){
             echo "Session Active".$_SESSION['username'];
         }
+        */
         require 'database.php';
         include 'profileQueries.php';
         $current_user = $_SESSION['username'];
@@ -75,7 +77,12 @@ Currently needs links and header added and repositioning.
         <div class="tabContent" id="events">
             <h2>Events</h2>
             <div>
-                <p><?php echo "Event Name: $eventname"?></p>
+                <p><?php 
+                
+                echo "Event Name: $eventname<br>";
+                echo "Date: $eventdate <br>";
+                echo "Details: $eventdetails<br><br>";
+                ?></p>
             </div>
         </div>
 
