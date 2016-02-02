@@ -8,6 +8,7 @@
             
             <!--TODO: MAKE SURE TO HAVE THE SIGN OUT BUTTON ACTUALLY SIGN USERS OUT Z.R. 1/25/16-->
             <ul style="float:right; list-style-type:none;">
+                <li><font color="white" style="padding-top:10px">Search for Connections: </font></li>
                 <li style="border-left: 1px solid #ffffff"><a href="signout.php">Sign Out</a></li>
             </ul>
 

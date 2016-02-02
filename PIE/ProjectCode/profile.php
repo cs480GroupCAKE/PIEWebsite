@@ -106,12 +106,7 @@ Currently needs links and header added and repositioning.
                         <li><a href='#'>Edit Description</a></li>
                     </ul>
                 </li>
-                <li class='active has-sub'><a href='#'>Connections</a>
-                    <ul>
-                        <li><a href='#'>Add Connection</a></li>
-                        <li><a href='#'>View Connections</a></li>
-                    </ul>
-                </li>
+                <li><a href='#'>View Connections</a></li>
                 <li><a href='#'>Help</a></li>
             </ul>
         </div>
