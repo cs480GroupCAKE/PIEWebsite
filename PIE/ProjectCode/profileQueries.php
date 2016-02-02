@@ -22,13 +22,13 @@
     $descRes = $userArr['description'];
     $username = $userArr['username'];
     $dob = $userArr['birthdate'];
-    /*
+    
     $eventname = $eventsArr['eventname'];
     $eventtype = $eventsArr['type'];
     $eventuser = $eventsArr['username'];
     $eventdate = $eventsArr['date'];
     $eventdetails = $eventsArr['details'];
-    */
+    
    
 ?>
 
