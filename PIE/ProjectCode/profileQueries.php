@@ -11,9 +11,10 @@
     
     //RESULT ARRAYS
     $userArr = mysqli_fetch_assoc(mysqli_query($database, $descriptionQ));
-    $eventsArr = array();
-    $eventsAssoc = mysqli_fetch_array(mysqli_query($database, $eventsQ));
-    $i = 0;
+    //$eventsArr = array();
+    //eventsAssoc
+    $eventsArr = mysqli_fetch_array(mysqli_query($database, $eventsQ));
+    //$i = 0;
     
     
     
