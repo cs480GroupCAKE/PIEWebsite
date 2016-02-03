@@ -112,7 +112,7 @@ Currently needs links and header added and repositioning.
                 <li class='active has-sub'><a href='#'>Edit Profile</a>
                     <ul>
                         <li><a href='#'>Edit Photos</a></li>
-                        <li><a href='#'>Edit Description</a></li>
+                        <li><a href='description.php'>Edit Description</a></li>
                     </ul>
                 </li>
                 <li><a href='#'>View Connections</a></li>
