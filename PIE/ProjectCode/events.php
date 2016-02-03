@@ -1,22 +1,14 @@
 <!DOCTYPE PHP>
-<?php   
-    session_start();
-    /*
-    if(isset($_SESSION['username'])){
-        echo "Session Active".$_SESSION['username'];
-    }
-    */
-?>
 <html>
 <head>
     <title>Events</title>
     
     <link rel="stylesheet" type="text/css" href="template.css">
     <link rel="stylesheet" type="text/css" href="events.css">
-    <link rel="stylesheet" type="text/css" href="buttons.css">
     
     <div id='cssmenu'>
-        <?php include'headerLogged.php'?>
+        <!--<?php include'headerLogged.php'?>-->
+
     </div>
     
     <h1>Schedule an Event</h1>
@@ -68,21 +60,21 @@
 
 </head>
 <body>
-    <form action="createEvent.php" method="post">
+    <form>
 
         <p>Event Name:</p>
-        <input type="text" name="eventname">
+        <input type="text" name="eventName">
 
         <p>Event Date:</p>
-        <!--<form action="" name="eventDate">-->
-        <select id="daydropdown" name="day">
+        <form action="" name="eventDate">
+        <select id="daydropdown">
     </select> 
-        <select id="monthdropdown" name="mos">
+        <select id="monthdropdown">
     </select> 
-        <select id="yeardropdown" name="year">
+        <select id="yeardropdown">
     </select> 
     
-        <!--</form>-->
+    </form>
 
     <script type="text/javascript">
         //populatedropdown(id_of_day_select, id_of_month_select, id_of_year_select)
@@ -95,13 +87,13 @@
         <input type="text" name="time">
     
         <p>Event Details:</p>
+        <textarea rows="4" cols="50">
         <input type="text" name="eventDetails">
-        <br>
-        <input type="submit" value="Create Event" name="submit" class="big button blue">
-    
+        </textarea>
     </form>
 
     <br>    
+    <button type="button">Submit</button>
 
     <button onclick="goBack()">Go Back</button>
 
