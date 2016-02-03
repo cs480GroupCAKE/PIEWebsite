@@ -4,15 +4,15 @@ to other areas of site included in navigation bar-->
 <html>
 <head>
     <title>Pie Home</title>
-    <link rel="stylesheet" type="text/css" href="buttons.css">
     <link rel="stylesheet" type="text/css" href="template.css">       
     
     <div id='cssmenu'>
         <?php include 'header.php'?>
     </div>
     
-    <div id='headerCenter'>
-        <h1>Welcome to PIE</h1>
+    <div id='headingCenter'>
+        <h1>Welcome to Personal Interactive Environment</h1>
+	<h2>P.I.E.</h2>
     </div>
 
 </head>
@@ -24,7 +24,7 @@ to other areas of site included in navigation bar-->
     <div id='divCenter'>
         <!-- Added line from basic webpage.html -->
         <div id='image'>
-            <img class="displayCenter" src="homepic.png" alt="PIE" style="width:304px;height:228px;">
+            <img class="displayCenter" src="home_picture.jpg" alt="PIE" style="width:500px;height:250px;">
         </div>
 
         <h2> Vision Statement</h2>

@@ -52,7 +52,9 @@ Currently needs links and header added and repositioning.
 
     </div>
     
-    <h1>Welcome back <?php echo $current_user ?>!</h1>
+    <div id='headingCenter'>
+        <h1>Welcome <?php echo $current_user ?>!</h1>
+    </div>
 
 </head>
 
