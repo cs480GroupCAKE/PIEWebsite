@@ -11,7 +11,7 @@ to other areas of site included in navigation bar-->
         <?php include 'header.php'?>
     </div>
     
-    <div id='headerCenter'>
+    <div id='headingCenter'>
         <h1>Welcome to PIE</h1>
     </div>
 
