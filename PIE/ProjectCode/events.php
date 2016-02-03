@@ -82,15 +82,15 @@
         populatedropdown("daydropdown", "monthdropdown", "yeardropdown")
         }
     </script>
-
         <p>Time:</p>
         <input type="text" name="time">
-    
-        <p>Event Details:</p>
-        <textarea rows="4" cols="50">
-        <input type="text" name="eventDetails">
-        </textarea>
     </form>
+		<p>Event Details:</p>
+    <!--<textarea rows="4" cols="50"> -->
+	<input type="text" name="eventDetails">
+
+		<!--Enter your event details here. -->
+   <!-- </textarea> -->
 
     <br>    
     <button type="button">Submit</button>
