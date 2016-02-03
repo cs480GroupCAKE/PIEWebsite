@@ -29,7 +29,7 @@ to other areas of site included in navigation bar-->
 
         <h2> Vision Statement</h2>
 
-        <p>Developing a website to aid a section of the elderly community that is facing social isolation. 
+        <p style="padding-left:200px;padding-right:200px;">Developing a website to aid a section of the elderly community that is facing social isolation. 
            This website will promote social activities and personal outings. Furthermore, 
            the simple design should aid with navigation and scheduling, and more.</p>
     </div>

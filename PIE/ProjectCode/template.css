@@ -36,12 +36,9 @@ body {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 #cssmenu li a:hover {
     background-color: #5d717e;
 }
-
-/*  TODO: NEW CODE ENDED;*/
 
 #cred {
     text-align:center;   
@@ -71,16 +68,12 @@ body {
     min-height:500px;
     min-width:600px;
     display:block;
-    padding-left:300px;
-    padding-right:300px;
 }
 
 #headingCenter {
     text-align:center;
     min-width:600px;
     display:block;
-    padding-left:300px;
-    padding-right:300px;
 }
 
 #image {

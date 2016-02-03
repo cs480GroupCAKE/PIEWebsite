@@ -33,6 +33,7 @@ Currently needs links and header added and repositioning.
     <title>Profile</title>
     
     <link rel="stylesheet" type="text/css" href="template.css">
+    <link rel="stylesheet" type="text/css" href="profile.css">
     <!-- Could use this for sign out button <link rel="stylesheet" type="text/css" href="buttons.css"> -->
     <link rel="stylesheet" type="text/css" href="about.css"> <!-- Used for tabs -->
 
