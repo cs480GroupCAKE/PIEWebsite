@@ -28,7 +28,7 @@ require 'database.php';
     $date = $_POST['year']."-".$mosNum."-".$_POST['day'];
     $username = $_SESSION['username'];
     $eventname = $_POST["eventname"];
-    $details = $_POST["eventDetails"];
+    $details = $_POST["eventdetails"];
     
     $enterEvent = "INSERT INTO events (username, eventname, details, date) 
         VALUES('$username','$eventname','$details','$date')";

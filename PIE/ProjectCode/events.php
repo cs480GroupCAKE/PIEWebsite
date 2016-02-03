@@ -5,15 +5,37 @@
     
     <link rel="stylesheet" type="text/css" href="template.css">
     <link rel="stylesheet" type="text/css" href="events.css">
+    <link rel="stylesheet" type="text/css" href="buttons.css">
     
+    <!-- I think we should stick to one events page (unless there is another one that does 
+	something different?).  ---TN 2/2/16 6:41 PM---
+	I ended up commenting this code  because it is easy for a user to enter an invalid date
+	for their event...
+	This is used for the date picker 
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    
+    <script>
+        $(function() {
+            $( "#datepicker" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+            });
+        });
+    </script>
+    
+	-->
     <div id='cssmenu'>
-        <!--<?php include'headerLogged.php'?>-->
+        <?php include'headerLogged.php'?>
 
     </div>
     
     <h1>Schedule an Event</h1>
-
-    <script type="text/javascript">
+	
+	    <script type="text/javascript">
 
         /***********************************************
         * Drop Down Date code
@@ -60,46 +82,47 @@
 
 </head>
 <body>
-    <form>
+    <form action="createEvent.php" method="post">
 
         <p>Event Name:</p>
-        <input type="text" name="eventName">
+        <input type="text" name="eventname">
 
-        <p>Event Date:</p>
-        <form action="" name="eventDate">
-        <select id="daydropdown">
+        <p>Requested Date:</p>
+        <!--<input type="text" id="datepicker"> -->
+	
+        <select id="daydropdown" name="day">
     </select> 
-        <select id="monthdropdown">
+        <select id="monthdropdown" name="mos">
     </select> 
-        <select id="yeardropdown">
+        <select id="yeardropdown" name="year">
     </select> 
     
-    </form>
 
-    <script type="text/javascript">
+		
+	<script type="text/javascript">
         //populatedropdown(id_of_day_select, id_of_month_select, id_of_year_select)
         window.onload=function(){
         populatedropdown("daydropdown", "monthdropdown", "yeardropdown")
         }
     </script>
+
         <p>Time:</p>
         <input type="text" name="time">
+    
+        <p>Event Details:</p>
+		  <textarea rows="4" cols="50" name="eventdetails">
+		   </textarea> 
+
+	
+	<br>
+
+    <input type="submit" name="submit" value="Create Event" class="big button blue">
     </form>
-		<p>Event Details:</p>
-    <!--<textarea rows="4" cols="50"> -->
-	<input type="text" name="eventDetails">
-
-		<!--Enter your event details here. -->
-   <!-- </textarea> -->
-
-    <br>    
-    <button type="button">Submit</button>
-
-    <button onclick="goBack()">Go Back</button>
+    <!--<button onclick="goBack()">Go Back</button>-->
 
     <script>
         function goBack(){
-        window.history.back();
+            window.history.back();
         }
     </script>
 
