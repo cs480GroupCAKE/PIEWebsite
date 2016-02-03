@@ -20,6 +20,7 @@ echo ini_get('display_errors');
 
 <?php
     session_start();
+    $_SESSION['username'] = 'username';
     $username = $_POST["username"];
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
