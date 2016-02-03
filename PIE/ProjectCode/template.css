@@ -75,6 +75,14 @@ body {
     padding-right:300px;
 }
 
+#headerCenter {
+    text-align:center;
+    min-width:600px;
+    display:block;
+    padding-left:300px;
+    padding-right:300px;
+}
+
 #image {
     margin: auto; 
     display: block;
