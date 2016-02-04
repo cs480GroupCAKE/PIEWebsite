@@ -19,8 +19,14 @@ echo ini_get('display_errors');
 <?php include 'database.php';?>
 
 <?php
+    if (isset($_SESSION))
+    {
+        unset($_SESSION);
+        session_unset();
+        session_destroy();
+    }
+
     session_start();
-    $_SESSION['username'] = 'username';
     $username = $_POST["username"];
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
@@ -30,6 +36,8 @@ echo ini_get('display_errors');
     //split bday into proper format for sql insertion
     $dobArray = explode("/", $birthdate);
     $dob = $dobArray[2]."-".$dobArray[0]."-".$dobArray[1];
+
+
 
     if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
         die(header("Location:signUp.php?signUpFailedEmail=true&reason1=invalidEmail"));
@@ -66,6 +74,7 @@ checks if mysqli installed, troubleshooting
         $sql = "INSERT INTO user (username, password, firstname, lastname, email, birthdate, datejoined)
         VALUES ('$username', '$password', '$firstname', '$lastname', '$email', '$dob',NOW())";
         if($database->query($sql)===TRUE){
+            $_SESSION['username'] = $username;
             header("Location:profile.php");
             //printf("Success! Your username is: %s\n Born year: %s\n",$user, $dob);// $row);this needs work
         }else{

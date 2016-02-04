@@ -81,10 +81,13 @@ Currently needs links and header added and repositioning.
             <h2>Events</h2>
             <div>
                 <p><?php 
-                
-                echo "Event Name: $eventname<br>";
-                echo "Date: $eventdate <br>";
-                echo "Details: $eventdetails<br><br>";
+                if($eventname!=NULL){
+                    echo "Event Name: $eventname<br>";
+                    echo "Date: $eventdate <br>";
+                    echo "Details: $eventdetails<br><br>";
+                }else{
+                    echo "No events scheduled";
+                }
                 ?></p>
             </div>
         </div>
