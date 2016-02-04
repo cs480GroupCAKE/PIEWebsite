@@ -14,7 +14,7 @@ the impact of the project to the current point. More work needs to be done on th
     <script src="tabs.js"></script>
 
     <div id='cssmenu'>
-        <?php include'header.php'?>
+        <?php require 'loggedcheck.php'; ?>
     </div>
 
     <h1>Making Outings as Easy as PIE</h1>

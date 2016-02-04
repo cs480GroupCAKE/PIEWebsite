@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="buttons.css">
     
         <div id='cssmenu'>
-            <?php include 'header.php'?>
+            <?php include 'loggedcheck.php'?>
         </div>
     <h1>Help Page</h1>
 </head>
