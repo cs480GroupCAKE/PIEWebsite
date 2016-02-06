@@ -18,11 +18,10 @@ stored in the database. Currently needs links and access to the viewed user's da
 <html>
 <head>
     <?php 
-
-        require 'database.php';
-        include 'profileQueries.php';
+        //require 'database.php';
+        include 'viewingQueries.php';
         $current_user = $_SESSION['username'];
-        //$viewed_user = 
+       // $viewed_user = $_POST['searchedUser'];
         //$user_description = $_SESSION['description'];
         //$username = mysqli_real_escape_string($database,$_REQUST['username']);
     ?>
@@ -44,11 +43,11 @@ stored in the database. Currently needs links and access to the viewed user's da
 
     <div id='cssmenu'>
 
-        <?php include 'headerLogged.php' ?>
+        <?php include 'headerLogged.php'; ?>
 
     </div>
     
-    <h1>Viewed username<?php //echo $viewed_user ?></h1>
+    <h1>Viewing <?php echo $vusername."'s profile"; ?></h1>
 
 </head>
 
@@ -57,7 +56,7 @@ stored in the database. Currently needs links and access to the viewed user's da
     <div id='divCenter'>
         <br/>
         <p>
-        <?php// echo $descRes; Change this to viewed user's description ?>
+        <?php echo $descRes; ?> 
         </p>
     
         <ul id="tabs">
@@ -70,7 +69,13 @@ stored in the database. Currently needs links and access to the viewed user's da
         <div class="tabContent" id="events">
             <h2>Events</h2>
             <div>
-                <p><?php// echo "Event Name: $eventname"?></p>
+                <p><?php 
+                   if($eventinfo != NULL){ 
+                       echo $eventinfo;
+                   }else{
+                       echo "No events scheduled";
+                   }
+               ?></p>
             </div>
         </div>
 

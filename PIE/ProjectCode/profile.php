@@ -18,6 +18,7 @@ Currently needs links and header added and repositioning.
 <html>
 <head>
     <?php 
+        $view = False;
         session_start();
         /*Code for debugging
         if(isset($_SESSION['username'])){
