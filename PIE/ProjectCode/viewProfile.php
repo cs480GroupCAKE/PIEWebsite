@@ -28,6 +28,7 @@ stored in the database. Currently needs links and access to the viewed user's da
     <title>View Profile</title>
     
     <link rel="stylesheet" type="text/css" href="template.css">
+    <link rel="stylesheet" type="text/css" href="profile.css">
     <!-- Could use this for sign out button <link rel="stylesheet" type="text/css" href="buttons.css"> -->
     <link rel="stylesheet" type="text/css" href="about.css"> <!-- Used for tabs -->
 
@@ -47,7 +48,9 @@ stored in the database. Currently needs links and access to the viewed user's da
 
     </div>
     
-    <h1>Viewing <?php echo $vusername."'s profile"; ?></h1>
+    <div id='headingCenter'>
+        <h1>Viewing <?php echo $vusername."'s profile"; ?></h1>
+    </div>
 
 </head>
 

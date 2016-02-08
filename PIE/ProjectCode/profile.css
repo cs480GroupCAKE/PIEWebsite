@@ -4,6 +4,10 @@
 }
 
 #headingCenter {
-    padding-left:240px;
-    padding-right:240px;
+    padding-left:230px;
+    padding-right:230px;
+}
+
+#cssmenu li a:hover {
+    min-height:37px;
 }

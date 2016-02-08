@@ -7,7 +7,7 @@
             <li><a href="helpPage.php">Help</a></li>
             
             <ul style="float:right; list-style-type:none;">
-                <li style="border-left: 1px solid #ffffff"><a href="signout.php">Sign Out</a></li>
+                <li style="border-left: 1px solid #ffffff; min-height:65px;"><a href="signout.php">Sign Out</a></li>
             </ul>
 
             <font color="white" style="padding-right:130px;">Search for Connections:</font>
