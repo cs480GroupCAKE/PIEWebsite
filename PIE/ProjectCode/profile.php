@@ -18,6 +18,7 @@ Currently needs links and header added and repositioning.
 <html>
 <head>
     <?php 
+        $view = False;
         session_start();
         /*Code for debugging
         if(isset($_SESSION['username'])){
@@ -68,7 +69,13 @@ Currently needs links and header added and repositioning.
     <div id='divCenter'>
         <br/>
         <p>
-        <?php echo $descRes; ?>
+        <?php
+             if($descRes!=NULL){
+                 echo $descRes;
+             }else{
+                 echo "Click Edit Description in the left menu to add your description";
+             } 
+        ?>
         </p>
     
         <ul id="tabs">

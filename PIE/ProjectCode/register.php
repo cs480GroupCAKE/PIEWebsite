@@ -65,7 +65,7 @@ checks if mysqli installed, troubleshooting
         die("dead ".$conn->connect_error);
     }
 */
-    $qtest = "SELECT username FROM userInfo WHERE username = '$user'";
+    $qtest = "SELECT username FROM user WHERE username = '$user'";
     $check = mysqli_query($database, $qtest);
     $row = mysqli_fetch_row($check);
 
