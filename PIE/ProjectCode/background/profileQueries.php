@@ -1,14 +1,13 @@
 <!DOCTYPE PHP>
-<?php require 'database.php';
-    //include_once 'search.php';
+<?php require './database/database.php';
+   
     session_start();
 
-    $vusername = $_POST['searchedUser'];
-    
+    $username = $_SESSION['username'];    
     //QUERIES
-    $descriptionQ = "Select * FROM user WHERE username = '$vusername'";
-    $eventsQ = "SELECT * FROM events WHERE username = '$vusername' ORDER BY date";
-    $connectionsQ = "SELECT * FROM connections WHERE username = $'vusername'";
+    $descriptionQ = "Select * FROM user WHERE username = '$username'";
+    $eventsQ = "SELECT * FROM events WHERE username = '$username' ORDER BY date";
+    $connectionsQ = "SELECT * FROM connections WHERE username = $'username'";
     
     //RESULT ARRAYS
     $userArr = mysqli_fetch_assoc(mysqli_query($database, $descriptionQ));
@@ -22,7 +21,7 @@
 
     //ELEMENTS
     $descRes = $userArr['description'];
-    $vusername = $userArr['username'];
+    $username = $userArr['username'];
     $dob = $userArr['birthdate'];
     
     $eventname = $eventsArr['eventname'];
@@ -30,7 +29,6 @@
     $eventuser = $eventsArr['username'];
     $eventdate = $eventsArr['date'];
     $eventdetails = $eventsArr['details'];
-    $eventinfo = "Event Name: ".$eventname."<br>Type: ".$eventtype."<br>Date: ".$eventdate."<br>Created By: ".$eventuser."<br>Details: ".$eventdetails."<br><br>";
     
    
 ?>

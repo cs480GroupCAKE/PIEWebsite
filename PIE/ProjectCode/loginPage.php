@@ -20,18 +20,18 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="buttons.css">
-    <link rel="stylesheet" type="text/css" href="template.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
 
     <div id='cssmenu'>
-        <?php include 'header.php'?>
+        <?php include './templates/header.php'?>
     </div>
 </head>
 
     
 <body> 
     <br>
-    <form action="login.php" method="post">
+    <form action="./background/login.php" method="post">
         Username:
         <br>
         <input type="text" name="username" required placeholder>

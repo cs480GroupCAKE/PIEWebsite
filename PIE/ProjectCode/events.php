@@ -3,9 +3,9 @@
 <head>
     <title>Events</title>
     
-    <link rel="stylesheet" type="text/css" href="template.css">
-    <link rel="stylesheet" type="text/css" href="events.css">
-    <link rel="stylesheet" type="text/css" href="buttons.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/events.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
     
     <!-- I think we should stick to one events page (unless there is another one that does 
 	something different?).  ---TN 2/2/16 6:41 PM---
@@ -29,7 +29,7 @@
     
 	-->
     <div id='cssmenu'>
-        <?php include'headerLogged.php'?>
+        <?php include'./templates/headerLogged.php'?>
 
     </div>
     
@@ -82,7 +82,7 @@
 
 </head>
 <body>
-    <form action="createEvent.php" method="post">
+    <form action="./background/createEvent.php" method="post">
 
         <p>Event Name:</p>
         <input type="text" name="eventname">

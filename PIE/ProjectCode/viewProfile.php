@@ -19,7 +19,7 @@ stored in the database. Currently needs links and access to the viewed user's da
 <head>
     <?php 
         //require 'database.php';
-        include 'viewingQueries.php';
+        include './background/viewingQueries.php';
         $current_user = $_SESSION['username'];
        // $viewed_user = $_POST['searchedUser'];
         //$user_description = $_SESSION['description'];
@@ -27,24 +27,24 @@ stored in the database. Currently needs links and access to the viewed user's da
     ?>
     <title>View Profile</title>
     
-    <link rel="stylesheet" type="text/css" href="template.css">
-    <link rel="stylesheet" type="text/css" href="profile.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/profile.css">
     <!-- Could use this for sign out button <link rel="stylesheet" type="text/css" href="buttons.css"> -->
-    <link rel="stylesheet" type="text/css" href="about.css"> <!-- Used for tabs -->
-
+    <link rel="stylesheet" type="text/css" href="./stylesheets/about.css"> <!-- Used for tabs -->
+    <link rel="stylesheet" href="./stylesheets/sidebar.css">
+    
     <script src="tabs.js"></script>
     
     <!-- This is used for the jQuery menu -->
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="sidebar.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="sidebar.js"></script>
 
     <div id='cssmenu'>
 
-        <?php include 'headerLogged.php'; ?>
+        <?php include './templates/headerLogged.php'; ?>
 
     </div>
     
@@ -59,7 +59,13 @@ stored in the database. Currently needs links and access to the viewed user's da
     <div id='divCenter'>
         <br/>
         <p>
-        <?php echo $descRes; ?> 
+        <?php
+            if($descRes!=NULL){        
+                echo $descRes;
+            }else{
+                echo "No description entered yet!";
+            }                
+        ?> 
         </p>
     
         <ul id="tabs">
@@ -73,7 +79,7 @@ stored in the database. Currently needs links and access to the viewed user's da
             <h2>Events</h2>
             <div>
                 <p><?php 
-                   if($eventinfo != NULL){ 
+                   if($eventname != NULL){ 
                        echo $eventinfo;
                    }else{
                        echo "No events scheduled";
@@ -99,7 +105,7 @@ stored in the database. Currently needs links and access to the viewed user's da
     <div id='divLeft'>
     
         <!-- Viewed user's profile pictures and information may be loaded from the database -->
-        <img src="profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">
+        <img src="./Images/profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">
     
         <div id='cssside'>
             <ul>

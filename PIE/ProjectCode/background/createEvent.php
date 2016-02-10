@@ -1,6 +1,16 @@
 <!DOCTYPE PHP>
 <?php
-require 'database.php';
+/*
+*/
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+ini_set('dispaly_startup_errors', '1');
+echo ini_get('display_errors');
+
+?>
+
+<?php
+require '../database/database.php';
   
     session_start();
     if(isset($_SESSION['username'])){
@@ -34,7 +44,7 @@ require 'database.php';
         VALUES('$username','$eventname','$details','$date')";
     
      if($database->query($enterEvent)===TRUE){
-            header("Location:profile.php");
+            header("Location:../profile.php");
             //printf("Success! Your username is: %s\n Born year: %s\n",$user, $dob);// $row);this needs work
         }else{
         echo "error ".$createEvent."<br>".$database->error;

@@ -2,9 +2,9 @@
 <?php
     session_start(); 
     if(isset($_SESSION['username'])){
-        include 'headerLogged.php';
+        include './templates/headerLogged.php';
     }else{
-        include'header.php';
+        include'./templates/header.php';
     }
 ?>
 

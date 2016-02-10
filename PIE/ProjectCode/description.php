@@ -8,21 +8,21 @@
 ?>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="template.css">
-    <link rel="stylesheet" type="text/css" href="buttons.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
     
     <meta charset="utf-8">
     <title>Sign Up</title>
     
     <div id='cssmenu'>
-        <?php include 'headerLogged.php'?>
+        <?php include './templates/headerLogged.php'?>
     </div>
     
     <h1>Edit Description</h1>
 </head>
 
 <body onload="init()">
-    <form action="editdescription.php" method="post">
+    <form action="./background/editdescription.php" method="post">
         Description:
         <br>
         <textarea id="description" class="input" name="description" maxlength="500" rows="10" cols="50"></textarea>

@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>Help</title>
-    <link rel="stylesheet" type="text/css" href="template.css">
-    <link rel="stylesheet" type="text/css" href="buttons.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
     
         <div id='cssmenu'>
-            <?php include 'loggedcheck.php'?>
+            <?php include './background/loggedcheck.php'?>
         </div>
     <h1>Help Page</h1>
 </head>

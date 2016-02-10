@@ -7,14 +7,14 @@ the impact of the project to the current point. More work needs to be done on th
 <head>
     <title>About</title>
     
-    <link rel="stylesheet" type="text/css" href="template.css">
-    <link rel="stylesheet" type="text/css" href="about.css">
-    <link rel="stylesheet" type="text/css" href="buttons.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/about.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
     
     <script src="tabs.js"></script>
 
     <div id='cssmenu'>
-        <?php require 'loggedcheck.php'; ?>
+        <?php require './background/loggedcheck.php'; ?>
     </div>
 
     <h1>Making Outings as Easy as PIE</h1>
@@ -24,7 +24,7 @@ the impact of the project to the current point. More work needs to be done on th
 <body onload="init()">
 
     <div id='image'>
-        <img class="displayCenter" src="pie.jpg" alt="PIE" style="width:400px;height:228px;">
+        <img class="displayCenter" src="./Images/pie.jpg" alt="PIE" style="width:400px;height:228px;">
     </div>
 
     <ul id="tabs">

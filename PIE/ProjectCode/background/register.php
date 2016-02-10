@@ -16,7 +16,7 @@ echo ini_get('display_errors');
     
 ?>
 
-<?php include 'database.php';?>
+<?php include '../database/database.php';?>
 
 <?php
     if (isset($_SESSION))
@@ -40,12 +40,12 @@ echo ini_get('display_errors');
 
 
     if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-        die(header("Location:signUp.php?signUpFailedEmail=true&reason1=invalidEmail"));
+        die(header("Location:../signUp.php?signUpFailedEmail=true&reason1=invalidEmail"));
     exit();
     }
 
     if(!password_verify($_POST["passwordVerify"],$password)){
-        die(header("Location:signUp.php?signUpFailedPassword=true&reason=passwordsDontMatch"));
+        die(header("Location:../signUp.php?signUpFailedPassword=true&reason=passwordsDontMatch"));
     exit();
     }
 
@@ -65,7 +65,7 @@ checks if mysqli installed, troubleshooting
         die("dead ".$conn->connect_error);
     }
 */
-    $qtest = "SELECT username FROM user WHERE username = '$user'";
+    $qtest = "SELECT username FROM user WHERE username = '$username'";
     $check = mysqli_query($database, $qtest);
     $row = mysqli_fetch_row($check);
 
@@ -75,7 +75,7 @@ checks if mysqli installed, troubleshooting
         VALUES ('$username', '$password', '$firstname', '$lastname', '$email', '$dob',NOW())";
         if($database->query($sql)===TRUE){
             $_SESSION['username'] = $username;
-            header("Location:profile.php");
+            header("Location:../profile.php");
             //printf("Success! Your username is: %s\n Born year: %s\n",$user, $dob);// $row);this needs work
         }else{
         echo "error ".$sql."<br>".$database->error;
@@ -83,7 +83,7 @@ checks if mysqli installed, troubleshooting
     }else{
         //sends user back to page if username
         //taken, must be a way to repopulate the info
-        die(header("Location: signUp.php?signUpFailed=true&reason=usernameTaken"));
+        die(header("Location:../signUp.php?signUpFailed=true&reason=usernameTaken"));
     }
 
     $database->close();

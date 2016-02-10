@@ -14,7 +14,7 @@ if successful success message is displayed, otherwise password or username error
     echo ini_get('display_errors');
 ?>
 
-<?php require 'database.php';?>
+<?php require '../database/database.php';?>
 
 <?php
 
@@ -44,16 +44,16 @@ checks if mysqli installed, troubleshooting
 
     //check if username is in database if not return error message
     if($getPass['username']==null) {
-        die(header("Location:loginPage.php?loginFailedUsername=true&reason=UsernameDNE"));
+        die(header("Location:../loginPage.php?loginFailedUsername=true&reason=UsernameDNE"));
         exit();
     }
 
     if(password_verify($password, $currentPass)) {
         $_SESSION['username'] = $username;
-        header("Location:profile.php");//work to be done here, should redirect and such, right now simple
+        header("Location:../profile.php");//work to be done here, should redirect and such, right now simple
     } else {
         //will return to page and error message shown
-        die(header("Location:loginPage.php?loginFailedPass=true&reason=invalidPass"));
+        die(header("Location:../loginPage.php?loginFailedPass=true&reason=invalidPass"));
     }
 
     //header("Location:welcome.html");

@@ -6,8 +6,8 @@ only a few are to make testing database code easier. Should catch handle and pri
 ?>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="template.css">
-    <link rel="stylesheet" type="text/css" href="buttons.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
     
     <meta charset="utf-8">
     <title>Sign Up</title>
@@ -32,13 +32,13 @@ only a few are to make testing database code easier. Should catch handle and pri
     </script>
             
     <div id='cssmenu'>
-        <?php include 'header.php' ?>
+        <?php include './templates/header.php' ?>
     </div>
     <h1>Welcome to PIE</h1>
 </head>
 
 <body onload="init()">
-    <form action="register.php" method="post">
+    <form action="./background/register.php" method="post">
         First Name:
         <br>
         <input type="text" name="firstname"><!---add required place holders--->

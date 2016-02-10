@@ -3,11 +3,11 @@
 <head>
     <title>Calendar</title>
     
-    <link rel="stylesheet" type="text/css" href="template.css">
-    <link rel="stylesheet" type="text/css" href="calendar.css">
+    <link rel="stylesheet" type="text/css" href="./template/template.css">
+    <link rel="stylesheet" type="text/css" href="./template/calendar.css">
     
     <div id='cssmenu'>
-        <?php include'header.php'?>
+        <?php include'./template/header.php'?>
     </div>
     
     <h1>Your Calendar</h1>

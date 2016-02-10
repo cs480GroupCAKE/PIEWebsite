@@ -25,18 +25,19 @@ Currently needs links and header added and repositioning.
             echo "Session Active".$_SESSION['username'];
         }
         */
-        require 'database.php';
-        include 'profileQueries.php';
+        require './database/database.php';
+        include './background/profileQueries.php';
         $current_user = $_SESSION['username'];
         //$user_description = $_SESSION['description'];
         //$username = mysqli_real_escape_string($database,$_REQUST['username']);
     ?>
     <title>Profile</title>
     
-    <link rel="stylesheet" type="text/css" href="template.css">
-    <link rel="stylesheet" type="text/css" href="profile.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/profile.css">
     <!-- Could use this for sign out button <link rel="stylesheet" type="text/css" href="buttons.css"> -->
-    <link rel="stylesheet" type="text/css" href="about.css"> <!-- Used for tabs -->
+    <link rel="stylesheet" type="text/css" href="./stylesheets/about.css"> <!-- Used for tabs -->
+    <link rel="stylesheet" href="./stylesheets/sidebar.css">
 
     <script src="tabs.js"></script>
     
@@ -44,13 +45,12 @@ Currently needs links and header added and repositioning.
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="sidebar.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="sidebar.js"></script>
 
     <div id='cssmenu'>
 
-        <?php include 'headerLogged.php' ?>
+        <?php include './templates/headerLogged.php' ?>
 
     </div>
     
@@ -115,7 +115,7 @@ Currently needs links and header added and repositioning.
     <!-- This is the dropdown menu. Needs links to each page. CSS will need changing for color and font. -->
     <div id='divLeft'>
     
-        <img src="profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">
+        <img src="./Images/profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">
     
         <div id='cssside'>
             <ul>
