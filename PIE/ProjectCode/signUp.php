@@ -32,7 +32,7 @@ only a few are to make testing database code easier. Should catch handle and pri
         }
     </script> -->
     
-        <!--This will be used for the javascript dropdown date. Still needs changes in register.php.-->
+    <!--This will be used for the javascript dropdown date. Still needs changes in register.php.-->
     <script type="text/javascript">
 
     /***********************************************
@@ -41,32 +41,82 @@ only a few are to make testing database code easier. Should catch handle and pri
 
         var monthtext=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
 
-        function populatedropdown(dayfield, monthfield, yearfield){
-            var today=new Date()
-            var dayfield=document.getElementById(dayfield)
-            var monthfield=document.getElementById(monthfield)
-            var yearfield=document.getElementById(yearfield)
-            
-            //Should have a switch case to find number of days based on months. Account for leap years every 4 years.
-            for (var i=1; i<32; i++)
-                dayfield.options[i]=new Option(i, i+1)
-            
-            dayfield.options[today.getDate()]=new Option(today.getDate(), today.getDate(), true, true) //select today's day
+        function populatedropdown(dayfield, monthfield, yearfield) {
+            var today=new Date();
+            var dayfield=document.getElementById(dayfield);
+            var monthfield=document.getElementById(monthfield);
+            var yearfield=document.getElementById(yearfield);
+            var thisyear=today.getFullYear();
+            //var isLeapYear=false;
         
-            for (var m=0; m<12; m++)
-                monthfield.options[m]=new Option(monthtext[m], monthtext[m])
-            
-            monthfield.options[today.getMonth()]=new Option(monthtext[today.getMonth()], monthtext[today.getMonth()], true, true) //select today's month
-        
-            var thisyear=today.getFullYear()
-        
-            for (var y=0; y<100; y++){
-                yearfield.options[y]=new Option(thisyear, thisyear)
-                thisyear-=1
+            for (var y=0; y<100; y++) {
+                yearfield.options[y]=new Option(thisyear, thisyear);
+                thisyear-=1;
             }
-        
-        yearfield.options[0]=new Option(today.getFullYear(), today.getFullYear(), true, true) //select today's year
-         
+            
+            for (var m=0; m<12; m++)
+                monthfield.options[m]=new Option(monthtext[m], monthtext[m]);
+                
+            for (var i=1; i<32; i++)
+                dayfield.options[i]=new Option(i, i+1);
+                
+            /*//Should switch for months to account for days in each; use isLeapYear on Feb. This doesn't work.
+            switch (document.getElementById("monthdropdown").options[document.getElementById("monthdropdown").selectedIndex]) {
+                case '0': 
+                    for (var i=1; i<32; i++)
+                        dayfield.options[i]=new Option(i, i+1);
+                    break;
+                case '1':
+                    for (var i=1; i<32; i++)
+                        dayfield.options[i]=new Option(i, i+1);
+                    break;
+                case '2':
+                    for (var i=1; i<32; i++)
+                        dayfield.options[i]=new Option(i, i+1);
+                    break;
+                case "3":
+                    for (var i=1; i<32; i++)
+                        dayfield.options[i]=new Option(i, i+1);
+                    break;
+                case "May":
+                    for (var i=1; i<32; i++)
+                        dayfield.options[i]=new Option(i, i+1);
+                    break;
+                case "Jun":
+                    for (var i=1; i<32; i++)
+                        dayfield.options[i]=new Option(i, i+1);
+                    break;
+                case "Jul":
+                    for (var i=1; i<32; i++)
+                        dayfield.options[i]=new Option(i, i+1);
+                    break;
+                case "Aug":
+                    for (var i=1; i<32; i++)
+                        dayfield.options[i]=new Option(i, i+1);
+                    break;
+                case "Sept":
+                    for (var i=1; i<32; i++)
+                        dayfield.options[i]=new Option(i, i+1);
+                    break;
+                case "Oct":
+                    for (var i=1; i<32; i++)
+                        dayfield.options[i]=new Option(i, i+1);
+                    break;
+                case "Nov":
+                    for (var i=1; i<32; i++)
+                        dayfield.options[i]=new Option(i, i+1);
+                    break;
+                case "Dec":
+                    for (var i=1; i<32; i++)
+                        dayfield.options[i]=new Option(i, i+1);
+                    break;
+                default:
+                    break;
+            }*/
+            
+            dayfield.options[today.getDate()]=new Option(today.getDate(), today.getDate(), true, true); //select today's day
+            monthfield.options[today.getMonth()]=new Option(monthtext[today.getMonth()], monthtext[today.getMonth()], true, true); //select today's month
+            yearfield.options[0]=new Option(today.getFullYear(), today.getFullYear(), true, true); //select today's year
         }
 
     </script>
