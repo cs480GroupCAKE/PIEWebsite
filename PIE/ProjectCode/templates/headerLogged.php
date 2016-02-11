@@ -12,7 +12,7 @@
             </ul>
 
             <font color="white" style="padding-right:130px;">Search for Connections:</font>
-            <form action="./viewProfile.php" method="post">
+            <form action="./searchResults.php" method="post">
                 <input type="text" name="searchedUser">
                 <input type="submit" value="Search" name="submit"><font style="padding-right:130px;"></font>
             </form>
