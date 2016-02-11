@@ -12,12 +12,13 @@ only a few are to make testing database code easier. Should catch handle and pri
     <meta charset="utf-8">
     <title>Sign Up</title>
     
-    <!-- This is used for jQuery date picker -->
+    <!-- This is used for jQuery date picker
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">-->
     
+    <!-- This is the code for the old jQuery calendar event picker
     <script>
         $(function() {
             $( "#datepicker" ).datepicker({
@@ -29,14 +30,14 @@ only a few are to make testing database code easier. Should catch handle and pri
         {
             $ ('#datepicker').append($('<option/>').val(i).html(i));
         }
-    </script>
+    </script> -->
     
-        <!-- This will be used for the javascript dropdown date. Still needs changes in register.php.
-        <script type="text/javascript">
+        <!--This will be used for the javascript dropdown date. Still needs changes in register.php.-->
+    <script type="text/javascript">
 
-        /***********************************************
-        * Drop Down Date code
-        ***********************************************/
+    /***********************************************
+    * Drop Down Date code
+    ***********************************************/
 
         var monthtext=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
 
@@ -46,7 +47,8 @@ only a few are to make testing database code easier. Should catch handle and pri
             var monthfield=document.getElementById(monthfield)
             var yearfield=document.getElementById(yearfield)
             
-            for (var i=0; i<31; i++)
+            //Should have a switch case to find number of days based on months. Account for leap years every 4 years.
+            for (var i=1; i<32; i++)
                 dayfield.options[i]=new Option(i, i+1)
             
             dayfield.options[today.getDate()]=new Option(today.getDate(), today.getDate(), true, true) //select today's day
@@ -68,7 +70,7 @@ only a few are to make testing database code easier. Should catch handle and pri
         }
 
     </script>
-    -->
+    
             
     <div id='cssmenu'>
         <?php include './templates/header.php' ?>
@@ -127,14 +129,18 @@ only a few are to make testing database code easier. Should catch handle and pri
 
         <br>    
         Birth Date: 
-        <p><input type="text" name="dob" id="datepicker"></p>
-        <!-- This will be used for the javascript date dropdown
+        <!-- This is the code for the old jQuery datepicker calendar
+        <p><input type="text" name="dob" id="datepicker"></p>-->
+        
+        <!-- This will be used for the javascript date dropdown -->
+        <br>
         <select id="daydropdown" name="day">
         </select> 
         <select id="monthdropdown" name="mos">
         </select> 
         <select id="yeardropdown" name="year">
         </select>
+        <br>
             
         <script type="text/javascript">
             //populatedropdown(id_of_day_select, id_of_month_select, id_of_year_select)
@@ -142,7 +148,7 @@ only a few are to make testing database code easier. Should catch handle and pri
                 populatedropdown("daydropdown", "monthdropdown", "yeardropdown")
             }
         </script>
-        -->
+        
         
         <br>
         <input type="submit" name="submit" value="Create Profile" class="big button blue">

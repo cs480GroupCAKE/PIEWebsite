@@ -33,16 +33,15 @@ echo ini_get('display_errors');
     $email = $_POST["email"];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
     $birthdate = $_POST["dob"];
-    //split bday into proper format for sql insertion
+    /*//split bday into proper format for sql insertion
     $dobArray = explode("/", $birthdate);
     $dob = $dobArray[2]."-".$dobArray[0]."-".$dobArray[1];
-
+    */
 
     //new birth date format
     $mos = $_POST['mos'];
     $mosNum;
     
-/*
     switch($mos){
         case "Jan" : $mosNum = "01"; break;
         case "Feb" : $mosNum = "02"; break;
@@ -59,7 +58,7 @@ echo ini_get('display_errors');
     }
     
     $dob = $_POST['year']."-".$mosNum."-".$_POST['day'];
-*/
+
 
 
     if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
