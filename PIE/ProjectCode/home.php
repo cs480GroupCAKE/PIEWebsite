@@ -43,6 +43,10 @@ to other areas of site included in navigation bar-->
 
 </body>
 
+    <div id='footer'>
+        <?php include './templates/footer.php'?>
+    </div>
+
 </html>
 
 
