@@ -117,10 +117,11 @@
     <script>
         $(function() {
             $( "#datepicker" ).datepicker({
-            changeMonth: true,
-            changeYear: true
+                changeMonth: true,
+                changeYear: true
             });
         });
+
         for(i= new Date().getFullYear(); i>1900; i--)
         {
             $ ('#datepicker').append($('<option/>').val(i).html(i));

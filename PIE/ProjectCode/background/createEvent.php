@@ -34,6 +34,12 @@ require '../database/database.php';
         case "Dec" : $mosNum = "12"; break;
     }
     
+    /*
+    $date = $_POST["eventdate"];
+    //split bday into proper format for sql insertion
+    $dateArray = explode("/", $date);
+    $eventdate = $dateArray[2]."-".$dateArray[0]."-".$dateArray[1];
+    */
     
     $date = $_POST['year']."-".$mosNum."-".$_POST['day'];
     $username = $_SESSION['username'];

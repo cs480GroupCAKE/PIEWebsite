@@ -58,9 +58,9 @@ only a few are to make testing database code easier. Should catch handle and pri
         
             var thisyear=today.getFullYear()
         
-            for (var y=0; y<20; y++){
+            for (var y=0; y<100; y++){
                 yearfield.options[y]=new Option(thisyear, thisyear)
-                thisyear+=1
+                thisyear-=1
             }
         
         yearfield.options[0]=new Option(today.getFullYear(), today.getFullYear(), true, true) //select today's year

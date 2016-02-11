@@ -38,6 +38,29 @@ echo ini_get('display_errors');
     $dob = $dobArray[2]."-".$dobArray[0]."-".$dobArray[1];
 
 
+    //new birth date format
+    $mos = $_POST['mos'];
+    $mosNum;
+    
+/*
+    switch($mos){
+        case "Jan" : $mosNum = "01"; break;
+        case "Feb" : $mosNum = "02"; break;
+        case "Mar" : $mosNum = "03"; break;
+        case "Apr" : $mosNum = "04"; break;
+        case "May" : $mosNum = "05"; break;
+        case "Jun" : $mosNum = "06"; break;
+        case "Jul" : $mosNum = "07"; break;
+        case "Aug" : $mosNum = "08"; break;
+        case "Sep" : $mosNum = "09"; break;
+        case "Oct" : $mosNum = "10"; break;
+        case "Nov" : $mosNum = "11"; break;
+        case "Dec" : $mosNum = "12"; break;
+    }
+    
+    $dob = $_POST['year']."-".$mosNum."-".$_POST['day'];
+*/
+
 
     if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
         die(header("Location:../signUp.php?signUpFailedEmail=true&reason1=invalidEmail"));
