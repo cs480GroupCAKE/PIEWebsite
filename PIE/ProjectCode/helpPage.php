@@ -16,15 +16,20 @@
         <p>Got a question that wasn't answered on this page? Send us an email with your question and 
             we will get back to you as soon as possible!</p>
 
-        <form id="contact-area" action="" method="POST">
+        <form id="contact-area" action="./background/sendEmail.php" method="POST">
             <div class="row">
                 <label for="name">Name:</label><br />
                 <input id="name" class="input" name="name" type="text" value="Your Name" size="30" onClick="this.value='';"/><br />
             </div>
+            
+            <div class="row">
+                <label for="subject">Subject:</label><br />
+                <input id="subject" class="input" name="subject" type="text" value="Subject" size="30" onClick="this.value='';"/><br />
+            </div>
     
             <div class="row">
                 <label for="email">Email:</label><br />
-                <input id="email" class="input" name="email" type="text" value="example@somewhere.com" size="30" onClick="this.value='';"/><br />
+                <input id="email" class="input" name="sender" type="text" value="example@somewhere.com" size="30" onClick="this.value='';"/><br />
             </div>
     
             <div class="row">
