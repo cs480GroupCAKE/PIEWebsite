@@ -30,6 +30,45 @@ only a few are to make testing database code easier. Should catch handle and pri
             $ ('#datepicker').append($('<option/>').val(i).html(i));
         }
     </script>
+    
+        <!-- This will be used for the javascript dropdown date. Still needs changes in register.php.
+        <script type="text/javascript">
+
+        /***********************************************
+        * Drop Down Date code
+        ***********************************************/
+
+        var monthtext=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+
+        function populatedropdown(dayfield, monthfield, yearfield){
+            var today=new Date()
+            var dayfield=document.getElementById(dayfield)
+            var monthfield=document.getElementById(monthfield)
+            var yearfield=document.getElementById(yearfield)
+            
+            for (var i=0; i<31; i++)
+                dayfield.options[i]=new Option(i, i+1)
+            
+            dayfield.options[today.getDate()]=new Option(today.getDate(), today.getDate(), true, true) //select today's day
+        
+            for (var m=0; m<12; m++)
+                monthfield.options[m]=new Option(monthtext[m], monthtext[m])
+            
+            monthfield.options[today.getMonth()]=new Option(monthtext[today.getMonth()], monthtext[today.getMonth()], true, true) //select today's month
+        
+            var thisyear=today.getFullYear()
+        
+            for (var y=0; y<20; y++){
+                yearfield.options[y]=new Option(thisyear, thisyear)
+                thisyear+=1
+            }
+        
+        yearfield.options[0]=new Option(today.getFullYear(), today.getFullYear(), true, true) //select today's year
+         
+        }
+
+    </script>
+    -->
             
     <div id='cssmenu'>
         <?php include './templates/header.php' ?>
@@ -56,7 +95,8 @@ only a few are to make testing database code easier. Should catch handle and pri
         <a style ="color:red">
             <?php $reasons = array("usernameTaken" => "That username already exists", 
                 "blank" => "NAME ERROR"); 
-                if ($_GET["signUpFailed"]) echo "\n";echo $reasons[$_GET["reason"]]; echo "\n";?>
+                if ($_GET["signUpFailed"]) echo "\n";echo $reasons[$_GET["reason"]]; echo "\n";
+            ?>
         </a>
         
         <br>
@@ -88,6 +128,21 @@ only a few are to make testing database code easier. Should catch handle and pri
         <br>    
         Birth Date: 
         <p><input type="text" name="dob" id="datepicker"></p>
+        <!-- This will be used for the javascript date dropdown
+        <select id="daydropdown" name="day">
+        </select> 
+        <select id="monthdropdown" name="mos">
+        </select> 
+        <select id="yeardropdown" name="year">
+        </select>
+            
+        <script type="text/javascript">
+            //populatedropdown(id_of_day_select, id_of_month_select, id_of_year_select)
+            window.onload=function(){
+                populatedropdown("daydropdown", "monthdropdown", "yeardropdown")
+            }
+        </script>
+        -->
         
         <br>
         <input type="submit" name="submit" value="Create Profile" class="big button blue">

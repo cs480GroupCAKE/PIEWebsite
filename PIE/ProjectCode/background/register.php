@@ -32,7 +32,7 @@ echo ini_get('display_errors');
     $lastname = $_POST["lastname"];
     $email = $_POST["email"];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-	$birthdate = $_POST["dob"];
+    $birthdate = $_POST["dob"];
     //split bday into proper format for sql insertion
     $dobArray = explode("/", $birthdate);
     $dob = $dobArray[2]."-".$dobArray[0]."-".$dobArray[1];
