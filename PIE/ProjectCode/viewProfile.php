@@ -21,7 +21,11 @@ stored in the database. Currently needs links and access to the viewed user's da
         if(isset($_GET['vusername'])){
             $vusername = $_GET['vusername'];
         }
+        
         include './background/viewingQueries.php';
+        if($vusername == NULL){
+            header('Location:searchError.php');
+        }
         $current_user = $_SESSION['username'];
        
     ?>
@@ -43,9 +47,7 @@ stored in the database. Currently needs links and access to the viewed user's da
     <script src="sidebar.js"></script>
 
     <div id='cssmenu'>
-
         <?php include './templates/headerLogged.php'; ?>
-
     </div>
     
     <div id='headingCenter'>
