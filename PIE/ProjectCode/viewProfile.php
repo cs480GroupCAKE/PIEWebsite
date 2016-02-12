@@ -18,12 +18,12 @@ stored in the database. Currently needs links and access to the viewed user's da
 <html>
 <head>
     <?php 
-        //require 'database.php';
+        if(isset($_GET['vusername'])){
+            $vusername = $_GET['vusername'];
+        }
         include './background/viewingQueries.php';
         $current_user = $_SESSION['username'];
-       // $viewed_user = $_POST['searchedUser'];
-        //$user_description = $_SESSION['description'];
-        //$username = mysqli_real_escape_string($database,$_REQUST['username']);
+       
     ?>
     <title>View Profile</title>
     

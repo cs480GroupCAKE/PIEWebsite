@@ -3,7 +3,7 @@
     //include_once 'search.php';
     session_start();
 
-    $vusername = $_POST['searchedUser'];
+    $vusername = $_GET['vusername'];
     
     //QUERIES
     $descriptionQ = "Select * FROM user WHERE username = '$vusername'";

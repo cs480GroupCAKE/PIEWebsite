@@ -71,6 +71,39 @@ body {
     display:block;
 }
 
+
+#cen-table {
+    line-height: 37px;
+    margin-left:auto;
+    margin-right:auto;  
+}
+
+#cen-table a:nth-child(odd) {
+    color:blue;
+}
+
+#cen-table th {
+    text-decoration:underline;
+    color:#000;
+    background-color:#fff;
+}
+
+#cen-table td {
+    text-align:center;
+    width:200px;
+}
+
+#cen-table tr:nth-child(even) {
+    color:#000;
+}
+
+#cen-table tr:nth-child(odd) {
+    color:#fff;
+    background-color: #aeb8be;
+}
+
+
+
 #headingCenter {
     text-align:center;
     min-width:600px;
