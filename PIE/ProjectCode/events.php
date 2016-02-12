@@ -35,6 +35,7 @@
     
     <h1>Schedule an Event</h1>
 
+<!-- This is the old script for date dropdowns
         <script type="text/javascript">
 
         /***********************************************
@@ -71,13 +72,12 @@
         }
 
     </script>
-    
+-->
 
 <!-- End of the slider -->
 
 
-    <!-- This is used for jQuery date picker. Still needs updates in createEvent.php.
-    
+    <!-- This is used for jQuery date picker. Still needs updates in createEvent.php. -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -96,7 +96,7 @@
             $ ('#datepicker').append($('<option/>').val(i).html(i));
         }
     </script>
-    -->
+    
 
 </head>
 
@@ -110,10 +110,11 @@
         <br><br>
 
         Date:<br>
-        <!-- This will be used for the jQuery calendar datepicker
-            <p><input type="text" name="dob" id="datepicker"></p>
-        -->
+        <!-- This will be used for the jQuery calendar datepicker -->
+        <input type="text" name="eventdate" id="datepicker">
+        <br><br>
 
+<!-- Old scipt for dropdown date selection
         <select id="daydropdown" name="day">
         </select> 
         <select id="monthdropdown" name="mos">
@@ -122,14 +123,14 @@
         </select> 
         <br><br>
 
-
     <script type="text/javascript">
         //populatedropdown(id_of_day_select, id_of_month_select, id_of_year_select)
         window.onload=function(){
             populatedropdown("daydropdown", "monthdropdown", "yeardropdown")
         }
     </script>
-
+-->
+    
         Time:<br>
         <input type="text" name="time">
         <br><br>

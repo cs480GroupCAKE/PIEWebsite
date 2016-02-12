@@ -12,7 +12,7 @@ only a few are to make testing database code easier. Should catch handle and pri
     <meta charset="utf-8">
     <title>Sign Up</title>
     
-    <!-- This is used for jQuery date picker
+<!-- This is used for jQuery date picker
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -30,9 +30,10 @@ only a few are to make testing database code easier. Should catch handle and pri
         {
             $ ('#datepicker').append($('<option/>').val(i).html(i));
         }
-    </script> -->
+    </script>
+ -->
     
-    <!--This will be used for the javascript dropdown date. Still needs changes in register.php.-->
+    <!-- This is be used for the javascript dropdown date. Works with register.php. -->
     <script type="text/javascript">
 
     /***********************************************
@@ -179,10 +180,12 @@ only a few are to make testing database code easier. Should catch handle and pri
 
         <br>    
         Birth Date: 
-        <!-- This is the code for the old jQuery datepicker calendar
-        <p><input type="text" name="dob" id="datepicker"></p>-->
         
-        <!-- This will be used for the javascript date dropdown -->
+<!-- This is the code for the old jQuery datepicker calendar
+        <p><input type="text" name="dob" id="datepicker"></p>
+-->
+        
+        <!-- This is be used for the javascript date dropdown -->
         <br>
         <select id="daydropdown" name="day">
         </select> 

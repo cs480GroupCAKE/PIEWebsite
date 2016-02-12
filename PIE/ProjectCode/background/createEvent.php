@@ -16,8 +16,11 @@ require '../database/database.php';
     if(isset($_SESSION['username'])){
         echo "Session Active"/$_SESSION['username'];
     }
+
+/* This was used for the old dropdown date picker
     $mos = $_POST['mos'];
     $mosNum;
+    
     
     switch($mos){
         case "Jan" : $mosNum = "01"; break;
@@ -33,21 +36,23 @@ require '../database/database.php';
         case "Nov" : $mosNum = "11"; break;
         case "Dec" : $mosNum = "12"; break;
     }
+*/
     
-    /*
+    //This is used for the jQuery calendar date picker
     $date = $_POST["eventdate"];
-    //split bday into proper format for sql insertion
-    $dateArray = explode("/", $date);
-    $eventdate = $dateArray[2]."-".$dateArray[0]."-".$dateArray[1];
-    */
     
+    //Split date into proper format for sql insertion
+    $dateArray = explode("/", $date);
+    $eventdat = $dateArray[2]."-".$dateArray[0]."-".$dateArray[1];
+    
+    //Post date in correct format
     $date = $_POST['year']."-".$mosNum."-".$_POST['day'];
     $username = $_SESSION['username'];
     $eventname = $_POST["eventname"];
     $details = $_POST["eventdetails"];
     
     $enterEvent = "INSERT INTO events (username, eventname, details, date) 
-        VALUES('$username','$eventname','$details','$date')";
+        VALUES('$username','$eventname','$details','$eventdat')";
     
      if($database->query($enterEvent)===TRUE){
             header("Location:../profile.php");

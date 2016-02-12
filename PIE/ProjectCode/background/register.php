@@ -33,10 +33,12 @@ echo ini_get('display_errors');
     $email = $_POST["email"];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
     $birthdate = $_POST["dob"];
-    /*//split bday into proper format for sql insertion
+    
+/* This is the old php for the jQuery datepicker
+    //split bday into proper format for sql insertion
     $dobArray = explode("/", $birthdate);
     $dob = $dobArray[2]."-".$dobArray[0]."-".$dobArray[1];
-    */
+*/
 
     //new birth date format
     $mos = $_POST['mos'];
