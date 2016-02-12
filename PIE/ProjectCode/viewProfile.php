@@ -57,6 +57,10 @@ stored in the database. Currently needs links and access to the viewed user's da
 </head>
 
 <body onload="init()">
+    <!--button will need to change to fit styling of rest site-->
+    <div id='divRight'>
+        <button onclick="addContact()">Add Contact</button>
+    </div>
 
     <div id='divCenter'>
         <br/>
@@ -102,6 +106,7 @@ stored in the database. Currently needs links and access to the viewed user's da
             <p>Add event photos here</p>
         </div>
     </div>
+
     
     <!-- This is the dropdown menu. Needs links to each page. CSS will need changing for color and font. -->
     <div id='divLeft'>
@@ -123,6 +128,8 @@ stored in the database. Currently needs links and access to the viewed user's da
             </ul>
         </div>
     </div>
+    
+
     
 </body>
 </html>
