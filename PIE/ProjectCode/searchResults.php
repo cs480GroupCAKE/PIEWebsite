@@ -22,17 +22,22 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
 </head>
 
 <body>
-    <?php
-        //TESTING LEAVE IN echo sizeof($resArr);
-        for($i=0; $i<sizeof($resArr);$i++){
-            echo $resArr[$i]."<br>";
-        }
-    //require './templates/footer.php';    
-    ?>
+    <div id='divCenter'>
+        <h2>Search Results</h2>
+        <br>
+        <?php
+            //TESTING LEAVE IN echo sizeof($resArr);
+            for($i=0; $i<sizeof($resArr);$i++){
+                echo $resArr[$i]." <br>";
+            }
+        //require './templates/footer.php';    
+        ?>
+    </div>
     
     
-    
+<body>
+
     <div id="footer">
-        
+        <?php include './templates/footer.php'?>
     </div>
 </html>

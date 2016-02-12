@@ -105,10 +105,11 @@
 
     <form action="./background/createEvent.php" method="post">
 
-        <p>Event Name:</p>
+        Event Name:<br>
         <input type="text" name="eventname">
+        <br><br>
 
-        <p>Date:</p>
+        Date:<br>
         <!-- This will be used for the jQuery calendar datepicker
             <p><input type="text" name="dob" id="datepicker"></p>
         -->
@@ -119,7 +120,7 @@
         </select> 
         <select id="yeardropdown" name="year">
         </select> 
-    
+        <br><br>
 
 
     <script type="text/javascript">
@@ -129,15 +130,15 @@
         }
     </script>
 
-        <p>Time:</p>
+        Time:<br>
         <input type="text" name="time">
+        <br><br>
     
-        <p>Event Details:</p>
-        <textarea rows="4" cols="50" name="eventdetails">
-        </textarea> 
-
-
-    <br>
+        Event Details:<br>
+        <textarea id="eventdescript" class="input" name="eventdetails" maxlength="500" rows="10" cols="50"></textarea>
+        <br><br>
+        <!--<textarea rows="4" cols="50" name="eventdetails">
+        </textarea>--> 
 
     <input type="submit" name="submit" value="Create Event" class="big button blue">
     </form>
