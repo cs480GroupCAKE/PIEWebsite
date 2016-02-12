@@ -21,21 +21,25 @@
                 <label for="name">Name:</label><br />
                 <input id="name" class="input" name="name" type="text" value="Your Name" size="30" onClick="this.value='';"/><br />
             </div>
+            <br>
             
             <div class="row">
                 <label for="subject">Subject:</label><br />
                 <input id="subject" class="input" name="subject" type="text" value="Subject" size="30" onClick="this.value='';"/><br />
             </div>
-    
+            <br>
+            
             <div class="row">
                 <label for="email">Email:</label><br />
                 <input id="email" class="input" name="sender" type="text" value="example@somewhere.com" size="30" onClick="this.value='';"/><br />
             </div>
-    
+            <br>
+            
             <div class="row">
                 <label for="message">Your question:</label><br />
                 <textarea id="message" class="input" name="message" rows="10" cols="31"></textarea><br />
             </div>
+            <br>
             
             <input id="submit_button" type="submit" value="Send email" class="big button blue"/>
         </form> 
