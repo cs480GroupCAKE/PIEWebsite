@@ -65,31 +65,26 @@ Currently needs links and header added and repositioning.
     
     
     -->
-    
-    
-    <style>
-        <!-- Prevents slides from flashing -->
-        #slides {
-            display:none;
-        }
-    </style>
-    
-<!-- javascript that enables us to use the slider -->
-
-    <script src="http://code.jquery.com/jquery-latest.min.js">
-    </script>
-
-    <script src="jquery.slides.min.js">
-    </script>
-
-    <script>
-        $(function(){
-            $("#slides").slidesjs({
-                width: 200,
-                height: 200
-            });
-        });
-    </script>
+  <title>jQuery UI Slider - Snap to increments</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  
+$(function() {
+    $( "#slider" ).slider({
+      value:2,
+      min: 0,
+      max: 10,
+      step: 1,
+      slide: function( event, ui ) {
+        $( "#amount" ).val(ui.value );
+      }
+    });
+    $( "#amount" ).val( $( "#slider" ).slider( "value" ) );
+});
+  </script>
 
 
 </head>
@@ -165,16 +160,13 @@ Currently needs links and header added and repositioning.
             </ul>
         </div>
     </div>
-
-	
-    <div id="slides">
-        <img src="pc.jpeg/940x528">
-        <img src="cwu_test.jpeg">
-        <img src="http://placehold.it/940x528">
-        <img src="http://placehold.it/940x528">
-        <img src="http://placehold.it/940x528">
-
-    </div>
-	
+<!-- text for the events slider -->
+    <p>
+		<label for="amount">Upcoming events:</label>
+		<input type="text" id="amount"  height="200" width="200" readonly style="border:0; color:#f6931f; font-weight:bold;">
+	</p>
+ 
+<div id="slider"></div>
+ 
 </body>
 </html>
