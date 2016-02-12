@@ -157,7 +157,7 @@ $(function() {
                     </ul>
                 </li>
                 <li><a href='#'>View Connections</a></li>
-                <li><a href='#'>View Notifications</a></li>
+                <li><a href='notices.php'>View Notifications</a></li>
                 <li><a href='#'>Help</a></li>
             </ul>
         </div>
@@ -175,8 +175,8 @@ understand how to use it with a thumbnail. Then I can position it correctly with
 But for right now buttons have no functionality.
  -->
 
-    <button name="next" type="submit">Next Event</button>
     <button name="previous" type="submit">Previous Event</button>
+    <button name="next" type="submit">Next Event</button>
  
 </body>
 </html>
