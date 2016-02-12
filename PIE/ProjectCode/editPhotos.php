@@ -4,13 +4,7 @@
     <title>Edit Images</title>
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
-    
-    <div id='cssmenu'>
-        <?php include'./templates/headerLogged.php'?>
-    </div>
-    
-    <h1>Edit Images</h1>
-    
+    <link rel="stylesheet" type="text/css" href="./stylesheets/popup.css">
 </head>
 
 <body>
@@ -23,8 +17,13 @@
     </div>
     
     <div id='divCenter'>
-
-
+        <h1>Edit Images</h1>
+        
+        <button id='popupbutton' onclick='addPP_div_show'>Add Profile Photos</button>
+        <button id='popupbutton' onclick='addEP_div_show'>Add Event Photos</button>
+        <br><br>
+        <button id='popupbutton' onclick='remPP_div_show'>Remove Profile Photos</button>
+        <button id='popupbutton' onclick='remEP_div_show'>Remove Event Photos</button>
     </div>
     
     <div id='footer'>
