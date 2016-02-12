@@ -19,11 +19,11 @@
     <div id='divCenter'>
         <h1>Edit Images</h1>
         
-        <button id='popupbutton' onclick='addPP_div_show'>Add Profile Photos</button>
-        <button id='popupbutton' onclick='addEP_div_show'>Add Event Photos</button>
+        <button id='popupbutton' onclick='addPP_div_show()'>Add Profile Photos</button>
+        <button id='popupbutton' onclick='addEP_div_show()'>Add Event Photos</button>
         <br><br>
-        <button id='popupbutton' onclick='remPP_div_show'>Remove Profile Photos</button>
-        <button id='popupbutton' onclick='remEP_div_show'>Remove Event Photos</button>
+        <button id='popupbutton' onclick='remPP_div_show()'>Remove Profile Photos</button>
+        <button id='popupbutton' onclick='remEP_div_show()'>Remove Event Photos</button>
     </div>
     
     <div id='footer'>

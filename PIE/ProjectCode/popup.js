@@ -1,28 +1,62 @@
-// Checks registration form for empty fields
-function registerEmpty() {
-    if(document.getElementById('firstname').value == "" || document.getElementById('lastname').value == "" || 
-       document.getElementById('username').value == "" || document.getElementById('email').value == "" || 
-       document.getElementById('password').value == "" || document.getElementById('passwordVerify').value == "" || 
-       document.getElementById('datepicker').value == "") {
-        alert("One or more field has been left empty. Please try again!");
+/* This is the javascript file for managing popup window display.
+*/
+
+//Checks for empty fields for profile photos
+function ppcheck_empty() {
+    if(document.getElementById('ppupload').value == "") {
+        alert("No file has been selected!");
     } else {
-        alert("Registration successful!");
+        document.getElementById('ppform').submit();
+        alert("Upload successful!");
     }
 }
 
-// Checks login form for empty fields
-function loginEmpty() {
-    if(document.getElementById('username').value == "" || document.getElementById('password').value == "") {
-        alert("Username or password is empty. Please try again!")
+//Checks for empty fields for event photos
+function epcheck_empty() {
+    if(document.getElementById('epupload').value == "") {
+        alert("No file has been selected!");
     } else {
-        // add log in function here
+        document.getElementById('epform').submit();
+        alert("Upload successful!");
     }
 }
 
-function divShow() {
-    document.getElementById('popupFull').style.display = "block";
+//Displays popup for profile photo upload
+function addPP_div_show() {
+    document.getElementById(ppPopup).style.display = "block";
 }
 
-function divHide() {
-    document.getElementById('popupFull').style.display = "none";
+//Displays popup for event photo upload
+function addEP_div_show() {
+    document.getElementById(ppPopup).style.display = "block";
+}
+
+//Displays popup for profile photo removal
+function remPP_div_show() {
+    document.getElementById(ppPopup).style.display = "block";
+}
+
+//Displays popup for event photo removal
+function remEP_div_show() {
+    document.getElementById(ppPopup).style.display = "block";
+}
+
+//Hides popup for profile photo upload
+function addPP_div_hide() {
+    document.getElementById(ppPopup).style.display = "none";
+}
+
+//Hides popup for event photo upload
+function addPP_div_hide() {
+    document.getElementById(ppPopup).style.display = "none";
+}
+
+//Hides popup for profile photo removal
+function addPP_div_hide() {
+    document.getElementById(ppPopup).style.display = "none";
+}
+
+//Hides popup for event photo removal
+function addPP_div_hide() {
+    document.getElementById(ppPopup).style.display = "none";
 }
