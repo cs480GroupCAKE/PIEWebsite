@@ -41,11 +41,10 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
                 if ($_GET["loginFailedUsername"]) echo "<br>".$reasons[$_GET["reason"]];
             ?>
         </a>
-      
-        <br>
+        <br><br>
+        
         Password:
         <br>
-        
         <input type="password" name="password" required placeholder></br>
         <a style="color:red">
             <?php $reasons = array("invalidPass" => "Invalid password. Please re-enter.",
@@ -53,6 +52,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
                 if ($_GET["loginFailedPass"]) echo $reasons[$_GET["reason"]]."<br>";
             ?>
         </a>
+        <br>
         
         <input type="submit" name="login" value="Login" class="button big blue"> 
     </form>
