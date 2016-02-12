@@ -17,12 +17,16 @@ echo ini_get('display_errors');
 <head>
     <title>Notices</title>
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
+    <?php require './background/noticeQueries.php' ?>
     <div id='cssmenu'>
         <?php require './background/loggedcheck.php';?>
     </div>
 </head>
 <body>
-    
+    <?php
+  
+        echo $contact."<br>".$notice;
+    ?>
 </body>
 
 

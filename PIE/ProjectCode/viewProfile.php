@@ -26,6 +26,7 @@ stored in the database. Currently needs links and access to the viewed user's da
         if($vusername == NULL){
             header('Location:searchError.php');
         }
+        $_SESSION['vusername'] = $vusername;
         $current_user = $_SESSION['username'];
        
     ?>
@@ -59,7 +60,7 @@ stored in the database. Currently needs links and access to the viewed user's da
 <body onload="init()">
     <!--button will need to change to fit styling of rest site-->
     <div id='divRight'>
-        <button onclick="addContact()">Add Contact</button>
+        <form action = "./background/addContact.php"><input type="submit" value="Add Contact"></form>
     </div>
 
     <div id='divCenter'>

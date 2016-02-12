@@ -7,7 +7,6 @@
     //QUERIES
     $descriptionQ = "Select * FROM user WHERE username = '$username'";
     $eventsQ = "SELECT * FROM events WHERE username = '$username' ORDER BY date";
-    $connectionsQ = "SELECT * FROM connections WHERE username = $'username'";
     
     //RESULT ARRAYS
     $userArr = mysqli_fetch_assoc(mysqli_query($database, $descriptionQ));
