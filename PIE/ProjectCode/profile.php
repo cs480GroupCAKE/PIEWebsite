@@ -152,7 +152,7 @@ $(function() {
                 <li><a href='events.php'>Create Event</a></li>
                 <li class='active has-sub'><a href='#'>Edit Profile</a>
                     <ul>
-                        <li><a href='#'>Edit Photos</a></li>
+                        <li><a href='editPhotos.php'>Edit Photos</a></li>
                         <li><a href='description.php'>Edit Description</a></li>
                     </ul>
                 </li>
@@ -177,6 +177,6 @@ But for right now buttons have no functionality.
 
     <button name="previous" type="submit">Previous Event</button>
     <button name="next" type="submit">Next Event</button>
- 
+
 </body>
 </html>
