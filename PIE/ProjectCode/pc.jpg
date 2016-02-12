@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Quality Pictures Wallpapers, Pictures</title>
+<meta name="description" content="Top quality Pictures Pictures & Wallpapers, gathered by our Team just for your Background for Free." />
+
+<meta name="author" content="feelgrafix.com" />
+<link rel="canonical" href="http://feelgrafix.com/group/pictures.html" />
+
+<link rel="stylesheet" type="text/css" href="/style.css">
+<link rel="stylesheet" type="text/css" href="/style.fonts.css">
+<link rel="stylesheet" type="text/css" href="/tpl/css/gallery.css" />
+
+<link rel="stylesheet" href="/tpl/css/imgareaselect-animated.css" type="text/css" />
+
+<script src="/tpl/js/TweenMax.min.js"></script>
+<script src="/tpl/js/jquery.min.js"></script>
+<script src="/tpl/js/gallery.js"></script>
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="/tpl/js/jquery.imgareaselect.pack.js"></script>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
+</head>
+<body id="main_ct">
+	<div class="sheader">
+	<div id="page" style="padding:10px;">
+		<div class="tl">
+			<a href="/">Home</a> &nbsp; | &nbsp; 
+			<a href="/top/">Top Wallpapers</a> &nbsp; | &nbsp; 
+			<a href="/random/">Random</a> &nbsp; | &nbsp; 
+			<a href="/collections/">Collections</a> &nbsp; | &nbsp; 
+			<a href="/themes/">Themes</a>
+		</div>
+	</div>
+</div>
+
+<div id="page">
+	<table class="md_page">
+		<tr>
+			<td style="padding:20px 0px;">
+				<table width="100%">
+				<tr>
+					<td>
+						<a href="/"><img src="/tpl/images/feelgrafix_logo.png"></a>
+					</td>
+					<td style="width:435px;">
+						<ul id="navigation_menu">
+							<li>
+								Categories ▿
+
+								<ul>
+																	<li><a href="/categories/3d/">3D / Graphics</a></li>	
+																		<li><a href="/categories/animals/">Animals</a></li>	
+																		<li><a href="/categories/anime/">Anime</a></li>	
+																		<li><a href="/categories/bikes/">Bikes</a></li>	
+																		<li><a href="/categories/cars/">Cars</a></li>	
+																		<li><a href="/categories/cartoons/">Cartoons</a></li>	
+																		<li><a href="/categories/celebrities/">Celebrities</a></li>	
+																		<li><a href="/categories/city/">City</a></li>	
+																		<li><a href="/categories/fantasy/">Fantasy</a></li>	
+																		<li><a href="/categories/food-and-drink/">Food and Drink</a></li>	
+																		<li><a href="/categories/games/">Games</a></li>	
+																		<li><a href="/categories/girls/">Girls</a></li>	
+																		<li><a href="/categories/movies/">Movies</a></li>	
+																		<li><a href="/categories/music/">Music</a></li>	
+																		<li><a href="/categories/nature/">Nature</a></li>	
+																		<li><a href="/categories/photography/">Photography</a></li>	
+																		<li><a href="/categories/sports/">Sports</a></li>	
+																		<li><a href="/categories/travel/">Travel</a></li>	
+										
+								</ul>
+							</li>
+							<li>
+								Top Resolutions ▿
+
+								<ul>
+																	<li><a href="/sizes/1024x768/">1024x768</a></li>
+																		<li><a href="/sizes/1280x1024/">1280x1024</a></li>
+																		<li><a href="/sizes/1280x720/">1280x720</a></li>
+																		<li><a href="/sizes/1280x800/">1280x800</a></li>
+																		<li><a href="/sizes/1280x960/">1280x960</a></li>
+																		<li><a href="/sizes/1366x768/">1366x768</a></li>
+																		<li><a href="/sizes/1440x900/">1440x900</a></li>
+																		<li><a href="/sizes/1600x1000/">1600x1000</a></li>
+																		<li><a href="/sizes/1600x1200/">1600x1200</a></li>
+																		<li><a href="/sizes/1600x900/">1600x900</a></li>
+										
+								</ul>
+							</li>
+							<li>
+								Wallpaper's Groups ▿
+
+								<ul>
+																	<li><a href="/group/germany.html">Germany</a></li>
+																		<li><a href="/group/lamborghini.html">Lamborghini</a></li>
+																		<li><a href="/group/kenya.html">Kenya</a></li>
+																		<li><a href="/group/shapes.html">Shapes</a></li>
+																		<li><a href="/group/sports.html">Sports</a></li>
+																		<li><a href="/group/manchester-united-fc.html">Manchester United F.C</a></li>
+																		<li><a href="/group/background.html">Background</a></li>
+																		<li><a href="/group/snowflake.html">Snowflake</a></li>
+																		<li><a href="/group/ghana.html">Ghana</a></li>
+																		<li><a href="/group/nature-wallpaper.html">Nature wallpaper</a></li>
+																		<li><a href="/group/love-wallpaper.html">Love wallpaper</a></li>
+																		<li><a href="/group/landscape.html">Landscape</a></li>
+																		<li><a href="/group/europe.html">Europe</a></li>
+																		<li><a href="/group/christiano-ronaldo.html">Christiano Ronaldo</a></li>
+																		<li><a href="/group/fc-barcelona.html">FC Barcelona</a></li>
+																		<li><a href="/group/wallpaper.html">Wallpaper</a></li>
+																		<li><a href="/group/whale.html">Whale</a></li>
+																		<li><a href="/group/watchmen.html">Watchmen</a></li>
+																		<li><a href="/group/destiny.html">Destiny</a></li>
+																		<li><a href="/group/Lava.html">Lava</a></li>
+																		<li><a href="/group/love-images.html">Love images</a></li>
+																		<li><a href="/group/cool-pictures.html">Cool pictures</a></li>
+																		<li><a href="/group/formula-1.html">Formula 1</a></li>
+																		<li><a href="/group/american-flag.html">American flag</a></li>
+																		<li><a href="/group/toyota.html">Toyota</a></li>
+										
+								</ul>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				</table>
+
+				<div class="hl"></div>
+
+				<table style="padding:0px 30px 0px 0px;" width="100%">
+				<tr>
+					<td style="vertical-align:top;">
+						<h1 class="sh1">Pictures</h1>
+
+						<div class="sh1_desc">
+							<p>Pictures are everywhere and they are very easy to find. Yet not all of them can boast of a high resolution and other features which would make them excellent and exceptional. On this site everyone is welcome to find the top pictures on any desirable topic starting with cowboys and finishing with famous people around the world. Additionally each and every picture deserves to be called unique as a specially educated animator was working it making it as perfect, deep and rich as possible. Therefore no need to search any further as everything you are looking for is very easy to find here.</p>
+						</div>
+
+											<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- groups -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:980px;height:120px"
+     data-ad-client="ca-pub-7901487151801581"
+     data-ad-slot="7405574757"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+						<h2 class="sh3" style="padding:0px 0px 0px 10px;">
+							We found 20 Images in «Pictures» Gallery:
+						</h2>
+
+						<div class="sn_gallery_blc">
+														<div class="sn_gallery">
+									<a href="/data/pictures/pictures-1.jpg" target="_blank">
+										<img src="/data/pictures/pictures-1.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-10.jpg" target="_blank">
+										<img src="/data/pictures/pictures-10.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-11.jpg" target="_blank">
+										<img src="/data/pictures/pictures-11.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-12.jpg" target="_blank">
+										<img src="/data/pictures/pictures-12.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-13.jpg" target="_blank">
+										<img src="/data/pictures/pictures-13.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-14.jpg" target="_blank">
+										<img src="/data/pictures/pictures-14.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-15.jpg" target="_blank">
+										<img src="/data/pictures/pictures-15.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-16.jpg" target="_blank">
+										<img src="/data/pictures/pictures-16.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-17.jpg" target="_blank">
+										<img src="/data/pictures/pictures-17.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-18.jpg" target="_blank">
+										<img src="/data/pictures/pictures-18.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-19.jpg" target="_blank">
+										<img src="/data/pictures/pictures-19.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-2.jpg" target="_blank">
+										<img src="/data/pictures/pictures-2.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-20.jpg" target="_blank">
+										<img src="/data/pictures/pictures-20.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-3.jpg" target="_blank">
+										<img src="/data/pictures/pictures-3.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-4.jpg" target="_blank">
+										<img src="/data/pictures/pictures-4.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-5.jpg" target="_blank">
+										<img src="/data/pictures/pictures-5.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-6.jpg" target="_blank">
+										<img src="/data/pictures/pictures-6.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-7.jpg" target="_blank">
+										<img src="/data/pictures/pictures-7.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-8.jpg" target="_blank">
+										<img src="/data/pictures/pictures-8.jpg" width="230" height="160">
+									</a>
+								</div>
+																<div class="sn_gallery">
+									<a href="/data/pictures/pictures-9.jpg" target="_blank">
+										<img src="/data/pictures/pictures-9.jpg" width="230" height="160">
+									</a>
+								</div>
+														</div>
+					</td>
+				</tr>
+				</table>
+
+				<div class="hl"></div>
+
+				<table style="padding:0px 30px 0px 0px;" width="100%">
+				<tr>
+					<td style="padding:10px;">
+						<div style="padding:10px 0px 0px 0px; float:left;">
+							<a style="text-decoration:none; color:#525252;" href="/">© Feelgrafix.com 2015</a>
+						</div>
+					</td>
+					<td style="padding:10px 5px;">
+						<div style="float:right;">
+							<!--LiveInternet counter--><script type="text/javascript"><!--
+							document.write("<a href='http://www.liveinternet.ru/click' "+
+							"target=_blank><img src='//counter.yadro.ru/hit?t11.10;r"+
+							escape(document.referrer)+((typeof(screen)=="undefined")?"":
+							";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+							screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+							";"+Math.random()+
+							"' alt='' title='LiveInternet: показано число просмотров за 24"+
+							" часа, посетителей за 24 часа и за сегодня' "+
+							"border='0' width='88' height='31'><\/a>")
+							//--></script><!--/LiveInternet-->
+							<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73135609-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+						</div>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+		</div>
+	</td>
+</tr>
+</table>
+</body>
+</html>

@@ -57,6 +57,40 @@ Currently needs links and header added and repositioning.
     <div id='headingCenter'>
         <h1>Welcome <?php echo $current_user ?>!</h1>
     </div>
+	
+	    
+	<!--               Slider for events. TN 2/10/16
+    
+    
+    
+    
+    -->
+    
+    
+    <style>
+        <!-- Prevents slides from flashing -->
+        #slides {
+            display:none;
+        }
+    </style>
+    
+<!-- javascript that enables us to use the slider -->
+
+    <script src="http://code.jquery.com/jquery-latest.min.js">
+    </script>
+
+    <script src="jquery.slides.min.js">
+    </script>
+
+    <script>
+        $(function(){
+            $("#slides").slidesjs({
+                width: 200,
+                height: 200
+            });
+        });
+    </script>
+
 
 </head>
 
@@ -131,6 +165,16 @@ Currently needs links and header added and repositioning.
             </ul>
         </div>
     </div>
-    
+
+	
+    <div id="slides">
+        <img src="pc.jpeg/940x528">
+        <img src="cwu_test.jpeg">
+        <img src="http://placehold.it/940x528">
+        <img src="http://placehold.it/940x528">
+        <img src="http://placehold.it/940x528">
+
+    </div>
+	
 </body>
 </html>
