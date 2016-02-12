@@ -65,7 +65,6 @@ Currently needs links and header added and repositioning.
     
     
     -->
-  <title>jQuery UI Slider - Snap to increments</title>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -73,18 +72,21 @@ Currently needs links and header added and repositioning.
   <script>
   
 $(function() {
-    $( "#slider" ).slider({
-      value:2,
-      min: 0,
-      max: 10,
-      step: 1,
-      slide: function( event, ui ) {
-        $( "#amount" ).val(ui.value );
-      }
-    });
-    $( "#amount" ).val( $( "#slider" ).slider( "value" ) );
+	
+		$("#slider").slider({
+			value:2,
+			min:0,
+			max:10,
+			step:1,
+			slide: function(event, ui){
+			    $("#myEvent").val(ui.value);
+			}
+		});
+		$("#myEvent").val($("#slider").slider("value"));
 });
+
   </script>
+
 
 
 </head>
@@ -162,11 +164,19 @@ $(function() {
     </div>
 <!-- text for the events slider -->
     <p>
-		<label for="amount">Upcoming events:</label>
-		<input type="text" id="amount"  height="200" width="200" readonly style="border:0; color:#f6931f; font-weight:bold;">
+		<label for="myEvent">Upcoming Events:</label>
+		<input type="text" id="myEvent"  readonly style="border:0; color:#5d717e; font-weight:bold;">
 	</p>
- 
+	
 <div id="slider"></div>
+
+<!-- Buttons that I want to implemement to work with the slider for the moment until I can 
+understand how to use it with a thumbnail. Then I can position it correctly with CSS.
+But for right now buttons have no functionality.
+ -->
+
+	<button name="next" type="submit">Next Event</button>
+	<button name="previous" type="submit">Previous Event</button>
  
 </body>
 </html>
