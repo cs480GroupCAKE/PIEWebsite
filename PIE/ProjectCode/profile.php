@@ -57,9 +57,9 @@ Currently needs links and header added and repositioning.
     <div id='headingCenter'>
         <h1>Welcome <?php echo $current_user ?>!</h1>
     </div>
-	
-	    
-	<!--               Slider for events. TN 2/10/16
+
+    
+    <!--               Slider for events. TN 2/10/16
     
     
     
@@ -72,17 +72,16 @@ Currently needs links and header added and repositioning.
   <script>
   
 $(function() {
-	
-		$("#slider").slider({
-			value:2,
-			min:0,
-			max:10,
-			step:1,
-			slide: function(event, ui){
-			    $("#myEvent").val(ui.value);
-			}
-		});
-		$("#myEvent").val($("#slider").slider("value"));
+        $("#slider").slider({
+            value:2,
+            min:0,
+            max:10,
+            step:1,
+            slide: function(event, ui){
+                $("#myEvent").val(ui.value);
+            }
+        });
+        $("#myEvent").val($("#slider").slider("value"));
 });
 
   </script>
@@ -158,16 +157,17 @@ $(function() {
                     </ul>
                 </li>
                 <li><a href='#'>View Connections</a></li>
+                <li><a href='#'>View Notifications</a></li>
                 <li><a href='#'>Help</a></li>
             </ul>
         </div>
     </div>
 <!-- text for the events slider -->
     <p>
-		<label for="myEvent">Upcoming Events:</label>
-		<input type="text" id="myEvent"  readonly style="border:0; color:#5d717e; font-weight:bold;">
-	</p>
-	
+        <label for="myEvent">Upcoming Events:</label>
+        <input type="text" id="myEvent"  readonly style="border:0; color:#5d717e; font-weight:bold;">
+    </p>
+
 <div id="slider"></div>
 
 <!-- Buttons that I want to implemement to work with the slider for the moment until I can 
@@ -175,8 +175,8 @@ understand how to use it with a thumbnail. Then I can position it correctly with
 But for right now buttons have no functionality.
  -->
 
-	<button name="next" type="submit">Next Event</button>
-	<button name="previous" type="submit">Previous Event</button>
+    <button name="next" type="submit">Next Event</button>
+    <button name="previous" type="submit">Previous Event</button>
  
 </body>
 </html>
