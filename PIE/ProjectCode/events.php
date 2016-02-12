@@ -84,10 +84,15 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
     
     <script>
+        //This is for the datepicker - it hides previous dates.
         $(function() {
+            var currDate = new Date();
+            
             $( "#datepicker" ).datepicker({
                 changeMonth: true,
-                changeYear: true
+                changeYear: true,
+                minDate: new Date(currDate.getFullYear(), currDate.getMonth(), currDate.getDate()),
+                hideIfNoPrevNext: true
             });
         });
 
@@ -95,6 +100,7 @@
         {
             $ ('#datepicker').append($('<option/>').val(i).html(i));
         }
+        
     </script>
     
 
@@ -141,7 +147,7 @@
         <!--<textarea rows="4" cols="50" name="eventdetails">
         </textarea>--> 
 
-    <input type="submit" name="submit" value="Create Event" class="big button blue">
+        <input type="submit" name="submit" value="Create Event" class="big button blue">
     </form>
     <!--<button onclick="goBack()">Go Back</button>-->
 
