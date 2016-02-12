@@ -7,6 +7,7 @@ body {
     color: #5d717e;
     text-align: center;
     min-width: 800px;
+    height: 100%;
 }
 
 #cssmenu {
@@ -69,6 +70,7 @@ body {
     min-height:500px;
     min-width:600px;
     display:block;
+    padding-bottom: 60px; /*TODO: ADDED THIS FOR THE FOOTER FORMATING*/
 }
 
 
@@ -102,8 +104,6 @@ body {
     background-color: #aeb8be;
 }
 
-
-
 #headingCenter {
     text-align:center;
     min-width:600px;
@@ -114,19 +114,32 @@ body {
     margin: auto; 
     display: block;
 }
+/*TODO: THIS IS USED TO FORMAT THE HEADER TO ALWAYS BE AT THE BOTTOM*/
+#container {
+    min-height: 100%;
+    position: relative;
+}
+
+#header {
+    
+}
 
 #footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: #5d717e;
     font-size: 12px;
     color: #aeb8be;
+    word-spacing:5em;
+    min-height: 50px;
 }
 
 #copyright {
-    font-size: 8px;
+    word-spacing:0em;
+    font-size: 10px;
 }
+/*TODO: THE FOOTER FORMATTING ENDS HERE*/
 
 .image-edge-fade{
     box-shadow: 0 0 8px 8px white inset;

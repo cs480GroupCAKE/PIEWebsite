@@ -16,9 +16,9 @@
             text-decoration: none;
         }
     </style>
-    <footer>
+    <body>
         <p>
-            <a href="about.php">About       </a> <a href="helpPage.php">        Contact </a>
+            <a href="about.php">About</a> <a href="helpPage.php">Contact </a>
         </p>
         <div id='copyright'>
             <p>
@@ -26,5 +26,5 @@
                 V 0.2
             </p>
         </div>
-    </footer>
+    <body>
 </html>

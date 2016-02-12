@@ -5,22 +5,22 @@ to other areas of site included in navigation bar-->
 <head>
     <title>Pie Home</title>
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">       
-    
-    <div id='cssmenu'>
-        <?php include './templates/header.php'?>
-    </div>
-    
-    <div id='headingCenter'>
-        <h1>Welcome to Personal Interactive Environment</h1>
-	<h2>P.I.E.</h2>
-    </div>
 
 </head>
-
 <body>
 <!-- The class cred is meant to enable us to "move" everything to the top right side of the page so it looks like a normal site for log in. -->
 <!-- Added action to form, submit button and required place holders. -->
-
+<div id='container'>
+    <div id='header'>
+        <div id='cssmenu'>
+            <?php include './templates/header.php'?>
+        </div>
+    
+        <div id='headingCenter'>
+            <h1>Welcome to Personal Interactive Environment</h1>
+            <h2>P.I.E.</h2>
+        </div>
+    </div>
     <div id='divCenter'>
         <!-- Added line from basic webpage.html -->
         <div id='image'>
@@ -40,12 +40,12 @@ to other areas of site included in navigation bar-->
 
     <div id='divRight'>
     </div>-->
-
-</body>
-
+    
     <div id='footer'>
         <?php include './templates/footer.php'?>
     </div>
+</div>
+</body>
 
 </html>
 
