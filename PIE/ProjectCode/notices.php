@@ -22,15 +22,49 @@ echo ini_get('display_errors');
         <?php require './background/loggedcheck.php';?>
     </div>
 </head>
+
 <body>
-    <?php
-  
-        echo $contact."<br>".$notice;
-    ?>
+    
+    <div id='divCenter'>
+        <h2>Search Results</h2>
+        <br>
+        <?php if(sizeof($connArr) != 0): ?>
+        <table id='cen-table'>
+            <thead>
+                <tr>
+                    <th>Notice</th><th>Sender</th><th>Accept</th><th>Decline</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    //TESTING LEAVE IN echo sizeof($connArr);
+                    for($i=0; $i<sizeof($connArr);$i++):
+                        $notice = $connArr[$i]['notice'];
+                        $sender = $connArr[$i]['sender'];
+                        $accept = $connArr[$i]['accept'];
+                        $decline = $connArr[$i]['decline'];
+                ?>
+                <tr> 
+                    <td><?php echo $notice;?></td><td><?php echo $sender;?></td>
+                    <td><?php echo $accept;?></td><td><?php echo $decline;?></td>
+                </tr>
+                    
+                <?php endfor; ?>
+            </tbody>
+        </table>
+            <?php endif; 
+                if(sizeof($connArr) == 0){
+                    echo $noResults;
+            }
+        //require './templates/footer.php';    
+        ?>
+    </div>
+    
+    
 </body>
 
 
     <div id='footer'>
-        <? php include './templates/footer.php'?>
+        <?php include './templates/footer.php'?>
     </div>
 </html>

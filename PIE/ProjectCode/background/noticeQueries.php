@@ -6,15 +6,14 @@
     $username = $_SESSION['username'];    
     //QUERIES
     $connectionsQ = "SELECT * FROM notifications WHERE username = '$username'";
+    $subQ = mysqli_query($database, $connectionsQ);
     
     //RESULT ARRAYS
-    if($connArr = mysqli_fetch_assoc(mysqli_query($database, $connectionsQ))){
-
-    //ELEMENTS
-    $contact = $connArr['contact'];
-    $notice = $connArr['notice'];
-    }else{
-        die($username);
+    $connArr = array();
+    
+    
+    while($row = mysqli_fetch_assoc($subQ)){
+        $connArr[] = $row;
     }
    
 ?>

@@ -2,12 +2,12 @@
 <?php
 /*
 KEEP IN CODE AND COMMENTED OUT UNLESS DEBUGGING
-
+*/
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('dispaly_startup_errors', '1');
 echo ini_get('display_errors');
-*/
+
 ?>
 
 <?php
@@ -17,15 +17,16 @@ echo ini_get('display_errors');
     
     $sender = $_SESSION['username'];
     $recipient = $_SESSION['vusername'];
-    $connNotice = "<a href='noticeAction.php?accept=true'>Accept\t\t</a><a href='noticeAction.php?accept=false>Decline</a>";
+    $accept = "<a href='./background/noticeAction.php?accept=true&sender=".$sender."'>Accept</a>";
+    $decline = "<a href='./background/noticeAction.php?accept=false&sender=".$sender."'>Decline</a>";
+    $notice = "Connection request";
     
-    $insert = "INSERT INTO notifications VALUES('$recipient','$sender','$connNotice')";
-    
-    if($database->query($insert)===TRUE){
+    $insert = "INSERT INTO notifications VALUES('$recipient','$sender',\"$accept\",\"$decline\",'$notice');";
+    echo "something";
+    if($database->query($insert)==TRUE){
         header("Location:../profile.php");
-         }
     }else{
-        echo "error ".$createConn."<br>".$database->error;
+        echo "error ".$insert."<br>".$database->error;
     }
 
 
