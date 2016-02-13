@@ -47,90 +47,99 @@ stored in the database. Currently needs links and access to the viewed user's da
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="sidebar.js"></script>
 
-    <div id='cssmenu'>
-        <?php include './templates/headerLogged.php'; ?>
-    </div>
-    
-    <div id='headingCenter'>
-        <h1>Viewing <?php echo $vusername."'s profile"; ?></h1>
-    </div>
-
 </head>
 
 <body onload="init()">
-    <!--button will need to change to fit styling of rest site-->
-    <div id='divRight'>
-        <form action = "./background/addContact.php"><input type="submit" value="Add Contact"></form>
-    </div>
 
-    <div id='divCenter'>
-        <br/>
-        <p>
-        <?php
-            if($descRes!=NULL){        
-                echo $descRes;
-            }else{
-                echo "No description entered yet!";
-            }                
-        ?> 
-        </p>
+    <div id='container'>
+        <div id='header'>
+            <div id='cssmenu'>
+                <?php include './templates/headerLogged.php'; ?>
+            </div>
     
-        <ul id="tabs">
-            <!-- These may have to be set to hide depending on public/private profiles -->
-            <li><a href="#events">Events</a></li>
-            <li><a href="#charts">Charts</a></li>
-            <li><a href="#photos">Event Photos</a></li>
-        </ul>
-
-        <div class="tabContent" id="events">
-            <h2>Events</h2>
-            <div>
-                <p><?php 
-                   if($eventname != NULL){ 
-                       echo $eventinfo;
-                   }else{
-                       echo "No events scheduled";
-                   }
-               ?></p>
+            <div id='headingCenter'>
+                <h1>Viewing <?php echo $vusername."'s profile"; ?></h1>
             </div>
         </div>
-
-        <div class="tabContent" id="charts">
-            <h2>Charts</h2>
-            <div>
-                <p>Add charts here</p>
+    
+        <div id='body'>
+            <!--button will need to change to fit styling of rest site-->
+            <div id='divRight'>
+                <form action = "./background/addContact.php"><input type="submit" value="Add Contact"></form>
             </div>
-        </div>
 
-        <div class="tabContent" id="photos">
-            <h2>Event Photos</h2>
-            <p>Add event photos here</p>
-        </div>
-    </div>
+            <div id='divCenter'>
+                <br/>
+                <p>
+                <?php
+                    if($descRes!=NULL){        
+                        echo $descRes;
+                    }else{
+                        echo "No description entered yet!";
+                    }                
+                ?> 
+                </p>
+            
+                <ul id="tabs">
+                    <!-- These may have to be set to hide depending on public/private profiles -->
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#charts">Charts</a></li>
+                    <li><a href="#photos">Event Photos</a></li>
+                </ul>
 
-    
-    <!-- This is the dropdown menu. Needs links to each page. CSS will need changing for color and font. -->
-    <div id='divLeft'>
-    
-        <!-- Viewed user's profile pictures and information may be loaded from the database -->
-        <img src="./Images/profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">
-    
-        <div id='cssside'>
-            <ul>
-                <li><a href='#'>View Pictures</a></li>
-                <li><a href='#'>View Connections</a></li>
-                <li class='active has-sub'><a href='#'>View Events</a>
+                <div class="tabContent" id="events">
+                    <h2>Events</h2>
+                    <div>
+                        <p><?php 
+                           if($eventname != NULL){ 
+                               echo $eventinfo;
+                           }else{
+                               echo "No events scheduled";
+                           }
+                       ?></p>
+                    </div>
+                </div>
+
+                <div class="tabContent" id="charts">
+                    <h2>Charts</h2>
+                    <div>
+                        <p>Add charts here</p>
+                    </div>
+                </div>
+
+                <div class="tabContent" id="photos">
+                    <h2>Event Photos</h2>
+                    <p>Add event photos here</p>
+                </div>
+            </div>
+
+            
+            <!-- This is the dropdown menu. Needs links to each page. CSS will need changing for color and font. -->
+            <div id='divLeft'>
+            
+                <!-- Viewed user's profile pictures and information may be loaded from the database -->
+                <img src="./Images/profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">
+            
+                <div id='cssside'>
                     <ul>
-                        <li><a href='#'>Upcoming Events</a></li>
-                        <li><a href='#'>Past Events</a></li>
+                        <li><a href='#'>View Pictures</a></li>
+                        <li><a href='#'>View Connections</a></li>
+                        <li class='active has-sub'><a href='#'>View Events</a>
+                            <ul>
+                                <li><a href='#'>Upcoming Events</a></li>
+                                <li><a href='#'>Past Events</a></li>
+                            </ul>
+                        </li>
+                        <li><a href='#'>Help</a></li>
                     </ul>
-                </li>
-                <li><a href='#'>Help</a></li>
-            </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div id='footer'>
+            <?php include './templates/footer.php'?>
         </div>
     </div>
-    
 
-    
 </body>
 </html>

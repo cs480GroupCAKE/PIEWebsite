@@ -21,26 +21,27 @@ to other areas of site included in navigation bar-->
             <h2>P.I.E.</h2>
         </div>
     </div>
-    <div id='divCenter'>
-        <!-- Added line from basic webpage.html -->
-        <div id='image'>
-            <img class="displayCenter" src="./Images/home_picture.jpg" alt="PIE" style="width:500px;height:250px;">
+    <div id='body'>
+        <div id='divCenter'>
+            <!-- Added line from basic webpage.html -->
+            <div id='image'>
+                <img class="displayCenter" src="./Images/home_picture.jpg" alt="PIE" style="width:500px;height:250px;">
+            </div>
+
+            <h2> Vision Statement</h2>
+
+            <p style="padding-left:200px;padding-right:200px;">Developing a website to aid a section of the elderly community that is facing social isolation. 
+                This website will promote social activities and personal outings. Furthermore, 
+                the simple design should aid with navigation and scheduling, and more.</p>
         </div>
 
-        <h2> Vision Statement</h2>
+        <!-- Placeholder for left sidebar -->
+        <!--<div id ='divLeft'>
+        </div>
 
-        <p style="padding-left:200px;padding-right:200px;">Developing a website to aid a section of the elderly community that is facing social isolation. 
-           This website will promote social activities and personal outings. Furthermore, 
-           the simple design should aid with navigation and scheduling, and more.</p>
+        <div id='divRight'>
+        </div>-->
     </div>
-
-    <!-- Placeholder for left sidebar -->
-    <!--<div id ='divLeft'>
-    </div>
-
-    <div id='divRight'>
-    </div>-->
-    
     <div id='footer'>
         <?php include './templates/footer.php'?>
     </div>

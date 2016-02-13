@@ -28,12 +28,6 @@
     </script>
     
     -->
-    <div id='cssmenu'>
-        <?php include'./templates/headerLogged.php'?>
-
-    </div>
-    
-    <h1>Schedule an Event</h1>
 
 <!-- This is the old script for date dropdowns
         <script type="text/javascript">
@@ -107,56 +101,70 @@
 </head>
 
 <body>
+    <div id='container'>
+        <div id='header'>
+            <div id='cssmenu'>
+                <?php include'./templates/headerLogged.php'?>
 
-
-    <form action="./background/createEvent.php" method="post">
-
-        Event Name:<br>
-        <input type="text" name="eventname">
-        <br><br>
-
-        Date:<br>
-        <!-- This will be used for the jQuery calendar datepicker -->
-        <input type="text" name="eventdate" id="datepicker">
-        <br><br>
-
-<!-- Old scipt for dropdown date selection
-        <select id="daydropdown" name="day">
-        </select> 
-        <select id="monthdropdown" name="mos">
-        </select> 
-        <select id="yeardropdown" name="year">
-        </select> 
-        <br><br>
-
-    <script type="text/javascript">
-        //populatedropdown(id_of_day_select, id_of_month_select, id_of_year_select)
-        window.onload=function(){
-            populatedropdown("daydropdown", "monthdropdown", "yeardropdown")
-        }
-    </script>
--->
+            </div>
     
-        Time:<br>
-        <input type="text" name="time">
-        <br><br>
+            <h1>Schedule an Event</h1>
+        </div>
     
-        Event Details:<br>
-        <textarea id="eventdescript" class="input" name="eventdetails" maxlength="500" rows="10" cols="50"></textarea>
-        <br><br>
-        <!--<textarea rows="4" cols="50" name="eventdetails">
-        </textarea>--> 
+        <div id='body'>
+            <form action="./background/createEvent.php" method="post">
 
-        <input type="submit" name="submit" value="Create Event" class="big button blue">
-    </form>
-    <!--<button onclick="goBack()">Go Back</button>-->
+                Event Name:<br>
+                <input type="text" name="eventname">
+                <br><br>
 
-    <script>
-        function goBack(){
-            window.history.back();
-        }
-    </script>
+                Date:<br>
+                <!-- This will be used for the jQuery calendar datepicker -->
+                <input type="text" name="eventdate" id="datepicker">
+                <br><br>
 
+                <!-- Old scipt for dropdown date selection
+                <select id="daydropdown" name="day">
+                </select> 
+                <select id="monthdropdown" name="mos">
+                </select> 
+                <select id="yeardropdown" name="year">
+                </select> 
+                <br><br>
+
+                <script type="text/javascript">
+                    //populatedropdown(id_of_day_select, id_of_month_select, id_of_year_select)
+                    window.onload=function(){
+                        populatedropdown("daydropdown", "monthdropdown", "yeardropdown")
+                    }
+                </script>
+                -->
+                
+                Time:<br>
+                <input type="text" name="time">
+                <br><br>
+            
+                Event Details:<br>
+                <textarea id="eventdescript" class="input" name="eventdetails" maxlength="500" rows="10" cols="50"></textarea>
+                <br><br>
+                <!--<textarea rows="4" cols="50" name="eventdetails">
+                </textarea>--> 
+
+                <input type="submit" name="submit" value="Create Event" class="big button blue">
+            </form>
+            <!--<button onclick="goBack()">Go Back</button>-->
+
+            <script>
+                function goBack(){
+                    window.history.back();
+                }
+            </script>
+        </div>
+    
+        <div id='footer'>
+            <?php include './templates/footer.php'?>
+        </div>
+    </div>
 
 </body>
 

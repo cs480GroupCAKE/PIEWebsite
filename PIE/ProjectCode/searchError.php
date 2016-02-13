@@ -20,16 +20,25 @@ echo ini_get('display_errors');
 <head>
     <title>ERROR</title>
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
-    <div id='cssmenu'>
-        <?php require './background/loggedcheck.php';?>
-    </div>
+
 </head>
 <body>
     <h1><?php echo $MSG;?></h1>
 </body>
-
-
-    <div id='footer'>
-        <? php include './templates/footer.php'?>
+    <div id='container'>
+        <div id='header'>
+            <div id='cssmenu'>
+                <?php require './background/loggedcheck.php';?>
+            </div>
+        </div>
+    
+        <div id='body'>
+    
+        </div>
+    
+        <div id='footer'>
+            <?php include './templates/footer.php'?>
+        </div>
     </div>
+
 </html>

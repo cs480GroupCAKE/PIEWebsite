@@ -122,90 +122,101 @@ only a few are to make testing database code easier. Should catch handle and pri
 
     </script>
     
-            
-    <div id='cssmenu'>
-        <?php include './templates/header.php' ?>
-    </div>
-    <h1>Welcome to PIE</h1>
 </head>
 
 <body onload="init()">
-    <form action="./background/register.php" method="post">
-        First Name:
-        <br>
-        <input type="text" name="firstname"><!---add required place holders--->
-        <br>
-        <br>
-        Last name:
-        <br>
-        <input type="text" name="lastname">
-        <br>
-        <br>
-        Username:
-        <br>
-        <input type="text" name="username" required placeholder>
-        <br>
-        <a style ="color:red">
-            <?php $reasons = array("usernameTaken" => "That username already exists", 
-                "blank" => "NAME ERROR"); 
-                if ($_GET["signUpFailed"]) echo "\n";echo $reasons[$_GET["reason"]]; echo "\n";
-            ?>
-        </a>
-        
-        <br>
-        Email:
-        <br>
-        <input type="text" name="email" required placeholder>
-        <br>
-        <a style="color:red">
-            <?php $reasons = array("invalidEmail" =>"Email entered is invalid", "blank" => "EMAIL ERROR"); 
-                if ($_GET["signUpFailedEmail"]) echo $reasons[$_GET['reason1']]; ?>
 
-        </a>
-        
-        <br>
-        Password:
-        <br>
-        <input type="password" name="password" required placeholder>
-        <br>
-        <br>
-        Re-enter Password:
-        <br>
-        <input type="password" name="passwordVerify" required placeholder>
-        <br>
-        <a style=color:red>
-            <?php $reasons = array("passwordsDontMatch" =>"Passwords don't match", "blank" => "Pass Error"); 
-                if ($_GET["signUpFailedPassword"])echo "\n"; echo $reasons[$_GET["reason"]];?>
-        </a>
+    <div id='container'>
+        <div id='header'>
+            <div id='cssmenu'>
+                <?php include './templates/header.php' ?>
+            </div>
+            <h1>Welcome to PIE</h1>
+        </div>
+    
+        <div id='body'>
+            <form action="./background/register.php" method="post">
+                First Name:
+                <br>
+                <input type="text" name="firstname"><!---add required place holders--->
+                <br>
+                <br>
+                Last name:
+                <br>
+                <input type="text" name="lastname">
+                <br>
+                <br>
+                Username:
+                <br>
+                <input type="text" name="username" required placeholder>
+                <br>
+                <a style ="color:red">
+                    <?php $reasons = array("usernameTaken" => "That username already exists", 
+                        "blank" => "NAME ERROR"); 
+                        if ($_GET["signUpFailed"]) echo "\n";echo $reasons[$_GET["reason"]]; echo "\n";
+                    ?>
+                </a>
+                
+                <br>
+                Email:
+                <br>
+                <input type="text" name="email" required placeholder>
+                <br>
+                <a style="color:red">
+                    <?php $reasons = array("invalidEmail" =>"Email entered is invalid", "blank" => "EMAIL ERROR"); 
+                        if ($_GET["signUpFailedEmail"]) echo $reasons[$_GET['reason1']]; ?>
 
-        <br>    
-        Birth Date: 
-        
-<!-- This is the code for the old jQuery datepicker calendar
-        <p><input type="text" name="dob" id="datepicker"></p>
--->
-        
-        <!-- This is be used for the javascript date dropdown -->
-        <br>
-        <select id="daydropdown" name="day">
-        </select> 
-        <select id="monthdropdown" name="mos">
-        </select> 
-        <select id="yeardropdown" name="year">
-        </select>
-        <br>
-            
-        <script type="text/javascript">
-            //populatedropdown(id_of_day_select, id_of_month_select, id_of_year_select)
-            window.onload=function(){
-                populatedropdown("daydropdown", "monthdropdown", "yeardropdown")
-            }
-        </script>
-        
-        
-        <br>
-        <input type="submit" name="submit" value="Create Profile" class="big button blue">
-    </form>
+                </a>
+                
+                <br>
+                Password:
+                <br>
+                <input type="password" name="password" required placeholder>
+                <br>
+                <br>
+                Re-enter Password:
+                <br>
+                <input type="password" name="passwordVerify" required placeholder>
+                <br>
+                <a style=color:red>
+                    <?php $reasons = array("passwordsDontMatch" =>"Passwords don't match", "blank" => "Pass Error"); 
+                        if ($_GET["signUpFailedPassword"])echo "\n"; echo $reasons[$_GET["reason"]];?>
+                </a>
+
+                <br>    
+                Birth Date: 
+                
+        <!-- This is the code for the old jQuery datepicker calendar
+                <p><input type="text" name="dob" id="datepicker"></p>
+        -->
+                
+                <!-- This is be used for the javascript date dropdown -->
+                <br>
+                <select id="daydropdown" name="day">
+                </select> 
+                <select id="monthdropdown" name="mos">
+                </select> 
+                <select id="yeardropdown" name="year">
+                </select>
+                <br>
+                    
+                <script type="text/javascript">
+                    //populatedropdown(id_of_day_select, id_of_month_select, id_of_year_select)
+                    window.onload=function(){
+                        populatedropdown("daydropdown", "monthdropdown", "yeardropdown")
+                    }
+                </script>
+                
+                
+                <br>
+                <input type="submit" name="submit" value="Create Profile" class="big button blue">
+            </form>
+        </div>
+    
+        <div id='footer'>
+            <?php include './templates/footer.php'?>
+        </div>
+    </div>
 
 </body>
 </html>

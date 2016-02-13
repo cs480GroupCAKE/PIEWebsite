@@ -12,22 +12,36 @@
     <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
     
     <meta charset="utf-8">
-    <title>Sign Up</title>
-    
-    <div id='cssmenu'>
-        <?php include './templates/headerLogged.php'?>
-    </div>
-    
-    <h1>Edit Description</h1>
+
 </head>
 
 <body onload="init()">
-    <form action="./background/editdescription.php" method="post">
-        Description:
-        <br>
-        <textarea id="description" class="input" name="description" maxlength="500" rows="10" cols="50"></textarea>
-        <br>
-        <input type="submit" name="submit" value="Add Description" class="big button blue">
-    </form>
+
+    <div id='container'>
+        <div id='header'>
+            <title>Sign Up</title>
+    
+            <div id='cssmenu'>
+                <?php include './templates/headerLogged.php'?>
+            </div>
+    
+            <h1>Edit Description</h1>
+        </div>
+        
+        <div id='body'>
+            <form action="./background/editdescription.php" method="post">
+                Description:
+                <br>
+                <textarea id="description" class="input" name="description" maxlength="500" rows="10" cols="50"></textarea>
+                <br>
+                <input type="submit" name="submit" value="Add Description" class="big button blue">
+            </form>
+        </div>
+        
+        <div id='footer'>
+            <?php include './templates/footer.php'?>
+        </div>
+    </div>
+
 </body>
 </html>
