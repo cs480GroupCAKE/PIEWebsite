@@ -47,16 +47,16 @@ function addPP_div_hide() {
 }
 
 //Hides popup for event photo upload
-function addPP_div_hide() {
+function addEP_div_hide() {
     document.getElementById('peppopupDiv').style.display = "none";
 }
 
 //Hides popup for profile photo removal
-function addPP_div_hide() {
+function remPP_div_hide() {
     document.getElementById('rpppopupDiv').style.display = "none";
 }
 
 //Hides popup for event photo removal
-function addPP_div_hide() {
+function remEP_div_hide() {
     document.getElementById('reppopupDiv').style.display = "none";
 }
