@@ -209,7 +209,7 @@ only a few are to make testing database code easier. Should catch handle and pri
                 
                 
                 <br>
-                <input type="submit" name="submit" value="Create Profile" class="big button blue">
+                <input id='button' type="submit" name="submit" value="Create Profile">
             </form>
         </div>
     

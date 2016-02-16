@@ -59,7 +59,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
                 </a>
                 <br>
                 
-                <input type="submit" name="login" value="Login" class="button big blue"> 
+                <input id='button' type="submit" name="login" value="Login"> 
             </form>
         </div>
     

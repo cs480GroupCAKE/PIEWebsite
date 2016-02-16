@@ -47,7 +47,7 @@
                     </div>
                     <br>
                     
-                    <input id="submit_button" type="submit" value="Send email" class="big button blue"/>
+                    <input id="button" type="submit" value="Send email"/>
                 </form> 
             </div>
             
