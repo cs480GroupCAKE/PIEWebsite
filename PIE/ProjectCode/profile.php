@@ -158,7 +158,7 @@ $(function() {
                                 <li><a href='description.php'>Edit Description</a></li>
                             </ul>
                         </li>
-                        <li><a href='#'>View Connections</a></li>
+                        <li><a href='viewConnections.php'>View Connections</a></li>
                         <li><a href='notices.php'>View Notifications</a></li>
                         <li><a href='#'>Help</a></li>
                     </ul>
@@ -169,8 +169,8 @@ $(function() {
                 <label for="myEvent">Upcoming Events:</label>
                 <input type="text" id="myEvent"  readonly style="border:0; color:#5d717e; font-weight:bold;">
             </p>
-
-        <div id="slider"></div>
+	<div id="slider">
+    </div>
 
         <!-- Buttons that I want to implemement to work with the slider for the moment until I can 
         understand how to use it with a thumbnail. Then I can position it correctly with CSS.
@@ -179,6 +179,18 @@ $(function() {
 
             <button name="previous" type="submit">Previous Event</button>
             <button name="next" type="submit">Next Event</button>
+			
+			<!-- going to try and check if the array access events is true, if it is then 
+			we populate it with any of the info that will be used/displayed on the slider.
+			http://stackoverflow.com/questions/20738329/how-to-call-a-php-function-on-the-click-of-a-button  //maybe something like this?
+			
+			TN
+			-->
+			<?php
+			if ($accessEvents==TRUE)
+			?>
+			
+			
         </div>
     
         <div id='footer'>

@@ -29,6 +29,7 @@
     $eventdate = $eventsArr['date'];
     $eventdetails = $eventsArr['details'];
     
+	$accessEvents=array($eventsArr);
    
 ?>
 
