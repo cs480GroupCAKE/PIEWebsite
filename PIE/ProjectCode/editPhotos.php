@@ -33,13 +33,14 @@
             <!-- Popup div for profile photo upload starts here -->
             <div id='popupInnerDiv'>
                 <!-- Form for profile photo upload -->
-                <form action='#' id='popupform' method='post' name='pppopupform'>
+                <form action='ppupload.php' id='popupform' method='post' name='pppopupform' enctype='multipart/form-data'>
                     <img id='close' src='./Images/close_button.png' onclick='addPP_div_hide()'>
                     <h2>Upload Profile Photo</h2>
-                    <hr>
-                    <input id='inputtext' name='ppuploadtext' placeholder='Profile Photo' type='text'>
+                    <hr><br><br>
+                    <input id='ppuploadfile' name='ppuploadfile' placeholder='Profile Photo' type='file'>
                     <br><br><br>
-                    <a href='javascript:%20ppcheck_empty()' id='submit'>Submit</a>
+                    <input type='submit' value='Upload Image' name='submit' id='submit'>
+                    <!--<a href='javascript:%20ppcheck_empty()' id='submit'>Submit</a>-->
                 </form>
             </div>
         </div>
@@ -49,7 +50,7 @@
              *                        CH 2.13.2016                           *
              *****************************************************************
         -->  
-        <div id='eppopupDiv'>
+        <div id='peppopupDiv'>
             <!-- Popup div for profile photo upload starts here -->
             <div id='popupInnerDiv'>
                 <!-- Form for profile photo upload -->
@@ -69,7 +70,7 @@
              *                       CH 2.13.2016                            *
              *****************************************************************
         -->  
-        <div id='rempppopupDiv'>
+        <div id='rpppopupDiv'>
             <!-- Popup div for profile photo upload starts here -->
             <div id='popupInnerDiv'>
                 <!-- Form for profile photo upload -->
@@ -92,7 +93,7 @@
              *                        CH 2.13.2016                           *
              *****************************************************************
         -->  
-        <div id='remeppopupDiv'>
+        <div id='reppopupDiv'>
             <!-- Popup div for profile photo upload starts here -->
             <div id='popupInnerDiv'>
                 <!-- Form for profile photo upload -->
