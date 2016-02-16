@@ -33,7 +33,7 @@
             <!-- Popup div for profile photo upload starts here -->
             <div id='popupInnerDiv'>
                 <!-- Form for profile photo upload -->
-                <form action='ppupload.php' id='popupform' method='post' name='pppopupform' enctype='multipart/form-data'>
+                <form action='./background/ppUpload.php' id='popupform' method='post' name='pppopupform' enctype='multipart/form-data'>
                     <img id='close' src='./Images/close_button.png' onclick='addPP_div_hide()'>
                     <h2>Upload Profile Photo</h2>
                     <hr><br><br>
