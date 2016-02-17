@@ -70,9 +70,21 @@ $(function() {
                 $("#myEvent").val(ui.value);
             }
         });
-        $("#myEvent").val($("#slider").slider("value"));         
+        $("#myEvent").val($("#slider").slider("value")); 
+
 });
   </script>
+  <script>
+  //still neeeds to have functionality. That way we can click a button instead of dragging slider.
+		$(function(){
+		$(.'previousB').click(function(){
+		)};
+		 )};
+		 
+		 $(.'nextB').click(function(){
+		 step:3;
+		 )};
+</script>
 
 
 
@@ -141,8 +153,9 @@ $(function() {
         But for right now buttons have no functionality.
          -->
 
-            <button name="previous" type="submit">Previous Event</button>
+            <button name="previous" type="submit" onClick=>Previous Event</button>
             <button name="next" type="submit">Next Event</button>
+		
                     </div>
                 </div>
 
@@ -188,9 +201,9 @@ $(function() {
 			TN
 			-->
 			<?php
-			echo"something";
+			//echo"something";
 			if ($accessEvents==TRUE)
-				echo"something";
+				//echo"something";
 			?>
 			
 			
