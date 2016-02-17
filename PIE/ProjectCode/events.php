@@ -96,7 +96,6 @@
         }
         
     </script>
-    
 
 </head>
 
@@ -150,7 +149,7 @@
                 <!--<textarea rows="4" cols="50" name="eventdetails">
                 </textarea>--> 
 
-                <input type="submit" name="submit" value="Create Event" class="big button blue">
+                <input id='button' type="submit" name="submit" value="Create Event">
             </form>
             <!--<button onclick="goBack()">Go Back</button>-->
 

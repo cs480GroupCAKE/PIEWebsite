@@ -1,0 +1,21 @@
+February 17, 2016
+Lulofs Meeting Notes
+Starting Time: 1pm
+
+Notes for the group:
+- Talk to other graders of the presentations to get feedback.
+- Be sure to avoid nervous habits during presentation.
+- Talked about where we are at
+- Asked about university site hosting (not a possibility)
+- Asked about funding for the group to host the site (not a possibility)
+- Email Chueh about the requirements we have drafted based on meeting notes
+- Send email including the requirements, our iteration report, and findings on hosting.
+
+Notes for the site:
+- Need to migrate from the test server to an actual server. 
+- Created a dedicated UI role for our group for the rest of the quarter. 
+- Finish the photo's, events slider, and manipulating the contact list. 
+
+Next meeting February 24, 2016 at 1pm Hebler hall 206.
+
+End time: 1:30pm
