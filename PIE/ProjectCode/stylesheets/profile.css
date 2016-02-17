@@ -13,7 +13,10 @@
 }
 
 
-#slider{
-width:55%;
-text-align:center;
+.slider{
+	max-width:800px;
+}
+
+#sliderText{
+text-align:center;	
 }

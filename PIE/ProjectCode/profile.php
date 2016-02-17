@@ -70,9 +70,8 @@ $(function() {
                 $("#myEvent").val(ui.value);
             }
         });
-        $("#myEvent").val($("#slider").slider("value"));
+        $("#myEvent").val($("#slider").slider("value"));         
 });
-
   </script>
 
 
@@ -128,6 +127,22 @@ $(function() {
                             echo "No events scheduled";
                         }
                         ?></p>
+						
+				<!-- text for the events slider -->
+				<p class="sliderText">
+					<label for="myEvent">Upcoming Events:</label>
+					<input type="text" id="myEvent"  readonly style="border:0; color:#FFF; background-color:#006D89; font-weight:bold;">
+				</p>
+				<div id="slider">
+				</div>
+
+        <!-- Buttons that I want to implemement to work with the slider for the moment until I can 
+        understand how to use it with a thumbnail. Then I can position it correctly with CSS.
+        But for right now buttons have no functionality.
+         -->
+
+            <button name="previous" type="submit">Previous Event</button>
+            <button name="next" type="submit">Next Event</button>
                     </div>
                 </div>
 
@@ -164,21 +179,7 @@ $(function() {
                     </ul>
                 </div>
             </div>
-        <!-- text for the events slider -->
-            <p>
-                <label for="myEvent">Upcoming Events:</label>
-                <input type="text" id="myEvent"  readonly style="border:0; color:#5d717e; font-weight:bold;">
-            </p>
-	<div id="slider">
-    </div>
 
-        <!-- Buttons that I want to implemement to work with the slider for the moment until I can 
-        understand how to use it with a thumbnail. Then I can position it correctly with CSS.
-        But for right now buttons have no functionality.
-         -->
-
-            <button name="previous" type="submit">Previous Event</button>
-            <button name="next" type="submit">Next Event</button>
 			
 			<!-- going to try and check if the array access events is true, if it is then 
 			we populate it with any of the info that will be used/displayed on the slider.
@@ -187,7 +188,9 @@ $(function() {
 			TN
 			-->
 			<?php
+			echo"something";
 			if ($accessEvents==TRUE)
+				echo"something";
 			?>
 			
 			
