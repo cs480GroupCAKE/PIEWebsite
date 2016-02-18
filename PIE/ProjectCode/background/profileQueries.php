@@ -28,8 +28,15 @@
     $eventuser = $eventsArr['username'];
     $eventdate = $eventsArr['date'];
     $eventdetails = $eventsArr['details'];
-    
-	$accessEvents=array($eventsArr);
+    //accessEvents needs to be able to collect atleast eventname from database 
+	//this way I can call it on profile.php and use it with the slider.
+	//$accessEvents=array();
+	//$accessEvents=$eventsArr['eventname', 'date', 'description'];
+	
+	//loop through array with the number of events
+	//for($j=0;$j<=$events.length();Sj++){
+		//echo"one of the events we found in DB is $j";
+	//}
    
 ?>
 

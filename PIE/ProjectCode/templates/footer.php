@@ -26,5 +26,5 @@
                 V 0.2
             </p>
         </div>
-    <body>
+    </body>
 </html>

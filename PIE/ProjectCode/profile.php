@@ -61,97 +61,36 @@ Currently needs links and header added and repositioning.
   
  
   <script>
-  
+  //creates the actual slider using jquery API with modification.
 $(function() {
         var s = $("#slider").slider({
-            value:2,
+            value:1,
             min:0,
             max:10,
             step:1,
             slide: function(event, ui){
-               $("#myEvent").val(ui.value);
-						 
+               $("#myEvent").val(ui.value);		 
             }
-	
-        });
-		
-		
+        }); 
 		$("#myEvent").val($("#slider").slider("value")); 
-		
-		 $("#previous").click(function() {
-			 s.slider('value', s.slider('value') - s.slider('option', 'step'));
+		//enables button to go to previous event
+		$("#previous").click(function() {
+		s.slider('value', s.slider('value') - s.slider('option', 'step'));
+		//shows number of events we are incrementing by.
+		$("#myEvent").val($("#slider").slider("value")); 
 		 });
 
-		 
-		  $("#next").click(function() {
-			 s.slider('value', s.slider('value') +s.slider('option', 'step'));
+		//enable the button to go to next event
+		$("#next").click(function() {
+		s.slider('value', s.slider('value') + s.slider('option','step'));
+		//shows number of events we are incrementing by.
+		$("#myEvent").val($("#slider").slider("value")); 
 		 });
-
-      	
+		 //trying to call the array to this page form profile queries.
+		 //session start();
+		 //$_SESSION['accessEvents']=$accessEvents;
 });
   </script>
-  <!-- <script>
-  still neeeds to have functionality. That way we can click a button instead of dragging slider.
-		// $(function(){
-		// $(.'previousB').click(function(){
-		// )};
-		 // )};
-		 
-		 // $(.'nextB').click(function(){
-		 // step:3;
-		 // )};
-// </script>
--->
-
-
-<!-- <script>
-
-var min = 0;
-var max= 10;
-  function moveSlider() {
-	  $("#slider").slider({
-            value:2,
-            min:0,
-            max:10,
-            step:1,
-            slide: function(event, ui){
-                $("#myEvent").val(ui.value);
-            }
-        });
-        $("#myEvent").val($("#slider").slider("value")); 
-	  
-  }
-  
-  function previous(){
-	   $("#slider").slider({
-		   min,
-		   max,
-            slide: function(event, ui){
-                $("#myEvent").val(ui.value);
-            }
-        });
-        $("#myEvent").val($("#slider").slider("value")); 
-	  
-  }
-  
-  function next(){
-	   $("#slider").slider({
-		   min,
-		   max,
-            slide: function(event, ui){
-                $("#myEvent").val(ui.value);
-            }
-        });
-        $("#myEvent").val($("#slider").slider("value")); 
-	
-  }
-  
-  
-</script>
-
--->
-
-
 
 </head>
 
@@ -253,7 +192,7 @@ var max= 10;
                         </li>
                         <li><a href='viewConnections.php'>View Connections</a></li>
                         <li><a href='notices.php'>View Notifications</a></li>
-                        <li><a href='#'>Help</a></li>
+                        <li><a href='helpPage.php'>Help</a></li>
                     </ul>
                 </div>
             </div>
