@@ -22,7 +22,7 @@ body {
     padding: 0;
     font-weight: bold;
     overflow: hidden;
-    background-color: #006D89;/*was #0CF*/
+    background-color: #006D89;
 }
 
 #cssmenu li {
@@ -39,7 +39,17 @@ body {
 }
 
 #cssmenu li a:hover {
-    background-color: #5d717e;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
+    background-color: #ffffff/*#5d717e the original gray*/;
+    color: #006D89; /*could change the text color instead*/
+}
+
+#cssmenu .active {
+    color: #ffffff;
 }
 
 #cred {
@@ -81,7 +91,7 @@ body {
     min-height:500px;
     min-width:600px;
     display:block;
-    padding-bottom: 60px; /*TODO: ADDED THIS FOR THE FOOTER FORMATING*/
+    padding-bottom: 60px;
 }
 
 
