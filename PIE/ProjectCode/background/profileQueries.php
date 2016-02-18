@@ -30,6 +30,7 @@
     $eventdetails = $eventsArr['details'];
     //accessEvents needs to be able to collect atleast eventname from database 
 	//this way I can call it on profile.php and use it with the slider.
+	
 	//$accessEvents=array();
 	//$accessEvents=$eventsArr['eventname', 'date', 'description'];
 	

@@ -152,11 +152,6 @@ $(function() {
 				<div id="slider">
 				</div>
 
-        <!-- Buttons that I want to implemement to work with the slider for the moment until I can 
-        understand how to use it with a thumbnail. Then I can position it correctly with CSS.
-        But for right now buttons have no functionality.
-         -->
-		
             <button name="previous" id="previous" type="submit" >Previous Event</button>
             <button name="next" id="next"type="submit">Next Event</button>
 		
