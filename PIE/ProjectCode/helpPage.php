@@ -18,7 +18,7 @@
         </div>
     
         <div id='body'>
-            <div id="center">
+            <div id="divCenter">
                 <p>Got a question that wasn't answered on this page? Send us an email with your question and 
                     we will get back to you as soon as possible!</p>
 
@@ -50,11 +50,11 @@
                     <input id="button" type="submit" value="Send email"/>
                 </form> 
             </div>
-            
-            <!-- Placeholder for cred -->
+            <!--
+            Placeholder for cred
             <div id="cred"></div>
-            <!-- Placeholder for left sidebar -->
-            <div id="divLeft"></div>
+            Placeholder for left sidebar
+            <div id="divLeft"></div>-->
         </div>
     
         <div id='footer'>
