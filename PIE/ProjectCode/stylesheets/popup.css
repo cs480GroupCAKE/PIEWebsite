@@ -80,6 +80,7 @@ h2 {
     margin:-10px -50px;
     text-align:center;
     border-radius:10px 10px 0 0;
+    font-family:raleway;
 }
 
 hr {
@@ -98,7 +99,20 @@ hr {
     font-family:raleway;
 }
 
+input#submit {
+    font-family:raleway;
+}
+
 #ppuploadfile {
+    width:82%;
+    padding:10px;
+    border:1px solid #ccc;
+    padding-left:40px;
+    font-size:16px;
+    font-family:raleway;
+}
+
+#epuploadfile {
     width:82%;
     padding:10px;
     border:1px solid #ccc;
