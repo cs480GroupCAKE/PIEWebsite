@@ -58,10 +58,58 @@ Currently needs links and header added and repositioning.
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
+  
+ 
   <script>
   
 $(function() {
-        $("#slider").slider({
+        var s = $("#slider").slider({
+            value:2,
+            min:0,
+            max:10,
+            step:1,
+            slide: function(event, ui){
+               $("#myEvent").val(ui.value);
+						 
+            }
+	
+        });
+		
+		
+		$("#myEvent").val($("#slider").slider("value")); 
+		
+		 $("#previous").click(function() {
+			 s.slider('value', s.slider('value') - s.slider('option', 'step'));
+		 });
+
+		 
+		  $("#next").click(function() {
+			 s.slider('value', s.slider('value') +s.slider('option', 'step'));
+		 });
+
+      	
+});
+  </script>
+  <!-- <script>
+  still neeeds to have functionality. That way we can click a button instead of dragging slider.
+		// $(function(){
+		// $(.'previousB').click(function(){
+		// )};
+		 // )};
+		 
+		 // $(.'nextB').click(function(){
+		 // step:3;
+		 // )};
+// </script>
+-->
+
+
+<!-- <script>
+
+var min = 0;
+var max= 10;
+  function moveSlider() {
+	  $("#slider").slider({
             value:2,
             min:0,
             max:10,
@@ -71,20 +119,37 @@ $(function() {
             }
         });
         $("#myEvent").val($("#slider").slider("value")); 
-
-});
-  </script>
-  <script>
-  //still neeeds to have functionality. That way we can click a button instead of dragging slider.
-		$(function(){
-		$(.'previousB').click(function(){
-		)};
-		 )};
-		 
-		 $(.'nextB').click(function(){
-		 step:3;
-		 )};
+	  
+  }
+  
+  function previous(){
+	   $("#slider").slider({
+		   min,
+		   max,
+            slide: function(event, ui){
+                $("#myEvent").val(ui.value);
+            }
+        });
+        $("#myEvent").val($("#slider").slider("value")); 
+	  
+  }
+  
+  function next(){
+	   $("#slider").slider({
+		   min,
+		   max,
+            slide: function(event, ui){
+                $("#myEvent").val(ui.value);
+            }
+        });
+        $("#myEvent").val($("#slider").slider("value")); 
+	
+  }
+  
+  
 </script>
+
+-->
 
 
 
@@ -152,9 +217,9 @@ $(function() {
         understand how to use it with a thumbnail. Then I can position it correctly with CSS.
         But for right now buttons have no functionality.
          -->
-
-            <button name="previous" type="submit" onClick=>Previous Event</button>
-            <button name="next" type="submit">Next Event</button>
+		
+            <button name="previous" id="previous" type="submit" >Previous Event</button>
+            <button name="next" id="next"type="submit">Next Event</button>
 		
                     </div>
                 </div>
