@@ -1,4 +1,5 @@
 <!DOCTYPE PHP>
+
 <html>
 <head>
     <!-- *****************************************************************
@@ -75,16 +76,27 @@
             <!-- Popup div for profile photo upload starts here -->
             <div id='popupInnerDiv'>
                 <!-- Form for profile photo upload -->
-                <form action='#' id='popupform' method='post' name='rempppopupform'>
+                <form action='./background/ppRemove.php' id='popupform' method='post' name='rempppopupform'>
                     <img id='close' src='./Images/close_button.png' onclick='remPP_div_hide()'>
                     <h2>Remove Profile Photos</h2>
-                    <hr>
-                    <!-- This is where I'll need to display current photos and a checkbox next to each for removal
-                    <input id='inputtext' name='ppuploadtext' placeholder='Profile Photo' type='text'>
-                    -->
-                    <br><br><br>
+                    <hr><br><br>
+                    <!-- This is where I'll need to display current photos and a checkbox next to each for removal -->
+                    <?php
+                        $files = glob("./userImages/profile/*.*");
+
+                        echo '<table id="phototb">';
+                        for($i=0; $i<count($files); $i++) {
+                            $image = $files[$i];
+                            echo '<tr>';
+                            echo '<td id="tbcheck"><input type="checkbox" name="picbox"></td><td id="tbpic"><img src="
+                                 '.$image.'" alt="Image $i" id="profileimg" /></td></tr>';
+                        }
+                        echo '</table>';
+                    ?>
                     <!-- Need to write a new check_empty() for checking text boxes are selected -->
-                    <a href='javascript:%20remppcheck_empty()' id='submit'>Remove Selected Photos</a>
+                    <input type='submit' value='Remove Selected Photos' name='submit'>
+                    <br><br>
+                    <!--<a href='javascript:%20remppcheck_empty()' id='submit'>Remove Selected Photos</a>-->
                 </form>
             </div>
         </div>
@@ -98,16 +110,27 @@
             <!-- Popup div for profile photo upload starts here -->
             <div id='popupInnerDiv'>
                 <!-- Form for profile photo upload -->
-                <form action='#' id='popupform' method='post' name='remeppopupform'>
+                <form action='./background/epRemove.php' id='popupform' method='post' name='remeppopupform'>
                     <img id='close' src='./Images/close_button.png' onclick='remEP_div_hide()'>
                     <h2>Remove Event Photos</h2>
-                    <hr>
-                    <!-- This is where I'll need to display current event photos and a checkbox next to each for removal
-                    <input id='inputtext' name='ppuploadtext' placeholder='Profile Photo' type='text'>
-                    -->
-                    <br><br><br>
+                    <hr><br><br>
+                    <!-- This is where I'll need to display current photos and a checkbox next to each for removal -->
+                    <?php
+                        $files = glob("./userImages/event/*.*");
+
+                        echo '<table id="phototb">';
+                        for($i=0; $i<count($files); $i++) {
+                            $image = $files[$i];
+                            echo '<tr>';
+                            echo '<td id="tbcheck"><input type="checkbox" name="picbox"></td><td id="tbpic"><img src="
+                                 '.$image.'" alt="Image $i" id="eventimg" /></td></tr>';
+                        }
+                        echo '</table>';
+                    ?>
                     <!-- Need to write a new check_empty() for checking text boxes are selected -->
-                    <a href='javascript:%20remepcheck_empty()' id='submit'>Remove Selected Photos</a>
+                    <input type='submit' value='Remove Selected Photos' name='submit'>
+                    <br><br>
+                    <!--<a href='javascript:%20remepcheck_empty()' id='submit'>Remove Selected Photos</a>-->
                 </form>
             </div>
         </div>

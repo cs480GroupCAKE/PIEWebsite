@@ -60,13 +60,15 @@ div#popupInnerDiv {
     position:absolute;
     left:50%;
     top:17%;
+    padding-bottom:200px;
     margin-left:-202px;
     font-family:'Raleway',sans-serif;
 }
 
 form#popupform {
     max-width:300px;
-    min-width:250px;
+    min-width:350px;
+    left:50%;
     padding:10px 50px;
     border:2px solid gray;
     border-radius:10px;
@@ -101,6 +103,31 @@ hr {
 
 input#submit {
     font-family:raleway;
+}
+
+/* This is for the profile images in the remove popup */
+#profileimg {
+    max-height:300px;
+    max-width:300px;
+}
+
+/* This is for the event images in the remove popup */
+#eventimg {
+    max-height:300px;
+    max-width:250px;
+}
+
+/* This is for the table checkboxes */
+#tbcheck {
+    top:50%;
+    left:50%;
+    padding-right:20px;
+}
+
+/* This is for the table images */
+#tbpic {
+    margin-left:10px;
+    padding-bottom:50px;
 }
 
 #ppuploadfile {
