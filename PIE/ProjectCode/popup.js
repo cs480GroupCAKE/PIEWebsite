@@ -21,6 +21,10 @@ function epcheck_empty() {
     }
 }
 
+function uploadSuccess() {
+    alert("Upload Successful!");
+}
+
 //Displays popup for profile photo upload
 function addPP_div_show() {
     document.getElementById('pppopupDiv').style.display = "block";

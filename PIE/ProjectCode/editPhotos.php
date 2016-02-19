@@ -26,7 +26,7 @@
     <div id='divCenter'>
         
         <!-- *****************************************************************
-             *                 Here is photo upload popup                    *
+             *             Here is profile photo upload popup                *
              *                      CH 2.12.2016                             *
              *****************************************************************
         -->  
@@ -68,7 +68,7 @@
         </div>
         
         <!-- *****************************************************************
-             *                Here is photo removal popup                    *
+             *            Here is profile photo removal popup                *
              *                       CH 2.13.2016                            *
              *****************************************************************
         -->  
@@ -80,7 +80,7 @@
                     <img id='close' src='./Images/close_button.png' onclick='remPP_div_hide()'>
                     <h2>Remove Profile Photos</h2>
                     <hr><br><br>
-                    <!-- This is where I'll need to display current photos and a checkbox next to each for removal -->
+                    <!-- This is where I display current photos and a checkbox next to each for removal -->
                     <?php
                         $files = glob("./userImages/profile/*.*");
 
@@ -88,10 +88,14 @@
                         for($i=0; $i<count($files); $i++) {
                             $image = $files[$i];
                             echo '<tr>';
-                            echo '<td id="tbcheck"><input type="checkbox" name="picbox"></td><td id="tbpic"><img src="
-                                 '.$image.'" alt="Image $i" id="profileimg" /></td></tr>';
+                            echo '<td id="tbcheck"><input type="checkbox" id="ppcb'.$i.'" name="picbox"></td>
+                                  <td id="tbpic"><label for="ppcb'.$i.'"><img src="'.$image.'" alt="Image '.$i.'" 
+                                  id="profileimg" /></label></td></tr>';
                         }
                         echo '</table>';
+                        
+                        //This will be used to remove images
+                        
                     ?>
                     <!-- Need to write a new check_empty() for checking text boxes are selected -->
                     <input type='submit' value='Remove Selected Photos' name='submit'>
@@ -114,7 +118,7 @@
                     <img id='close' src='./Images/close_button.png' onclick='remEP_div_hide()'>
                     <h2>Remove Event Photos</h2>
                     <hr><br><br>
-                    <!-- This is where I'll need to display current photos and a checkbox next to each for removal -->
+                    <!-- This is where I display current photos and a checkbox next to each for removal -->
                     <?php
                         $files = glob("./userImages/event/*.*");
 
@@ -122,8 +126,9 @@
                         for($i=0; $i<count($files); $i++) {
                             $image = $files[$i];
                             echo '<tr>';
-                            echo '<td id="tbcheck"><input type="checkbox" name="picbox"></td><td id="tbpic"><img src="
-                                 '.$image.'" alt="Image $i" id="eventimg" /></td></tr>';
+                            echo '<td id="tbcheck"><input type="checkbox" id="epcb'.$i.'" name="picbox"></td>
+                                  <td id="tbpic"><label for="epcb'.$i.'"><img src="'.$image.'" alt="Image '.$i.'" 
+                                  id="eventimg" /></label></td></tr>';
                         }
                         echo '</table>';
                     ?>
