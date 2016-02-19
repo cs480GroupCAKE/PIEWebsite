@@ -7,13 +7,14 @@
     //QUERIES
     $descriptionQ = "Select * FROM user WHERE username = '$username'";
     $eventsQ = "SELECT * FROM events WHERE username = '$username' ORDER BY date";
+	$eventsQ = "SELECT * FROM events";
     
     //RESULT ARRAYS
     $userArr = mysqli_fetch_assoc(mysqli_query($database, $descriptionQ));
-    //$eventsArr = array();
-    //eventsAssoc
+    $eventsArr = array();
+   // eventsAssoc
     $eventsArr = mysqli_fetch_array(mysqli_query($database, $eventsQ));
-    //$i = 0;
+   // $i = 0;
     
     
     
@@ -28,15 +29,33 @@
     $eventuser = $eventsArr['username'];
     $eventdate = $eventsArr['date'];
     $eventdetails = $eventsArr['details'];
-    //accessEvents needs to be able to collect atleast eventname from database 
+    
+	
+	//accessEvents needs to be able to collect atleast eventname from database 
 	//this way I can call it on profile.php and use it with the slider.
+	// $accessEvents =$eventsArr['eventname'];
+	// $accessEvents .=$eventsArr['type'];
+	// $accessEvents .=$eventsArr['date'];
+
 	
-	//$accessEvents=array();
-	//$accessEvents=$eventsArr['eventname', 'date', 'description'];
-	
+	// $result = mysqli_query($database, $eventsQ);
+     // if (!$result) {
+	// echo("Nothing found");
+     // }
+    //data converted into array
+     // while ($row = mysqli_fetch_assoc($result)){
+	// $array_data[] = $row;
+   // }
+     //encode the data into array.
+    // $json = json_encode($array_data);
+	//displays all events from the database.
+    // echo $json;
+
+
 	//loop through array with the number of events
-	//for($j=0;$j<=$events.length();Sj++){
-		//echo"one of the events we found in DB is $j";
+	
+	//for($accessEvents=1;$accessEvents<=$events.length();$accessEvents++){
+	 //   echo "one of the events we found in DB is $accessEvents";
 	//}
    
 ?>

@@ -86,9 +86,7 @@ $(function() {
 		//shows number of events we are incrementing by.
 		$("#myEvent").val($("#slider").slider("value")); 
 		 });
-		 //trying to call the array to this page form profile queries.
-		 //session start();
-		 //$_SESSION['accessEvents']=$accessEvents;
+		 
 });
   </script>
 
@@ -130,7 +128,34 @@ $(function() {
                     <li><a href="#charts">Charts</a></li>
                     <li><a href="#photos">Event Photos</a></li>
                 </ul>
+				
+				<!-- Display test -->
+				
+				<!--<script>
+				//Part of code is modified based on how other were able to retrieve data. For testing purposes
+				//Not being used.
+				
+				// $(document).ready(function() {
 
+					// $("#test").click(function test() {                
+
+					// $.ajax({    //using this to load our profileQueries.php file
+					// type: "GET",
+					// url: "./background/profileQueries.php",             
+					// dataType: "array",               
+					// success: function(response){                    
+            // $("#display").array(response); 
+					// }
+						// });
+					// });
+			// });
+				</script>
+				-->
+				
+				<!--testing display 
+				<div  id="display"></div>
+				-->
+				
                 <div class="tabContent" id="events">
                     <h2>Events</h2>
                     <div>
@@ -142,15 +167,51 @@ $(function() {
                         }else{
                             echo "No events scheduled";
                         }
-                        ?></p>
 						
+							$result = mysqli_query($database, $eventsQ);
+							 if (!$result) {
+							echo("Nothing found");
+							 }
+							//data converted into array
+							 while ($row = mysqli_fetch_assoc($result)){
+							$array_data[] = $row;
+						   }
+							 //encode the data into array.
+							$json = json_encode($array_data);
+							//displays all events from the database.
+							echo $json;
+							
+							//for($row=1; $row<=$eventsQ; $row ++){
+								//echo "$username";
+							//}
+							
+							if($eventname !=NULL){
+								$_POST['next'];
+								//echo "$eventdate";
+								
+							}
+						?>
+						</p>
+						
+					<!--	<p>  <php include './background/profileQueries.php' ?>
+						
+						session_start();
+						
+						loop through array with the number of events
+						for($accessEvents=1;$accessEvents<=$events.length();$accessEvents++){
+							echo "one of the events we found in DB is $accessEvents";
+							$_POST['sliderText'];
+						}						
+						
+						</p>
+						-->
 				<!-- text for the events slider -->
-				<p class="sliderText">
+				 <p class="sliderText">
 					<label for="myEvent">Upcoming Events:</label>
 					<input type="text" id="myEvent"  readonly style="border:0; color:#FFF; background-color:#006D89; font-weight:bold;">
-				</p>
+				</p> 
 				<div id="slider">
-				</div>
+				</div>  
 
             <button name="previous" id="previous" type="submit" >Previous Event</button>
             <button name="next" id="next"type="submit">Next Event</button>
@@ -191,20 +252,6 @@ $(function() {
                     </ul>
                 </div>
             </div>
-
-			
-			<!-- going to try and check if the array access events is true, if it is then 
-			we populate it with any of the info that will be used/displayed on the slider.
-			http://stackoverflow.com/questions/20738329/how-to-call-a-php-function-on-the-click-of-a-button  //maybe something like this?
-			
-			TN
-			-->
-			<?php
-			//echo"something";
-			if ($accessEvents==TRUE)
-				//echo"something";
-			?>
-			
 			
         </div>
     
