@@ -99,9 +99,9 @@ echo ini_get('display_errors');
                         for($i=0; $i<count($files); $i++) {
                             $image = $files[$i];
                             echo '<tr>';
-                            echo '<td id="tbcheck"><input type="checkbox" id="ppcb'.$i.'" name="picbox"></td>
+                            echo '<td id="tbcheck"><input type="checkbox" id="ppcb'.$i.'" name="ppcb'.$i.'"></td>
                                   <td id="tbpic"><label for="ppcb'.$i.'"><img src="'.$image.'" alt="Image '.$i.'" 
-                                  id="profileimg" /></label></td></tr>';
+                                  id="profileimg" name="ppcb'.$i.'" /></label></td></tr>';
                         }
                         echo '</table>';
                     ?>
@@ -135,9 +135,9 @@ echo ini_get('display_errors');
                         for($i=0; $i<count($files); $i++) {
                             $image = $files[$i];
                             echo '<tr>';
-                            echo '<td id="tbcheck"><input type="checkbox" id="epcb'.$i.'" name="picbox"></td>
+                            echo '<td id="tbcheck"><input type="checkbox" id="epcb'.$i.'" name="epcb'.$i.'"></td>
                                   <td id="tbpic"><label for="epcb'.$i.'"><img src="'.$image.'" alt="Image '.$i.'" 
-                                  id="eventimg" /></label></td></tr>';
+                                  id="eventimg" name="epcb'.$i.'" /></label></td></tr>';
                         }
                         echo '</table>';
                     ?>

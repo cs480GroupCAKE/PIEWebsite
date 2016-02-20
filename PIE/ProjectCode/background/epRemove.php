@@ -17,5 +17,30 @@ echo ini_get('display_errors');
 ?>
 
 <?php
+    //This will be used when I remove the image directory/name to the database
+/*    require '../database/database.php';
+    session_start();
+    if(isset($_SESSION['username'])) {
+        echo 'Session Active'/$_SESSION['username'];
+    }
+*/
+    //Set target directory, get all files from that folder
+    $target_dir = "../userImages/event/";
+    $target_files = glob($target_dir."*.*");
+    $num_files = count($target_files);
 
+    //If submit is pressed, remove the images
+    if(isset($_POST["submit"])) {
+        for($i=0; $i<$num_files; $i++) {
+            if(isset($_POST['epcb'.$i])) {
+                if(file_exists($target_files[$i])) {
+                    unlink($target_files[$i]); 
+                    //echo 'Images have been removed.';
+                    header('Location:../editPhotos.php');
+                } else {
+                    echo 'Selected files do not exist';
+                }
+            }
+        }
+    }
 ?>
