@@ -1,4 +1,8 @@
-/* This is the javascript file for managing popup window display.
+/*
+         ******************************************************************
+         * This is the javascript file for managing popup window display. *
+         *                         CH 2.12.2016                           *
+         ******************************************************************
 */
 
 //Checks for empty fields for profile photos

@@ -7,9 +7,17 @@ ini_set('display_errors', '1');
 ini_set('dispaly_startup_errors', '1');
 echo ini_get('display_errors');
 */
+
+/*
+         *****************************************************************
+         *       This file will be used for adding profile photos.       *
+         *                         CH 2.13.2016                          *
+         *****************************************************************
+*/
 ?>
 
 <?php
+    //This will be used when I add the image directory/name to the database
     require '../database/database.php';
     session_start();
     if(isset($_SESSION['username'])) {

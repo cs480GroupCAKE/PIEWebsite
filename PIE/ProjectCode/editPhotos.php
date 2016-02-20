@@ -1,4 +1,14 @@
 <!DOCTYPE PHP>
+<?php
+/*
+KEEP IN CODE AND COMMENTED OUT UNLESS DEBUGGING
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+ini_set('dispaly_startup_errors', '1');
+echo ini_get('display_errors');
+*/
+?>
 
 <html>
 <head>
@@ -7,6 +17,7 @@
          *                         CH 2.12.2016                          *
          *****************************************************************
     -->
+    
     <title>Edit Images</title>
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
@@ -93,11 +104,9 @@
                                   id="profileimg" /></label></td></tr>';
                         }
                         echo '</table>';
-                        
-                        //This will be used to remove images
-                        
                     ?>
                     <!-- Need to write a new check_empty() for checking text boxes are selected -->
+                    <!-- Need to find a way to send checkbox id's to ppRemove.php -->
                     <input type='submit' value='Remove Selected Photos' name='submit'>
                     <br><br>
                     <!--<a href='javascript:%20remppcheck_empty()' id='submit'>Remove Selected Photos</a>-->
