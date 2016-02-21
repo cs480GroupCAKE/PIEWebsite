@@ -2,12 +2,12 @@
 <?php
 /*
 KEEP IN CODE AND COMMENTED OUT UNLESS DEBUGGING
-
+*/
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('dispaly_startup_errors', '1');
 echo ini_get('display_errors');
-*/
+
 ?>
 
 <html>
@@ -26,7 +26,23 @@ echo ini_get('display_errors');
 </head>
 
 <body>
-<!--    <form action="./background/createEvent.php" method="post">  -->
+
+<?php
+    //This will be used when I add the image directory/name to the database
+    require './database/database.php';
+    session_start();
+/*    if(isset($_SESSION['username'])) {
+        echo 'Session Active'/$_SESSION['username'];
+    }
+*/
+    //Need username for everything
+    $username = $_SESSION['username'];
+
+    //Make directories for user if they don't exist.
+    mkdir("./userImages/profile/".$username."/");
+    mkdir("./userImages/event/".$username."/");
+?>
+
 <div id='container'>
     <div id='header'>
         <div id='cssmenu'>

@@ -26,10 +26,10 @@ echo ini_get('display_errors');
 
     //Need username for everything
     $username = $_SESSION['username'];
-
+/*
     //Make directory for user if it doesnt exist.
-    mkdir("..userImages/event/".$username);
-
+    mkdir("../userImages/event/".$username);
+*/
     //Set target file and directory - should rename files differently after testing
     $target_dir = "../userImages/event/".$username."/";
     $target_file = $target_dir.basename($_FILES["epuploadfile"]["name"]);

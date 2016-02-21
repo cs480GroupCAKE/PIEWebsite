@@ -17,6 +17,7 @@ echo ini_get('display_errors');
 ?>
 
 <?php
+
     //This will be used when I add the image directory/name to the database
     require '../database/database.php';
     session_start();
@@ -26,10 +27,10 @@ echo ini_get('display_errors');
 
     //Need username for everything
     $username = $_SESSION['username'];
-
+/*
     //Make directory for user if it doesnt exist.
-    mkdir("..userImages/profile/".$username);
-
+    mkdir("../userImages/profile/".$username);
+*/
     //Set target directory, file, upload check, and file type check
     $target_dir = "../userImages/profile/".$username."/";
     $target_file = $target_dir.basename($_FILES["ppuploadfile"]["name"]);
