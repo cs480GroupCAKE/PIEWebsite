@@ -24,8 +24,14 @@ echo ini_get('display_errors');
         echo 'Session Active'/$_SESSION['username'];
     }
 
+    //Need username for everything
+    $username = $_SESSION['username'];
+
+    //Make directory for user if it doesnt exist.
+    mkdir("..userImages/event/".$username);
+
     //Set target file and directory - should rename files differently after testing
-    $target_dir = "../userImages/event/";
+    $target_dir = "../userImages/event/".$username."/";
     $target_file = $target_dir.basename($_FILES["epuploadfile"]["name"]);
     $uploadOK = 1;
     $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
@@ -65,6 +71,8 @@ echo ini_get('display_errors');
         echo "Your file was not uploaded.";
     } else {
         if(move_uploaded_file($_FILES["epuploadfile"]["tmp_name"], $target_file)) {
+            $enterImg = "INSERT INTO images (username, event) 
+                         VALUES('$username','$target_file')";
             //below echo used for testing
             //echo "The file ".basename($_FILES["epuploadfile"]["name"])." has been uploaded.";
             header('Location:../editPhotos.php');

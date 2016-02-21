@@ -40,7 +40,7 @@ echo ini_get('display_errors');
              *             Here is profile photo upload popup                *
              *                      CH 2.12.2016                             *
              *****************************************************************
-        -->  
+        -->
         <div id='pppopupDiv'>
             <!-- Popup div for profile photo upload starts here -->
             <div id='popupInnerDiv'>
@@ -56,12 +56,12 @@ echo ini_get('display_errors');
                 </form>
             </div>
         </div>
-        
+
         <!-- *****************************************************************
              *              Here is event photo upload popup                 *
              *                        CH 2.13.2016                           *
              *****************************************************************
-        -->  
+        -->
         <div id='peppopupDiv'>
             <!-- Popup div for profile photo upload starts here -->
             <div id='popupInnerDiv'>
@@ -77,12 +77,12 @@ echo ini_get('display_errors');
                 </form>
             </div>
         </div>
-        
+
         <!-- *****************************************************************
              *            Here is profile photo removal popup                *
              *                       CH 2.13.2016                            *
              *****************************************************************
-        -->  
+        -->
         <div id='rpppopupDiv'>
             <!-- Popup div for profile photo upload starts here -->
             <div id='popupInnerDiv'>
@@ -93,7 +93,17 @@ echo ini_get('display_errors');
                     <hr><br><br>
                     <!-- This is where I display current photos and a checkbox next to each for removal -->
                     <?php
-                        $files = glob("./userImages/profile/*.*");
+                        //This will be used when I add the image directory/name to the database
+                        require '../database/database.php';
+                        session_start();
+                        if(isset($_SESSION['username'])) {
+                            echo 'Session Active'/$_SESSION['username'];
+                        }
+
+                        //Need username for everything
+                        $username = $_SESSION['username'];
+                    
+                        $files = glob("./userImages/profile/".$username."/*.*");
 
                         echo '<table id="phototb">';
                         for($i=0; $i<count($files); $i++) {
@@ -113,12 +123,12 @@ echo ini_get('display_errors');
                 </form>
             </div>
         </div>
-        
+
         <!-- *****************************************************************
              *              Here is event photo removal popup                *
              *                        CH 2.13.2016                           *
              *****************************************************************
-        -->  
+        -->
         <div id='reppopupDiv'>
             <!-- Popup div for profile photo upload starts here -->
             <div id='popupInnerDiv'>
@@ -129,7 +139,17 @@ echo ini_get('display_errors');
                     <hr><br><br>
                     <!-- This is where I display current photos and a checkbox next to each for removal -->
                     <?php
-                        $files = glob("./userImages/event/*.*");
+                        //This will be used when I add the image directory/name to the database
+                        require '../database/database.php';
+                        session_start();
+                        if(isset($_SESSION['username'])) {
+                            echo 'Session Active'/$_SESSION['username'];
+                        }
+
+                        //Need username for everything
+                        $username = $_SESSION['username'];
+                    
+                        $files = glob("./userImages/event/".$username."/*.*");
 
                         echo '<table id="phototb">';
                         for($i=0; $i<count($files); $i++) {
@@ -148,9 +168,9 @@ echo ini_get('display_errors');
                 </form>
             </div>
         </div>
-        
+
         <h1>Edit Images</h1>
-        
+
         <button id='popupbutton' onclick='addPP_div_show()'>Add Profile Photos</button>
         <button id='popupbutton' onclick='addEP_div_show()'>Add Event Photos</button>
         <br><br>

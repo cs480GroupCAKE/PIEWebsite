@@ -52,14 +52,14 @@ require '../database/database.php';
     $details = $_POST["eventdetails"];
     
     $enterEvent = "INSERT INTO events (username, eventname, details, date) 
-        VALUES('$username','$eventname','$details','$eventdat')";
+                   VALUES('$username','$eventname','$details','$eventdat')";
     
-     if($database->query($enterEvent)===TRUE){
-            header("Location:../profile.php");
-            //printf("Success! Your username is: %s\n Born year: %s\n",$user, $dob);// $row);this needs work
-        }else{
+    if($database->query($enterEvent)===TRUE){
+        header("Location:../profile.php");
+        //printf("Success! Your username is: %s\n Born year: %s\n",$user, $dob);// $row);this needs work
+    }else{
         echo "error ".$createEvent."<br>".$database->error;
-        }
-        echo $date;
-        echo working;
+    }
+    echo $date;
+    echo working;
 ?>

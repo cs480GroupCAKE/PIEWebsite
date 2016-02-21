@@ -24,8 +24,14 @@ echo ini_get('display_errors');
         echo 'Session Active'/$_SESSION['username'];
     }
 
-    //Set target file and directory - should rename files differently after testing
-    $target_dir = "../userImages/profile/";
+    //Need username for everything
+    $username = $_SESSION['username'];
+
+    //Make directory for user if it doesnt exist.
+    mkdir("..userImages/profile/".$username);
+
+    //Set target directory, file, upload check, and file type check
+    $target_dir = "../userImages/profile/".$username."/";
     $target_file = $target_dir.basename($_FILES["ppuploadfile"]["name"]);
     $uploadOK = 1;
     $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
@@ -64,7 +70,10 @@ echo ini_get('display_errors');
     if($uploadOk == 0) {
         echo "Your file was not uploaded.";
     } else {
+        //If error-free, move the file to the user's folder
         if(move_uploaded_file($_FILES["ppuploadfile"]["tmp_name"], $target_file)) {
+            $enterImg = "INSERT INTO images (username, profile) 
+                         VALUES('$username','$target_file')";
             //below echo used for testing
             //echo "The file ".basename($_FILES["ppuploadfile"]["name"])." has been uploaded.";
             header('Location:../editPhotos.php');
