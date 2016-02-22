@@ -36,9 +36,14 @@ echo ini_get('display_errors');
         for($j=0; $j<$num_files; $j++) {
             if(isset($_POST['epcb'.$j])) {
                 if(file_exists($target_files[$j])) {
-                    unlink($target_files[$j]); 
-                    //echo 'Images have been removed.';
-                    header('Location:../editPhotos.php');
+                    unlink($target_files[$j]);
+                    $remImg = "DELETE FROM images WHERE event = '$target_files[$j]'";
+                    if($database->query($remImg) === TRUE) {
+                        //echo 'Images have been removed.';
+                        header('Location:../editPhotos.php');
+                    } else {
+                        echo "Error: ".$epRemove."<br>".$database->error;
+                    }
                 } else {
                     echo 'Selected files do not exist';
                 }

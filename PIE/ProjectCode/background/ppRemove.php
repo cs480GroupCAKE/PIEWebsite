@@ -37,8 +37,13 @@ echo ini_get('display_errors');
             if(isset($_POST['ppcb'.$j])) {
                 if(file_exists($target_files[$j])) {
                     unlink($target_files[$j]); 
-                    //echo 'Images have been removed.';
-                    header('Location:../editPhotos.php');
+                    $remImg = "DELETE FROM images WHERE profile = '$target_files[$j]'";
+                    if($database->query($remImg) === TRUE) {
+                        //echo 'Images have been removed.';
+                        header('Location:../editPhotos.php');
+                    } else {
+                        echo "Error: ".$ppRemove."<br>".$database->error;
+                    }
                 } else {
                     echo 'Selected files do not exist';
                 }

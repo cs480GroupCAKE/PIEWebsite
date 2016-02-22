@@ -75,9 +75,13 @@ echo ini_get('display_errors');
         if(move_uploaded_file($_FILES["ppuploadfile"]["tmp_name"], $target_file)) {
             $enterImg = "INSERT INTO images (username, profile) 
                          VALUES('$username','$target_file')";
-            //below echo used for testing
-            //echo "The file ".basename($_FILES["ppuploadfile"]["name"])." has been uploaded.";
-            header('Location:../editPhotos.php');
+            if($database->query($enterImg) === TRUE) {
+                //below echo used for testing
+                //echo "The file ".basename($_FILES["ppuploadfile"]["name"])." has been uploaded.";
+                header('Location:../editPhotos.php');
+            } else {
+                echo "Error: ".$ppUpload."<br>".$database->error;
+            }
         } else {
             echo "Sorry, there was an error uploading your file.";
         }
