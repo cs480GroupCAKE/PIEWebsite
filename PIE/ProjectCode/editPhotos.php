@@ -2,12 +2,12 @@
 <?php
 /*
 KEEP IN CODE AND COMMENTED OUT UNLESS DEBUGGING
-*/
+
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('dispaly_startup_errors', '1');
 echo ini_get('display_errors');
-
+*/
 ?>
 
 <html>
@@ -110,11 +110,11 @@ echo ini_get('display_errors');
                     <!-- This is where I display current photos and a checkbox next to each for removal -->
                     <?php
                         //This will be used when I add the image directory/name to the database
-                        require '../database/database.php';
-                        session_start();
+                        require './database/database.php';
+                        /*session_start();
                         if(isset($_SESSION['username'])) {
                             echo 'Session Active'/$_SESSION['username'];
-                        }
+                        }*/
 
                         //Need username for everything
                         $username = $_SESSION['username'];
@@ -156,11 +156,11 @@ echo ini_get('display_errors');
                     <!-- This is where I display current photos and a checkbox next to each for removal -->
                     <?php
                         //This will be used when I add the image directory/name to the database
-                        require '../database/database.php';
-                        session_start();
+                        require './database/database.php';
+                        /*session_start();
                         if(isset($_SESSION['username'])) {
                             echo 'Session Active'/$_SESSION['username'];
-                        }
+                        }*/
 
                         //Need username for everything
                         $username = $_SESSION['username'];

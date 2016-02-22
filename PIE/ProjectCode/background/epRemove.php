@@ -33,10 +33,10 @@ echo ini_get('display_errors');
 
     //If submit is pressed, remove the images
     if(isset($_POST["submit"])) {
-        for($i=0; $i<$num_files; $i++) {
-            if(isset($_POST['epcb'.$i])) {
-                if(file_exists($target_files[$i])) {
-                    unlink($target_files[$i]); 
+        for($j=0; $j<$num_files; $j++) {
+            if(isset($_POST['epcb'.$j])) {
+                if(file_exists($target_files[$j])) {
+                    unlink($target_files[$j]); 
                     //echo 'Images have been removed.';
                     header('Location:../editPhotos.php');
                 } else {
