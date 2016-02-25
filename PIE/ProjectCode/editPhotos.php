@@ -79,9 +79,9 @@ echo ini_get('display_errors');
              *****************************************************************
         -->
         <div id='peppopupDiv'>
-            <!-- Popup div for profile photo upload starts here -->
+            <!-- Popup div for event photo upload starts here -->
             <div id='popupInnerDiv'>
-                <!-- Form for profile photo upload -->
+                <!-- Form for event photo upload -->
                 <form action='./background/epUpload.php' id='popupform' method='post' name='eppopupform' enctype='multipart/form-data'>
                     <img id='close' src='./Images/close_button.png' onclick='addEP_div_hide()'>
                     <h2>Upload Event Photo</h2>
@@ -100,9 +100,9 @@ echo ini_get('display_errors');
              *****************************************************************
         -->
         <div id='rpppopupDiv'>
-            <!-- Popup div for profile photo upload starts here -->
+            <!-- Popup div for profile photo removal starts here -->
             <div id='popupInnerDiv'>
-                <!-- Form for profile photo upload -->
+                <!-- Form for profile photo removal -->
                 <form action='./background/ppRemove.php' id='popupform' method='post' name='rempppopupform'>
                     <img id='close' src='./Images/close_button.png' onclick='remPP_div_hide()'>
                     <h2>Remove Profile Photos</h2>
@@ -146,9 +146,9 @@ echo ini_get('display_errors');
              *****************************************************************
         -->
         <div id='reppopupDiv'>
-            <!-- Popup div for profile photo upload starts here -->
+            <!-- Popup div for event photo removal starts here -->
             <div id='popupInnerDiv'>
-                <!-- Form for profile photo upload -->
+                <!-- Form for event photo removal -->
                 <form action='./background/epRemove.php' id='popupform' method='post' name='remeppopupform'>
                     <img id='close' src='./Images/close_button.png' onclick='remEP_div_hide()'>
                     <h2>Remove Event Photos</h2>
@@ -185,6 +185,49 @@ echo ini_get('display_errors');
             </div>
         </div>
 
+        <!-- *****************************************************************
+             *             Here is profile photo setting popup               *
+             *                      CH 2.25.2016                             *
+             *****************************************************************
+        -->
+        <div id='spppopupDiv'>
+            <!-- Popup div for profile photo setting starts here -->
+            <div id='popupInnerDiv'>
+                <!-- Form for profile photo setting -->
+                <form action='./background/ppSet.php' id='popupform' method='post' name='setpppopupform'>
+                    <img id='close' src='./Images/close_button.png' onclick='setPP_div_hide()'>
+                    <h2>Select Profile Photo</h2>
+                    <hr><br><br>
+                    <!-- This is where I display current photos and a radio button next to each for setting -->
+                    <?php
+                        //This will be used when I add the image directory/name to the database
+                        require './database/database.php';
+                        /*session_start();
+                        if(isset($_SESSION['username'])) {
+                            echo 'Session Active'/$_SESSION['username'];
+                        }*/
+
+                        //Need username for everything
+                        $username = $_SESSION['username'];
+                    
+                        $files = glob("./userImages/profile/".$username."/*.*");
+
+                        echo '<table id="phototb">';
+                        for($i=0; $i<count($files); $i++) {
+                            $image = $files[$i];
+                            echo '<tr>';
+                            echo '<td id="tbradio"><input type="radio" id="sprb'.$i.'" name="sprb'.$i.'"></td>
+                                  <td id="tbpic"><label for="sprb'.$i.'"><img src="'.$image.'" alt="Image '.$i.'" 
+                                  id="profileimg" name="sprb'.$i.'" /></label></td></tr>';
+                        }
+                        echo '</table>';
+                    ?>
+                    <input type='submit' value='Set Profile Photo' name='submit'>
+                    <br><br>
+                </form>
+            </div>
+        </div>
+
         <h1>Edit Images</h1>
 
         <button id='popupbutton' onclick='addPP_div_show()'>Add Profile Photos</button>
@@ -192,6 +235,8 @@ echo ini_get('display_errors');
         <br><br>
         <button id='popupbutton' onclick='remPP_div_show()'>Remove Profile Photos</button>
         <button id='popupbutton' onclick='remEP_div_show()'>Remove Event Photos</button>
+        <br><br>
+        <button id='popupbutton' onclick='setPP_div_show()'>Select Profile Photo</button>
     </div>
     
     <div id='footer'>

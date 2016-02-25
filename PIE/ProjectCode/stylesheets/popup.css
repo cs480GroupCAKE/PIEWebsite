@@ -53,6 +53,18 @@
     overflow:auto;
 }
 
+#spppopupDiv {
+    width:100%;
+    height:100%;
+    opacity:.95;
+    top:0;
+    left:0;
+    display:none;
+    position:fixed;
+    background-color:#313131;
+    overflow:auto;
+}
+
 img#close {
     position:absolute;
     right:-14px;
@@ -112,7 +124,7 @@ input#submit {
 /* This is for the profile images in the remove popup */
 #profileimg {
     max-height:300px;
-    max-width:300px;
+    max-width:250px;
 }
 
 /* This is for the event images in the remove popup */
@@ -123,6 +135,13 @@ input#submit {
 
 /* This is for the table checkboxes */
 #tbcheck {
+    top:50%;
+    left:50%;
+    padding-right:20px;
+}
+
+/* This is for the table radio buttons */
+#tbradio {
     top:50%;
     left:50%;
     padding-right:20px;
