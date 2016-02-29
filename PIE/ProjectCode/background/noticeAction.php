@@ -17,14 +17,16 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
    
 if(isset($_GET['accept'])){
     if($_GET['accept'] == 'true'){
-            $enterConn = "INSERT INTO connections VALUES('$username','$sender','N');";
+        $enterConn = "UPDATE connections SET pending=N WHERE username='$sender' AND contact='$'username';";
+        $database->query($enterConn);
+    }else{
+        $deleteConn = "DELETE FROM connections WHERE username = '$sender' AND sender = '$username'";
+        database->query($deleteConn);
     }
 }
     
-    if($_GET['accept']=='false'||$database->query($enterConn)==TRUE){
-        if($database->query($deleteNotice)==TRUE){
-            header("Location:../notices.php");
-        }
+    if($database->query($deleteNotice)==TRUE){
+        header("Location:../notices.php");
     }
     echo "SOMETHING";
         echo "error ".$enterConn."<br>".$database->error;

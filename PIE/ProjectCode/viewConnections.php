@@ -52,6 +52,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
                         <?php
                             //TESTING LEAVE IN echo sizeof($resArr);
                             for($i=0; $i<sizeof($resArr);$i++):
+                                if($pendArr[$i]=='Y'){continue;}
                                 $contact = $resArr[$i];
                                 $link = $format1.$contact.$format2;
                                 $remove = $delete1.$contact.$delete2;

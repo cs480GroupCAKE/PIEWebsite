@@ -20,10 +20,13 @@ echo ini_get('display_errors');
     $accept = "<a href='./background/noticeAction.php?accept=true&sender=".$sender."'>Accept</a>";
     $decline = "<a href='./background/noticeAction.php?accept=false&sender=".$sender."'>Decline</a>";
     $notice = "Connection request";
+    $pending = "Y";
     
     $insert = "INSERT INTO notifications VALUES('$recipient','$sender',\"$accept\",\"$decline\",'$notice');";
+    $insertPend = "INSERT INTO connections VALUES('$sender','$recipient','$pending');";
+    
     echo "something";
-    if($database->query($insert)==TRUE){
+    if($database->query($insert)==TRUE&&$database->query($insertPend)==TRUE){
         header("Location:../profile.php");
     }else{
         echo "error ".$insert."<br>".$database->error;
