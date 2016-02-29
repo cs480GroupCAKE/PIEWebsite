@@ -41,6 +41,7 @@ echo ini_get('display_errors');
     //Make directories for user if they don't exist.
     mkdir("./userImages/profile/".$username."/");
     mkdir("./userImages/event/".$username."/");
+    mkdir("./userImages/current/".$username."/")
 ?>
 
 <div id='container'>
@@ -110,14 +111,14 @@ echo ini_get('display_errors');
                     <!-- This is where I display current photos and a checkbox next to each for removal -->
                     <?php
                         //This will be used when I add the image directory/name to the database
-                        require './database/database.php';
+                        //require './database/database.php';
                         /*session_start();
                         if(isset($_SESSION['username'])) {
                             echo 'Session Active'/$_SESSION['username'];
                         }*/
 
                         //Need username for everything
-                        $username = $_SESSION['username'];
+                        //$username = $_SESSION['username'];
                     
                         $files = glob("./userImages/profile/".$username."/*.*");
 
@@ -156,14 +157,14 @@ echo ini_get('display_errors');
                     <!-- This is where I display current photos and a checkbox next to each for removal -->
                     <?php
                         //This will be used when I add the image directory/name to the database
-                        require './database/database.php';
+                        //require './database/database.php';
                         /*session_start();
                         if(isset($_SESSION['username'])) {
                             echo 'Session Active'/$_SESSION['username'];
                         }*/
 
                         //Need username for everything
-                        $username = $_SESSION['username'];
+                        //$username = $_SESSION['username'];
                     
                         $files = glob("./userImages/event/".$username."/*.*");
 
@@ -201,14 +202,14 @@ echo ini_get('display_errors');
                     <!-- This is where I display current photos and a radio button next to each for setting -->
                     <?php
                         //This will be used when I add the image directory/name to the database
-                        require './database/database.php';
+                        //require './database/database.php';
                         /*session_start();
                         if(isset($_SESSION['username'])) {
                             echo 'Session Active'/$_SESSION['username'];
                         }*/
 
                         //Need username for everything
-                        $username = $_SESSION['username'];
+                        //$username = $_SESSION['username'];
                     
                         $files = glob("./userImages/profile/".$username."/*.*");
 
@@ -216,7 +217,7 @@ echo ini_get('display_errors');
                         for($i=0; $i<count($files); $i++) {
                             $image = $files[$i];
                             echo '<tr>';
-                            echo '<td id="tbradio"><input type="radio" id="sprb'.$i.'" name="sprb'.$i.'"></td>
+                            echo '<td id="tbradio"><input type="radio" id="sprb'.$i.'" name="sprb" value="sprb'.$i.'"></td>
                                   <td id="tbpic"><label for="sprb'.$i.'"><img src="'.$image.'" alt="Image '.$i.'" 
                                   id="profileimg" name="sprb'.$i.'" /></label></td></tr>';
                         }
