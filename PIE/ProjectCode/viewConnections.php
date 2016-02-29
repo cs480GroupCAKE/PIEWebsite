@@ -40,25 +40,25 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
         <div id='body'>
             <div id='divCenter'>
                 <h2>Connections</h2>
-                <br>
                 <?php if(sizeof($resArr) != 0): ?>
                 <table id='cen-table'>
                     <thead>
                         <tr>
-                            <th>contact</th><th>link</th><th>delete contact</th>
+                            <th>Contact Username</th><th>View Profile</th><th>Remove Contact</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                             //TESTING LEAVE IN echo sizeof($resArr);
                             for($i=0; $i<sizeof($resArr);$i++):
-                                if($pendArr[$i]=='Y'){continue;}
                                 $contact = $resArr[$i];
                                 $link = $format1.$contact.$format2;
                                 $remove = $delete1.$contact.$delete2;
                         ?>
                         <tr> 
-                            <td><?php echo $contact;?></td><td><?php echo $link;?></td><td><?php echo $remove;?>
+                            <td><?php echo $contact;?></td><td>
+                            <?php echo $link;?></td><td>
+                            <?php if($pendArr[$i]=='Y'){echo"Contact Pending";}else{echo $remove;}?>
                         </tr>
                             
                         <?php endfor; ?>
