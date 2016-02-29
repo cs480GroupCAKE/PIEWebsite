@@ -1,12 +1,12 @@
 <!DOCTYPE PHP>
 <?php
 /*
-*/
+
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('dispaly_startup_errors', '1');
 echo ini_get('display_errors');
-
+*/
 ?>
 
 <?php
@@ -14,46 +14,50 @@ echo ini_get('display_errors');
     require '../database/database.php';
     session_start();
     if(isset($_SESSION['username'])) {
-        echo 'Session Active'/$_SESSION['username'];
+        echo 'Session Active'.$_SESSION['username'];
     }
-
-    echo "check active session";
 
     $username = $_SESSION['username'];
 
-    //Set target directory, get all files from that folder, set variable for current dir
+    //Set target directory, get all files from that folder, set variable for current dir, get all files
     $target_dir = "../userImages/profile/".$username."/";
     $current_dir = "../userImages/current/".$username."/";
     $target_files = glob($target_dir."*.*");
     $current_files = glob($current_dir."*.*");
+    
+    $numCurrent = count($current_files);
 
-    echo "check page load";
     //Unlink all files in current files directory, remove them from the database
     if(isset($_POST['submit'])) {
-        echo "check submit post";
-        for($i=0; $i<count($current_files); $i++) {
+        for($i=0; $i<$numCurrent/*count($current_files)*/; $i++) {
             if(file_exists($current_files[$i])) {
                 unlink($current_files[$i]);
-                $remCurr = "DELETE FROM images WHERE current = '$current_files[".$i."]';";
+                /*$remCurr = "DELETE FROM images WHERE current = '$current_files[$i]';";
+                if($database->query($remCurr) === TRUE) {
+                    echo "Images removed.";
+                } else {
+                    echo "Error: ".$ppSet."<br>".$database->error;
+                }*/
             }
         }
 
         //Add the selected image to the current folder and to the database under username, current
         for($j=0; $j<count($target_files); $j++) {
             if(isset($_POST['sprb'])) {
-                echo "check set radio post";
-                if(file_exists($target_files[$j])) {
-                    echo "check file exists";
-                    if(copy($target_files[$j], $current_dir.basename($target_files[$j]).PHP_EOL)) {
-                        echo "check copy";
-                        $addCurr = "INSERT INTO images (username, current) 
-                                    VALUES('$username','$target_files[".$j."]');";
-                        if($database->query($addCurr) === TRUE) {
-                            //echo "Success!";
-                            header('Location:../profile.php');
+                if($_POST['sprb'] == "sprb".$j) {
+                    if(file_exists($target_files[$j])) {
+                        if(copy($target_files[$j], $current_dir.basename($target_files[$j]))) {
+                            $update = "UPDATE images SET current = '$current_dir.basename($target_files[$j])' 
+                                       WHERE username = '$username' AND profile = NULL AND event = NULL;";
+                            /*$addCurr = "INSERT INTO images (username, current) 
+                                        VALUES('$username','$target_files[$j]');";*/
+                            if($database->query($update/*addCurr*/) === TRUE) {
+                                //echo "Success!";
+                                //header('Location:../profile.php');
+                            }
+                        } else {
+                            echo "Error copying file!";
                         }
-                    } else {
-                        echo "Error copying file!";
                     }
                 }
             }

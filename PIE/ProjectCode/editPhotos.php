@@ -195,7 +195,7 @@ echo ini_get('display_errors');
             <!-- Popup div for profile photo setting starts here -->
             <div id='popupInnerDiv'>
                 <!-- Form for profile photo setting -->
-                <form action='./background/ppSet.php' id='popupform' method='post' name='setpppopupform'>
+                <form action='./background/ppSet.php' id='popupform' method='post' name='setpppopupform'><!--enctype='multipart/form-data'-->
                     <img id='close' src='./Images/close_button.png' onclick='setPP_div_hide()'>
                     <h2>Select Profile Photo</h2>
                     <hr><br><br>
@@ -218,8 +218,8 @@ echo ini_get('display_errors');
                             $image = $files[$i];
                             echo '<tr>';
                             echo '<td id="tbradio"><input type="radio" id="sprb'.$i.'" name="sprb" value="sprb'.$i.'"></td>
-                                  <td id="tbpic"><label for="sprb'.$i.'"><img src="'.$image.'" alt="Image '.$i.'" 
-                                  id="profileimg" name="sprb'.$i.'" /></label></td></tr>';
+                                  <td id="tbpic"><label for="sprb"><img src="'.$image.'" alt="Image '.$i.'" 
+                                  id="profileimg" name="sprb" /></label></td></tr>';
                         }
                         echo '</table>';
                     ?>
