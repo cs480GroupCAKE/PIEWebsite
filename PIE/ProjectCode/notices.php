@@ -26,10 +26,10 @@ echo ini_get('display_errors');
 
 <body>
     
-    <div id='divCenter'>
+    <div class='divCenter'>
         <h2>Notifications</h2>
         <?php if(sizeof($connArr) != 0): ?>
-        <table id='cen-table'>
+        <table class='cen-table'>
             <thead>
                 <tr>
                     <th>Notice</th><th>Sender</th><th>Accept</th><th>Decline</th>
@@ -61,7 +61,7 @@ echo ini_get('display_errors');
         
         <?php if(sizeof($resArr) != 0): ?>
         <h2>Sent Connection Requests</h2>
-        <table id='cen-table'>
+        <table class='cen-table'>
             <thead>
                 <tr>
                     <th>Notice</th><th>Sent To</th><th>Status</th>

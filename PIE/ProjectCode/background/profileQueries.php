@@ -29,6 +29,7 @@
     $eventuser = $eventsArr['username'];
     $eventdate = $eventsArr['date'];
     $eventdetails = $eventsArr['details'];
+    //$eventtime = $eventsArr['time'];
     
 	
 	//accessEvents needs to be able to collect atleast eventname from database 

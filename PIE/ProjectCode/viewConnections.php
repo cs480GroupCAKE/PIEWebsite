@@ -41,7 +41,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
             <div id='divCenter'>
                 <h2>Connections</h2>
                 <?php if(sizeof($resArr) != 0): ?>
-                <table id='cen-table'>
+                <table class='cen-table'>
                     <thead>
                         <tr>
                             <th>Contact Username</th><th>View Profile</th><th>Remove Contact</th>

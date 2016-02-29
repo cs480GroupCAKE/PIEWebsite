@@ -39,7 +39,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
                 <h2>Search Results</h2>
                 <br>
                 <?php if(sizeof($resArr) != 0): ?>
-                <table id='cen-table'>
+                <table class='cen-table'>
                     <thead>
                         <tr>
                             <th>username</th><th>link</th>
