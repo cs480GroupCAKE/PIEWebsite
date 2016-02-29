@@ -29,7 +29,7 @@ echo ini_get('display_errors');
     <div id='divCenter'>
         <h2>Notifications</h2>
         <?php if(sizeof($connArr) != 0): ?>
-        <table class='cen-table'>
+        <table id='cen-table'>
             <thead>
                 <tr>
                     <th>Notice</th><th>Sender</th><th>Accept</th><th>Decline</th>
