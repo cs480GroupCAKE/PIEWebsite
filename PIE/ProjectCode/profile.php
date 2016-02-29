@@ -37,9 +37,17 @@ Currently needs links and header added and repositioning.
         mkdir("./userImages/current/".$current_user."/");
         
         $curdir = "./userImages/current/".$current_user."/";
+        $profile_blank = $curdir."profileBlank.jpg";
         
         if(dir_empty($curdir)) {
-            copy("./Images/profileBlank.jpg", $curdir."profileBlank.jpg");
+            copy("./Images/profileBlank.jpg", $profile_blank);
+            $setDefault = "INSERT INTO images (username, current) 
+                           VALUES('$current_user','$profile_blank');";
+            if($database->query($setDefault) === TRUE) {
+                //no need to do anything
+            } else {
+                echo "Error: ".$profile."<br>".$database->error;
+            }
         }
         
         function dir_empty($curdir) {

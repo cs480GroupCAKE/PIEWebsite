@@ -29,15 +29,9 @@ echo ini_get('display_errors');
 
     //Unlink all files in current files directory, remove them from the database
     if(isset($_POST['submit'])) {
-        for($i=0; $i<$numCurrent/*count($current_files)*/; $i++) {
+        for($i=0; $i<$numCurrent; $i++) {
             if(file_exists($current_files[$i])) {
                 unlink($current_files[$i]);
-                /*$remCurr = "DELETE FROM images WHERE current = '$current_files[$i]';";
-                if($database->query($remCurr) === TRUE) {
-                    echo "Images removed.";
-                } else {
-                    echo "Error: ".$ppSet."<br>".$database->error;
-                }*/
             }
         }
 
@@ -46,14 +40,13 @@ echo ini_get('display_errors');
             if(isset($_POST['sprb'])) {
                 if($_POST['sprb'] == "sprb".$j) {
                     if(file_exists($target_files[$j])) {
-                        if(copy($target_files[$j], $current_dir.basename($target_files[$j]))) {
-                            $update = "UPDATE images SET current = '$current_dir.basename($target_files[$j])' 
-                                       WHERE username = '$username' AND profile = NULL AND event = NULL;";
-                            /*$addCurr = "INSERT INTO images (username, current) 
-                                        VALUES('$username','$target_files[$j]');";*/
-                            if($database->query($update/*addCurr*/) === TRUE) {
+                        $current_pic = $current_dir.basename($target_files[$j]);
+                        if(copy($target_files[$j], $current_pic)) {
+                            $update = "UPDATE images SET current = '$current_pic' 
+                                       WHERE username = '$username'"; //AND profile = 'NULL' AND event = 'NULL';";
+                            if($database->query($update) === TRUE) {
                                 //echo "Success!";
-                                //header('Location:../profile.php');
+                                header('Location:../profile.php');
                             }
                         } else {
                             echo "Error copying file!";
