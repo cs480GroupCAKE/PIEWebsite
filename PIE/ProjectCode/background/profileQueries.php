@@ -7,15 +7,18 @@
     //QUERIES
     $descriptionQ = "Select * FROM user WHERE username = '$username'";
     $eventsQ = "SELECT * FROM events WHERE username = '$username' ORDER BY date";
-	$eventsQ = "SELECT * FROM events";
+    $subQ = mysqli_query($database, $eventsQ);
     
     //RESULT ARRAYS
     $userArr = mysqli_fetch_assoc(mysqli_query($database, $descriptionQ));
-    $eventsArr = array();
+    $eventArr = array();
    // eventsAssoc
-    $eventsArr = mysqli_fetch_array(mysqli_query($database, $eventsQ));
+   // $eventsArr = mysqli_fetch_array(mysqli_query($database, $eventsQ));
    // $i = 0;
     
+    while($row = mysqli_fetch_assoc($subQ)){
+        $eventArr[] = $row;
+    }
     
     
 
@@ -23,14 +26,14 @@
     $descRes = $userArr['description'];
     $username = $userArr['username'];
     $dob = $userArr['birthdate'];
-    
+    /*
     $eventname = $eventsArr['eventname'];
     $eventtype = $eventsArr['type'];
     $eventuser = $eventsArr['username'];
     $eventdate = $eventsArr['date'];
     $eventdetails = $eventsArr['details'];
     //$eventtime = $eventsArr['time'];
-    
+    */
 	
 	//accessEvents needs to be able to collect atleast eventname from database 
 	//this way I can call it on profile.php and use it with the slider.

@@ -2,12 +2,12 @@
 <?php
 /*
 KEEP IN CODE AND COMMENTED OUT UNLESS DEBUGGING
-*/
+
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('dispaly_startup_errors', '1');
 echo ini_get('display_errors');
-
+*/
     
 ?>
 <!--
@@ -39,7 +39,7 @@ Currently needs links and header added and repositioning.
         $curdir = "./userImages/current/".$current_user."/";
         
         if(dir_empty($curdir)) {
-            copy("./Images/profileBlank.jpg", $curdir."profileBlank.jpeg");
+            copy("./Images/profileBlank.jpg", $curdir."profileBlank.jpg");
         }
         
         function dir_empty($curdir) {
@@ -257,7 +257,12 @@ $(function() {
             
                 <div id='cssside'>
                     <ul>
-                        <li><a href='events.php'>Create Event</a></li>
+                        <li class='active has-sub'><a href='#'>Events</a>
+                            <ul>
+                                <li><a href='events.php'>Create Event</a></li>
+                                <li><a href='viewAllEvents.php'>View All Events</a></li>
+                            </ul>
+                        </li>
                         <li class='active has-sub'><a href='#'>Edit Profile</a>
                             <ul>
                                 <li><a href='editPhotos.php'>Edit Photos</a></li>
