@@ -66,7 +66,7 @@ stored in the database. Currently needs links and access to the viewed user's da
         <div id='body'>
             <!--button will need to change to fit styling of rest site-->
             <div id='divRight'>
-                <?php 
+                <h3><?php 
                     $found = FALSE;
                     $pending = FALSE;
                     for($i = 0; $i<count($resArr); $i++){
@@ -85,9 +85,9 @@ stored in the database. Currently needs links and access to the viewed user's da
                             echo "Contact Added";
                         }
                     }else{
-                        echo "<form action = './background/addContact.php'><input type='submit' value='Add Contact'></form>";
+                        echo "<form action = './background/addContact.php'><input id='button' type='submit' value='Add Contact'></form>";
                     }
-                ?>
+                ?></h3>
             </div>
 
             <div id='divCenter'>
