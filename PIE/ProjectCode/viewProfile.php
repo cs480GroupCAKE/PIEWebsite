@@ -140,7 +140,13 @@ stored in the database. Currently needs links and access to the viewed user's da
             <div id='divLeft'>
             
                 <!-- Viewed user's profile pictures and information may be loaded from the database -->
-                <img src="./Images/profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">
+                <?php
+                    $current_dir = "./userImages/current/".$vusername."/";
+                    $current_files = glob($current_dir."*.*");
+                    
+                    echo "<img src='$current_files[0]' alt='Profile Picture' style='max-width:220px;max-height:220px;'>"
+                ?>
+                <!--<img src="./Images/profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">-->
             
                 <div id='cssside'>
                     <ul>

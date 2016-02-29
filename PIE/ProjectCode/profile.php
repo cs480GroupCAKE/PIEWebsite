@@ -260,8 +260,13 @@ $(function() {
             
             <!-- This is the dropdown menu. Needs links to each page. CSS will need changing for color and font. -->
             <div id='divLeft'>
-            
-                <img src="./Images/profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">
+                <?php
+                    $current_dir = "./userImages/current/".$current_user."/";
+                    $current_files = glob($current_dir."*.*");
+                    
+                    echo "<img src='$current_files[0]' alt='Profile Picture' style='max-width:220px;max-height:220px;'>"
+                ?>
+                <!--<img src="./Images/profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">-->
             
                 <div id='cssside'>
                     <ul>
