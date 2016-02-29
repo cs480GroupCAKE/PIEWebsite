@@ -7,7 +7,7 @@ echo ini_get('display_errors');
 require '../database/database.php';
 session_start();
     if(isset($_SESSION['username'])){
-        echo "Session Active"/$_SESSION['username'];
+        echo "Session Active".$_SESSION['username'];
     }
     
     $desc = $_POST["description"];

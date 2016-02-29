@@ -13,15 +13,17 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
 <?php
     //Global PHP vars
     $user = "placeholder for username in array";
-    $contact;
     $format1 = "<a href='./viewProfile.php?vusername=";
     $format2 = "'>View Profile</a><br>";
+    $delete1 = "<a href='./background/removeContact.php?contact=";
+    $delete2 = "'>Delete</a><br>";
 ?>
 <html>
 <head>
-    <title>Search Results</title>
+    <title>Connections</title>
 
-    <?php require './background/connectionsQueries.php';?>
+    <?php require './background/connectionsQueries.php';
+          //include './background/removeContact.php';?>
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
 
 </head>
@@ -37,13 +39,13 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
     
         <div id='body'>
             <div id='divCenter'>
-                <h2>Search Results</h2>
+                <h2>Connections</h2>
                 <br>
                 <?php if(sizeof($resArr) != 0): ?>
                 <table id='cen-table'>
                     <thead>
                         <tr>
-                            <th>contact</th><th>link</th>
+                            <th>contact</th><th>link</th><th>delete contact</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -52,9 +54,10 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
                             for($i=0; $i<sizeof($resArr);$i++):
                                 $contact = $resArr[$i];
                                 $link = $format1.$contact.$format2;
+                                $remove = $delete1.$contact.$delete2;
                         ?>
                         <tr> 
-                            <td><?php echo $contact;?></td><td><?php echo $link;?>
+                            <td><?php echo $contact;?></td><td><?php echo $link;?></td><td><?php echo $remove;?>
                         </tr>
                             
                         <?php endfor; ?>

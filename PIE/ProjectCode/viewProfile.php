@@ -23,6 +23,7 @@ stored in the database. Currently needs links and access to the viewed user's da
         }
         
         include './background/viewingQueries.php';
+        include './background/connectionsQueries.php';
         if($vusername == NULL){
             header('Location:searchError.php');
         }
@@ -65,7 +66,28 @@ stored in the database. Currently needs links and access to the viewed user's da
         <div id='body'>
             <!--button will need to change to fit styling of rest site-->
             <div id='divRight'>
-                <form action = "./background/addContact.php"><input type="submit" value="Add Contact"></form>
+                <?php 
+                    $found = FALSE;
+                    $pending = FALSE;
+                    for($i = 0; $i<count($resArr); $i++){
+                        if($resArr[$i] == $vusername){
+                            $found = TRUE;
+                            if($pendArr[$i] == 'Y'){                            
+                                $pending = TRUE;
+                            }
+                            break;
+                        }
+                    }
+                    if($found==TRUE){
+                        if($pending==TRUE){
+                            echo "Contact Pending";
+                        }else{
+                            echo "Contact Added";
+                        }
+                    }else{
+                        echo "<form action = './background/addContact.php'><input type='submit' value='Add Contact'></form>";
+                    }
+                ?>
             </div>
 
             <div id='divCenter'>

@@ -17,7 +17,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
    
 if(isset($_GET['accept'])){
     if($_GET['accept'] == 'true'){
-            $enterConn = "INSERT INTO connections VALUES('$username','$sender');";
+            $enterConn = "INSERT INTO connections VALUES('$username','$sender','N');";
     }
 }
     

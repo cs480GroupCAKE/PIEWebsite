@@ -7,6 +7,7 @@
     //QUERIES
     $connectionsQ = "SELECT * FROM notifications WHERE username = '$username'";
     $subQ = mysqli_query($database, $connectionsQ);
+    $noResults = "No Pending Notifications";
     
     //RESULT ARRAYS
     $connArr = array();

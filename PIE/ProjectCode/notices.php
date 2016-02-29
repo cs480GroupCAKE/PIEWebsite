@@ -26,7 +26,7 @@ echo ini_get('display_errors');
 <body>
     
     <div id='divCenter'>
-        <h2>Search Results</h2>
+        <h2>Notifications</h2>
         <br>
         <?php if(sizeof($connArr) != 0): ?>
         <table id='cen-table'>
