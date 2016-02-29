@@ -2,12 +2,12 @@
 <?php
 /*
 KEEP IN CODE AND COMMENTED OUT UNLESS DEBUGGING
-
+*/
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('dispaly_startup_errors', '1');
 echo ini_get('display_errors');
-*/
+
     
 ?>
 <!--
@@ -30,6 +30,24 @@ Currently needs links and header added and repositioning.
         $current_user = $_SESSION['username'];
         //$user_description = $_SESSION['description'];
         //$username = mysqli_real_escape_string($database,$_REQUST['username']);
+        
+        //Make directories for user if they don't exist.
+        mkdir("./userImages/profile/".$current_user."/");
+        mkdir("./userImages/event/".$current_user."/");
+        mkdir("./userImages/current/".$current_user."/");
+        
+        $curdir = "./userImages/current/".$current_user."/";
+        
+        if(dir_empty($curdir)) {
+            copy("./Images/profileBlank.jpg", $curdir."profileBlank.jpeg");
+        }
+        
+        function dir_empty($curdir) {
+            if(!is_readable($curdir)) {
+                return NULL;
+            }
+            return (count(scandir($curdir)) == 2);
+        }
     ?>
     <title>Profile</title>
     

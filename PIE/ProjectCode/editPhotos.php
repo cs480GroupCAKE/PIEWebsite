@@ -38,10 +38,10 @@ echo ini_get('display_errors');
     //Need username for everything
     $username = $_SESSION['username'];
 
-    //Make directories for user if they don't exist.
+/*    //Make directories for user if they don't exist.
     mkdir("./userImages/profile/".$username."/");
     mkdir("./userImages/event/".$username."/");
-    mkdir("./userImages/current/".$username."/")
+    mkdir("./userImages/current/".$username."/");*/
 ?>
 
 <div id='container'>

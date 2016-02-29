@@ -14,8 +14,10 @@ echo ini_get('display_errors');
     require '../database/database.php';
     session_start();
     if(isset($_SESSION['username'])) {
-        echo 'Session Active'.$_SESSION['username'];
+        echo 'Session Active'/$_SESSION['username'];
     }
+
+    echo "check active session";
 
     $username = $_SESSION['username'];
 
@@ -38,11 +40,11 @@ echo ini_get('display_errors');
 
         //Add the selected image to the current folder and to the database under username, current
         for($j=0; $j<count($target_files); $j++) {
-            if(isset($_POST['sprb'.$j])) {
+            if(isset($_POST['sprb'])) {
                 echo "check set radio post";
                 if(file_exists($target_files[$j])) {
                     echo "check file exists";
-                    if(copy($target_files[$j], $current_dir)) {
+                    if(copy($target_files[$j], $current_dir.basename($target_files[$j]).PHP_EOL)) {
                         echo "check copy";
                         $addCurr = "INSERT INTO images (username, current) 
                                     VALUES('$username','$target_files[".$j."]');";
