@@ -18,7 +18,7 @@ echo ini_get('display_errors');
     
     if($d=='t'){
         $_SESSION['delete'] = 'true';
-        header("Location:./createEvent.php") or die("ERROR");
+        header("Location:./createEvent.php");
     }
     
     $eventQ = "SELECT * FROM events WHERE eventid = '$id';";

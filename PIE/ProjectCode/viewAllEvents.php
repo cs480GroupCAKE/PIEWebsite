@@ -19,7 +19,9 @@ echo ini_get('display_errors');
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
     <div id='cssmenu'>
         <?php require './background/loggedcheck.php';
-              require './background/profileQueries.php';?>
+              require './background/profileQueries.php';
+              session_start();
+        ?>
     </div>
 </head>
 
