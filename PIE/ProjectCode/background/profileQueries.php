@@ -15,8 +15,11 @@
    // eventsAssoc
    // $eventsArr = mysqli_fetch_array(mysqli_query($database, $eventsQ));
    // $i = 0;
-    
+ 
     while($row = mysqli_fetch_assoc($subQ)){
+        $date = explode("-",$row['date']);
+        $date_formatted = $date[1]."/".$date[2]."/".$date[0];
+        $row['date'] = $date_formatted;
         $eventArr[] = $row;
     }
     

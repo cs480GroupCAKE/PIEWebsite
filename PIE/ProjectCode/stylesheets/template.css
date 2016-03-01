@@ -169,6 +169,10 @@ body {
     box-shadow: 0 0 8px 8px white inset;
 }
 
+#eventdescript{
+    text-align:left;
+}
+
 /*
 
 TODO: OLD CODE USED FOR NAVIGATION BAR. LOT OF BULK CODE NOT NEEDED. DELETE AFTER GROUP REVIEWS.;

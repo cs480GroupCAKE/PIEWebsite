@@ -42,7 +42,7 @@ echo ini_get('display_errors');
                         $name = $eventArr[$i]['eventname'];
                         $date = $eventArr[$i]['date'];
                         $attending = "tobeimplemented";
-                        $edit = "<a href='updateEvent.php?id='$id''>Edit</a>";
+                        $edit = "<a href='./background/grabEvent.php?id=".$id."'>Edit</a>";
                         $delete = "<a href='removeEvent.php?id='$id''>Delete</a>";
                 ?>
                 <tr> 

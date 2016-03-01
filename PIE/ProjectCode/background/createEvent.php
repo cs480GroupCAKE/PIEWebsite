@@ -14,8 +14,12 @@ require '../database/database.php';
   
     session_start();
     if(isset($_SESSION['username'])){
-        echo "Session Active"/$_SESSION['username'];
+        echo "Session Active ".$_SESSION['username'];
     }
+    //$arr = array();
+    $arr = $_SESSION['current_event'];
+    $id = $arr['eventid'];
+
 
 /* This was used for the old dropdown date picker
     $mos = $_POST['mos'];
@@ -43,7 +47,7 @@ require '../database/database.php';
     
     //Split date into proper format for sql insertion
     $dateArray = explode("/", $date);
-    $eventdat = $dateArray[2]."-".$dateArray[0]."-".$dateArray[1];
+    $eventdate = $dateArray[2]."-".$dateArray[0]."-".$dateArray[1];
     
     //Post date in correct format
     $date = $_POST['year']."-".$mosNum."-".$_POST['day'];
@@ -51,15 +55,24 @@ require '../database/database.php';
     $eventname = $_POST["eventname"];
     $details = $_POST["eventdetails"];
     
-    $enterEvent = "INSERT INTO events (username, eventname, details, date) 
-                   VALUES('$username','$eventname','$details','$eventdat')";
+    $updateEvent = "UPDATE events SET username='$username', eventname='$eventname',details='$details',
+                    date='$eventdate' WHERE eventid='$id';";
     
-    if($database->query($enterEvent)===TRUE){
-        header("Location:../profile.php");
-        //printf("Success! Your username is: %s\n Born year: %s\n",$user, $dob);// $row);this needs work
+    $enterEvent = "INSERT INTO events (username, eventname, details, date) 
+                   VALUES('$username','$eventname','$details','$eventdate')";
+    
+    if($id == NULL){
+        if($database->query($enterEvent)===TRUE){
+            header("Location:../profile.php");
+        }else{
+            echo "error ".$createEvent."<br>".$database->error;
+        }    
     }else{
-        echo "error ".$createEvent."<br>".$database->error;
+        if($database->query($updateEvent)==TRUE){
+            unset($_SESSION['current_event']);
+            header("Location:../viewAllEvents.php");
+        }else{
+            echo "error".$updateEvent.$database->error;
+        }
     }
-    echo $date;
-    echo working;
 ?>

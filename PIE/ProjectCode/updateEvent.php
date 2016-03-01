@@ -11,8 +11,16 @@ echo ini_get('display_errors');
 ?>
 
 <?php 
+    session_start();
     require './database/database.php';
     include './background/profileQueries.php';
+    $current = array();
+    $current = $_SESSION['current_event'];
+    $details = $current['details'];
+    $date = explode("-",$current['date']);
+    $date_formatted = $date[1]."/".$date[2]."/".$date[0];
+    
+    
 ?>
 
 <!DOCTYPE PHP>
@@ -62,23 +70,24 @@ echo ini_get('display_errors');
         </div>
     
         <div id='body'>
-            <form action="./background/updateEventBackground.php" method="post">
+            <form action="./background/createEvent.php" method="post">
 
                 Event Name:<br>
-                <input type="text" name="eventname">
+                <input type="text" name="eventname" value="<?php echo $current['eventname'];?>">
                 <br><br>
 
                 Date:<br>
                 <!-- This will be used for the jQuery calendar datepicker -->
-                <input type="text" name="eventdate" id="datepicker" value=<?php echo $eventdate;?>>
+                <input type="text" name="eventdate" id="datepicker" value="<?php echo $date_formatted;?>">
                 <br><br>
                 
                 Time:<br>
-                <input type="text" name="time">
+                <input type="text" name="time" value="<?php echo 'test';?>">
                 <br><br>
             
                 Event Details:<br>
-                <textarea id="eventdescript" class="input" name="eventdetails" maxlength="5000" rows="10" cols="50"></textarea>
+                <textarea id='eventdescript' class='input' name='eventdetails' maxlength='500' 
+                rows='10' cols='50'><?php echo $current['details'];?></textarea>
                 <br><br>
                 <!--<textarea rows="4" cols="50" name="eventdetails">
                 </textarea>--> 
