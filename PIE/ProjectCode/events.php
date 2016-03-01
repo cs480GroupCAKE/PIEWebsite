@@ -114,12 +114,12 @@
             <form action="./background/createEvent.php" method="post">
 
                 Event Name:<br>
-                <input type="text" name="eventname">
+                <input type="text" name="eventname" placeholder='Event Name' required>
                 <br><br>
 
                 Date:<br>
                 <!-- This will be used for the jQuery calendar datepicker -->
-                <input type="text" name="eventdate" id="datepicker">
+                <input type="text" name="eventdate" id="datepicker" placeholder='Select Date' required>
                 <br><br>
 
                 <!-- Old scipt for dropdown date selection
@@ -140,11 +140,16 @@
                 -->
                 
                 Time:<br>
-                <input type="text" name="time">
+                <input type="text" name="time" placeholder='Event Time'>
+                <br><br>
+                
+                Location:<br>
+                <input type="text" name="location" required placeholder="Event Location" required>
                 <br><br>
             
                 Event Details:<br>
-                <textarea id="eventdescript" class="input" name="eventdetails" maxlength="500" rows="10" cols="50"></textarea>
+                <textarea id="eventdescript" class="input" name="eventdetails"
+                placeholder='Enter Event Details' maxlength="500" rows="10" cols="50"></textarea>
                 <br><br>
                 <!--<textarea rows="4" cols="50" name="eventdetails">
                 </textarea>--> 

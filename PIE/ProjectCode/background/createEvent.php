@@ -19,7 +19,19 @@ require '../database/database.php';
     //$arr = array();
     $arr = $_SESSION['current_event'];
     $id = $arr['eventid'];
-
+    $delete = $_SESSION['delete'];
+    
+    $deleteEvent = "DELETE FROM events WHERE eventid='$id';";
+            
+    if($delete=='true'){
+        if($database->query($deleteEvent)==TRUE){
+            unset($_SESSION['delete']);
+            unset($_SESSION['current_event']);
+            header("Location:../viewAllEvents");
+        }else{
+            echo "error".$updateEvent.$database->error;
+        }
+    }
 
 /* This was used for the old dropdown date picker
     $mos = $_POST['mos'];
@@ -54,16 +66,18 @@ require '../database/database.php';
     $username = $_SESSION['username'];
     $eventname = $_POST["eventname"];
     $details = $_POST["eventdetails"];
+    $location = $_POST['location'];
     
     $updateEvent = "UPDATE events SET username='$username', eventname='$eventname',details='$details',
-                    date='$eventdate' WHERE eventid='$id';";
+                    date='$eventdate', location='$location' WHERE eventid='$id';";
     
-    $enterEvent = "INSERT INTO events (username, eventname, details, date) 
-                   VALUES('$username','$eventname','$details','$eventdate')";
+    $enterEvent = "INSERT INTO events (username, eventname, details, date, location) 
+                   VALUES('$username','$eventname','$details','$eventdate', '$location')";
+    
     
     if($id == NULL){
         if($database->query($enterEvent)===TRUE){
-            header("Location:../profile.php");
+            header("Location:../viewAllEvents.php");
         }else{
             echo "error ".$createEvent."<br>".$database->error;
         }    

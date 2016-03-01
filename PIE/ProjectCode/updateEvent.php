@@ -20,7 +20,7 @@ echo ini_get('display_errors');
     $date = explode("-",$current['date']);
     $date_formatted = $date[1]."/".$date[2]."/".$date[0];
     
-    
+    echo $_SESSION['delete'];
 ?>
 
 <!DOCTYPE PHP>
@@ -73,16 +73,20 @@ echo ini_get('display_errors');
             <form action="./background/createEvent.php" method="post">
 
                 Event Name:<br>
-                <input type="text" name="eventname" value="<?php echo $current['eventname'];?>">
+                <input type="text" name="eventname" value="<?php echo $current['eventname'];?>" required>
                 <br><br>
 
                 Date:<br>
                 <!-- This will be used for the jQuery calendar datepicker -->
-                <input type="text" name="eventdate" id="datepicker" value="<?php echo $date_formatted;?>">
+                <input type="text" name="eventdate" id="datepicker" value="<?php echo $date_formatted;?>" required>
                 <br><br>
                 
                 Time:<br>
-                <input type="text" name="time" value="<?php echo 'test';?>">
+                <input type="text" name="time" value="<?php echo 'test';?>" placeholder='Enter time'>
+                <br><br>
+                
+                Location:<br>
+                <input type="text" name="location" value="<?php echo $current['location'];?>" required>
                 <br><br>
             
                 Event Details:<br>

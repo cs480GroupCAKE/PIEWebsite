@@ -31,7 +31,7 @@ echo ini_get('display_errors');
         <table class='cen-table'>
             <thead>
                 <tr>
-                    <th>ID</th><th>Name</th><th>Date</th><th>Attending</th><th>Edit</th><th>Delete</th>
+                    <th>Name</th><th>Date</th><th>Location</th><th>Attending</th><th>Edit</th><th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -41,13 +41,14 @@ echo ini_get('display_errors');
                         $id = $eventArr[$i]['eventid'];
                         $name = $eventArr[$i]['eventname'];
                         $date = $eventArr[$i]['date'];
+                        $location = $eventArr[$i]['location'];
                         $attending = "tobeimplemented";
                         $edit = "<a href='./background/grabEvent.php?id=".$id."'>Edit</a>";
-                        $delete = "<a href='removeEvent.php?id='$id''>Delete</a>";
+                        $delete = "<a href='./background/grabEvent.php?id=".$id."&d=t'>Delete</a>";
                 ?>
                 <tr> 
-                    <td><?php echo $id;?></td><td><?php echo $name;?></td>
-                    <td><?php echo $date;?></td><td><?php echo $attending;?></td>
+                    <td><?php echo $name;?></td><td><?php echo $date;?></td>
+                    <td><?php echo $location;?></td><td><?php echo $attending;?></td>
                     <td><?php echo $edit;?></td><td><?php echo $delete;?></td>
                 </tr>
                     
