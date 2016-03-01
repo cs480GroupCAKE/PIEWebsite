@@ -270,13 +270,13 @@ $(function() {
             
                 <div id='cssside'>
                     <ul>
-                        <li class='active has-sub'><a href='#'>Events</a>
+                        <li class='has-sub'><a href='#'>Events</a>
                             <ul>
                                 <li><a href='events.php'>Create Event</a></li>
                                 <li><a href='viewAllEvents.php'>View All Events</a></li>
                             </ul>
                         </li>
-                        <li class='active has-sub'><a href='#'>Edit Profile</a>
+                        <li class='has-sub'><a href='#'>Edit Profile</a>
                             <ul>
                                 <li><a href='editPhotos.php'>Edit Photos</a></li>
                                 <li><a href='description.php'>Edit Description</a></li>

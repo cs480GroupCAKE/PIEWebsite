@@ -152,7 +152,7 @@ stored in the database. Currently needs links and access to the viewed user's da
                     <ul>
                         <li><a href='#'>View Pictures</a></li>
                         <li><a href='#'>View Connections</a></li>
-                        <li class='active has-sub'><a href='#'>View Events</a>
+                        <li class='has-sub'><a href='#'>View Events</a>
                             <ul>
                                 <li><a href='#'>Upcoming Events</a></li>
                                 <li><a href='#'>Past Events</a></li>
