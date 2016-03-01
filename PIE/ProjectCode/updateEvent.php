@@ -82,7 +82,7 @@ echo ini_get('display_errors');
                 <br><br>
                 
                 Time:<br>
-                <input type="text" name="time" value="<?php echo 'test';?>" placeholder='Enter time'>
+                <input type="text" name="time" value="<?php echo $current['time'];?>" placeholder='Enter time'>
                 <br><br>
                 
                 Location:<br>

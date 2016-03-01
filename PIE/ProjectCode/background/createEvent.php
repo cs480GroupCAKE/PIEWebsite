@@ -67,12 +67,13 @@ require '../database/database.php';
     $eventname = $_POST["eventname"];
     $details = $_POST["eventdetails"];
     $location = $_POST['location'];
+    $time = $_POST['time'];
     
     $updateEvent = "UPDATE events SET username='$username', eventname='$eventname',details='$details',
-                    date='$eventdate', location='$location' WHERE eventid='$id';";
+                    date='$eventdate', location='$location', time='$time' WHERE eventid='$id';";
     
-    $enterEvent = "INSERT INTO events (username, eventname, details, date, location) 
-                   VALUES('$username','$eventname','$details','$eventdate', '$location')";
+    $enterEvent = "INSERT INTO events (username, eventname, details, date, location, time) 
+                   VALUES('$username','$eventname','$details','$eventdate', '$location', '$time')";
     
     
     if($id == NULL){
