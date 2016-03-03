@@ -182,10 +182,15 @@ $(function() {
                     <h2>Events</h2>
                     <div>
                         <p><?php 
-                        if($eventname!=NULL){
-                            echo "Event Name: $eventname<br>";
-                            echo "Date: $eventdate <br>";
-                            echo "Details: $eventdetails<br><br>";
+                            if(sizeof(eventArr)>0){
+                            foreach($eventArr as $current){
+                                echo "<a>Name: </a>".$current['eventname']."<br>";
+                                echo "<a>Created By: </a>".$current['username']."<br>";
+                                echo "<a>Date: </a>".$current['date']."<br>";
+                                echo "<a>Time: </a>".$current['time']."<br>";
+                                echo "<a>--Details--</a><br>".$current['details']."<br><br>";
+                                echo "-------------------------<br><br>";
+                            }
                         }else{
                             echo "No events scheduled";
                         }
@@ -227,7 +232,51 @@ $(function() {
                 </p> 
                 <div id="slider">
                 </div>  
-
+                            <?php 
+                            $result = mysqli_query($database, $eventsQ);
+                            if (!$result) {
+                            echo("Nothing found");
+                            }
+                            //data converted into array
+                            while ($row = mysqli_fetch_assoc($result)){
+                            $array_data[] = $row;
+                           }
+                            //encode the data into array.
+                            $json = json_encode($array_data);
+                            //displays all events from the database.
+                            //echo $json;
+                            
+                            //for($row=1; $row<=$eventsQ; $row ++){
+                                //echo "$username";
+                            //}
+                            
+                            if($eventname !=NULL){
+                            $_POST['next'];
+                            //echo "$eventdate";
+                            
+                            }
+                        ?>
+                        </p>
+                        
+                    <!--    <p>  <php include './background/profileQueries.php' ?>
+                        
+                        session_start();
+                        
+                        loop through array with the number of events
+                        for($accessEvents=1;$accessEvents<=$events.length();$accessEvents++){
+                            echo "one of the events we found in DB is $accessEvents";
+                            $_POST['sliderText'];
+                        }
+                        
+                        </p>
+                        -->
+                <!-- text for the events slider -->
+                <p class="sliderText">
+                    <label for="myEvent">Upcoming Events:</label>
+                    <input type="text" id="myEvent"  readonly style="border:0; color:#FFF; background-color:#006D89; font-weight:bold;">
+                </p> 
+                <div id="slider">
+                </div>  
             <button name="previous" id="previous" type="submit" >Previous Event</button>
             <button name="next" id="next"type="submit">Next Event</button>
             
