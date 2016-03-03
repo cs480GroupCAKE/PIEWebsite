@@ -12,13 +12,22 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
    require '../database/database.php';
    session_start();
    $sender = $_GET['sender'];
+   $action = $_GET['accept'];
    $username = $_SESSION['username'];
+   $eventid = $_GET['eventid'];
    $deleteNotice = "DELETE FROM notifications WHERE username = '$username' AND sender = '$sender';";
    
 if(isset($_GET['accept'])){
-    if($_GET['accept'] == 'true'){
+    if($action == 'true'){
         $enterConn = "UPDATE connections SET pending='N' WHERE username='$sender' AND contact='$username';";
         $database->query($enterConn);
+    }else if($action == 'attend'){
+        $attendEvent = "SELECT attending FROM events WHERE id = '$eventid';";
+        $string = $databse->query($attendEvent);
+        $string = $string." ".$username;
+        $insertEvent = "UPDATE events SET attending='$string' WHERE id='$eventid';";
+        $database->query($insertEvent);
+        
     }else{
         $deleteConn = "DELETE FROM connections WHERE username = '$sender' AND sender = '$username';";
         $database->query($deleteConn);

@@ -70,10 +70,10 @@ require '../database/database.php';
     $time = $_POST['time'];
     
     $updateEvent = "UPDATE events SET username='$username', eventname='$eventname',details='$details',
-                    date='$eventdate', location='$location', time='$time' WHERE eventid='$id';";
+                    date='$eventdate', location='$location', time='$time' attending='$attending' WHERE eventid='$id';";
     
-    $enterEvent = "INSERT INTO events (username, eventname, details, date, location, time) 
-                   VALUES('$username','$eventname','$details','$eventdate', '$location', '$time')";
+    $enterEvent = "INSERT INTO events (username, eventname, details, date, location, time, attending) 
+                   VALUES('$username','$eventname','$details','$eventdate', '$location', '$time', '$attending')";
     
     
     if($id == NULL){
