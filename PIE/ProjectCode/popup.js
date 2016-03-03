@@ -54,6 +54,10 @@ function setPP_div_show() {
     document.getElementById('spppopupDiv').style.display = "block";
 }
 
+function invite_div_show() {
+    document.getElementById('invpopupDiv').style.display = "block";
+}
+
 //Hides popup for profile photo upload
 function addPP_div_hide() {
     document.getElementById('pppopupDiv').style.display = "none";
@@ -77,4 +81,8 @@ function remEP_div_hide() {
 //Hides popup for event photo removal
 function setPP_div_hide() {
     document.getElementById('spppopupDiv').style.display = "none";
+}
+
+function invite_div_hide() {
+    document.getElementById('invpopupDiv').style.display = "none";
 }

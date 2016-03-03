@@ -28,7 +28,7 @@ echo ini_get('display_errors');
     if($current_event = mysqli_fetch_assoc($subQ)){
         $_SESSION['current_event'] = $current_event;
        // echo sizeof($_SESSION['current_event']);
-   //     header('Location:../updateEvent.php');
+        header('Location:../updateEvent.php');
     }else{
         echo "error ".$eventsQ."<br>".$database->error;
     }
