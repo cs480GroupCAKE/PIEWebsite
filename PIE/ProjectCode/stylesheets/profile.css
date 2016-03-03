@@ -25,3 +25,11 @@
 #sliderText{
 text-align:center;	
 }
+
+#infoID{
+    float:left;
+    display:inline-block;
+    padding:5px;
+    margin-left:10px;
+    text-align:left;
+}

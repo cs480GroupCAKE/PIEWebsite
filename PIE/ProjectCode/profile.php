@@ -98,21 +98,20 @@ $(function() {
                $("#myEvent").val(ui.value);		 
             }
         }); 
-		$("#myEvent").val($("#slider").slider("value")); 
-		//enables button to go to previous event
-		$("#previous").click(function() {
-		s.slider('value', s.slider('value') - s.slider('option', 'step'));
-		//shows number of events we are incrementing by.
-		$("#myEvent").val($("#slider").slider("value")); 
-		 });
+        $("#myEvent").val($("#slider").slider("value")); 
+        //enables button to go to previous event
+        $("#previous").click(function() {
+        s.slider('value', s.slider('value') - s.slider('option', 'step'));
+        //shows number of events we are incrementing by.
+        $("#myEvent").val($("#slider").slider("value")); 
+         });
 
-		//enable the button to go to next event
-		$("#next").click(function() {
-		s.slider('value', s.slider('value') + s.slider('option','step'));
-		//shows number of events we are incrementing by.
-		$("#myEvent").val($("#slider").slider("value")); 
-		 });
-		 
+        //enable the button to go to next event
+        $("#next").click(function() {
+        s.slider('value', s.slider('value') + s.slider('option','step'));
+        //shows number of events we are incrementing by.
+        $("#myEvent").val($("#slider").slider("value")); 
+        }); 
 });
   </script>
 
@@ -151,37 +150,34 @@ $(function() {
             
                 <ul id="tabs">
                     <li><a href="#events">Events</a></li>
-                    <li><a href="#charts">Charts</a></li>
+                    <li><a href="#instructions">Instructions</a></li>
                     <li><a href="#photos">Event Photos</a></li>
                 </ul>
-				
-				<!-- Display test -->
-				
-				<!--<script>
-				//Part of code is modified based on how other were able to retrieve data. For testing purposes
-				//Not being used.
-				
-				// $(document).ready(function() {
+                <!-- Display test -->
+                
+                <!--<script>
+                //Part of code is modified based on how other were able to retrieve data. For testing purposes
+                //Not being used.
+                // $(document).ready(function() {
 
-					// $("#test").click(function test() {                
+                // $("#test").click(function test() {                
 
-					// $.ajax({    //using this to load our profileQueries.php file
-					// type: "GET",
-					// url: "./background/profileQueries.php",             
-					// dataType: "array",               
-					// success: function(response){                    
+                // $.ajax({    //using this to load our profileQueries.php file
+                // type: "GET",
+                // url: "./background/profileQueries.php",             
+                // dataType: "array",               
+                // success: function(response){                    
             // $("#display").array(response); 
-					// }
-						// });
-					// });
-			// });
-				</script>
-				-->
-				
-				<!--testing display 
-				<div  id="display"></div>
-				-->
-				
+                // }
+                // });
+                // });
+            // });
+                </script>
+                -->
+                <!--testing display 
+                <div  id="display"></div>
+                -->
+                
                 <div class="tabContent" id="events">
                     <h2>Events</h2>
                     <div>
@@ -193,62 +189,68 @@ $(function() {
                         }else{
                             echo "No events scheduled";
                         }
-						
-							$result = mysqli_query($database, $eventsQ);
-							 if (!$result) {
-							echo("Nothing found");
-							 }
-							//data converted into array
-							 while ($row = mysqli_fetch_assoc($result)){
-							$array_data[] = $row;
-						   }
-							 //encode the data into array.
-							$json = json_encode($array_data);
-							//displays all events from the database.
-							echo $json;
-							
-							//for($row=1; $row<=$eventsQ; $row ++){
-								//echo "$username";
-							//}
-							
-							if($eventname !=NULL){
-								$_POST['next'];
-								//echo "$eventdate";
-								
-							}
-						?>
-						</p>
-						
-					<!--	<p>  <php include './background/profileQueries.php' ?>
-						
-						session_start();
-						
-						loop through array with the number of events
-						for($accessEvents=1;$accessEvents<=$events.length();$accessEvents++){
-							echo "one of the events we found in DB is $accessEvents";
-							$_POST['sliderText'];
-						}						
-						
-						</p>
-						-->
-				<!-- text for the events slider -->
-				 <p class="sliderText">
-					<label for="myEvent">Upcoming Events:</label>
-					<input type="text" id="myEvent"  readonly style="border:0; color:#FFF; background-color:#006D89; font-weight:bold;">
-				</p> 
-				<div id="slider">
-				</div>  
+                    
+                            $result = mysqli_query($database, $eventsQ);
+                            if (!$result) {
+                            echo("Nothing found");
+                             }
+                            //data converted into array
+                            while ($row = mysqli_fetch_assoc($result)){
+                            $array_data[] = $row;
+                        }
+                            //encode the data into array.
+                            $json = json_encode($array_data);
+                            //displays all events from the database.
+                            echo $json;
+                            //for($row=1; $row<=$eventsQ; $row ++){
+                                //echo "$username";
+                            //}
+                            if($eventname !=NULL){
+                                $_POST['next'];
+                                //echo "$eventdate";
+                            }
+                        ?>
+                        </p>
+                    <!--    <p>  <php include './background/profileQueries.php' ?>
+                        session_start();
+                        loop through array with the number of events
+                        for($accessEvents=1;$accessEvents<=$events.length();$accessEvents++){
+                        echo "one of the events we found in DB is $accessEvents";
+                        $_POST['sliderText'];
+                        }
+                        </p>
+                        -->
+                <!-- text for the events slider -->
+                <p class="sliderText">
+                    <label for="myEvent">Upcoming Events:</label>
+                    <input type="text" id="myEvent"  readonly style="border:0; color:#FFF; background-color:#006D89; font-weight:bold;">
+                </p> 
+                <div id="slider">
+                </div>  
 
             <button name="previous" id="previous" type="submit" >Previous Event</button>
             <button name="next" id="next"type="submit">Next Event</button>
-		
+            
                     </div>
                 </div>
 
-                <div class="tabContent" id="charts">
-                    <h2>Charts</h2>
+                <div class="tabContent" id="instructions">
+                    <h2>Navigating Through Your Profile</h2>
                     <div>
-                        <p>Add charts here</p>
+                        <ul>
+                            <li id="infoID">To add an event, click the drop down menu "Events" and select "Create Event"</li>
+                            <li id="infoID">After you've created your event, you will be able to view the details about your event
+                            and have a chance to edit or delete the event afterwards</li>
+                            <li id="infoID">To add a photo, click on the left drop down menu "Edit Profile" and select "Edit Photos"</li>
+                            <li id="infoID">To edit your description, click on the left drop down menu "Edit Description" and select "Edit Description"</li>
+                            <li id="infoID">To add a connection/friend,search for the connection located on top of the page</li>
+                            <li id="infoID">You can view the connections/friends you have by clicking "View Connection" on the left of the page</li>
+                            <li id="infoID">You can view your notifications by clicking "View Notifications" on the left side of the page</li>
+                        </ul>
+                        <table>
+                            <tr>
+                            <td></td>
+                        </table>
                     </div>
                 </div>
 
@@ -288,7 +290,7 @@ $(function() {
                     </ul>
                 </div>
             </div>
-			
+            
         </div>
     
         <div id='footer'>
