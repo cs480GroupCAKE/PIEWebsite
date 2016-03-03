@@ -31,10 +31,8 @@ echo ini_get('display_errors');
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/events.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/popup.css">
+    <script src="./popup.js"></script>
     
     <script>
         //This is for the datepicker - it hides previous dates.
@@ -99,6 +97,23 @@ echo ini_get('display_errors');
                 <input id='button' type="submit" name="submit" value="Update Event">
             </form>
             <!--<button onclick="goBack()">Go Back</button>-->
+
+                        <!-- This is used for the connection invites for events -->
+            <div id='invpopupDiv'>
+                <div id='popupInnerDiv'>
+                    <form action='#' id='popupform' method='post' name='invpopupform'><!--enctype='multipart/form-data'-->
+                        <img id='close' src='./Images/close_button.png' onclick='invite_div_hide()'>
+                        <h2>Invite Connections</h2>
+                        <hr><br><br>
+                        <!-- add inputs here -->
+                        <br><br><br>
+                        <!-- reference this in connection adding php -->
+                        <input type='submit' value='Invite' name='submit'>
+                    </form>
+                </div>
+            </div>
+        
+        <button id='popupbutton' onclick='invite_div_show()'>Invite Connections</button>
 
             <script>
                 function goBack(){
