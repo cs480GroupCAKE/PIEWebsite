@@ -186,10 +186,15 @@ $(function() {
                     <h2>Events</h2>
                     <div>
                         <p><?php 
-                        if($eventname!=NULL){
-                            echo "Event Name: $eventname<br>";
-                            echo "Date: $eventdate <br>";
-                            echo "Details: $eventdetails<br><br>";
+                        if(sizeof(eventArr)>0){
+                            foreach($eventArr as $current){
+                                echo "<a>Name: </a>".$current['eventname']."<br>";
+                                echo "<a>Created By: </a>".$current['username']."<br>";
+                                echo "<a>Date: </a>".$current['date']."<br>";
+                                echo "<a>Time: </a>".$current['time']."<br>";
+                                echo "<a>--Details--</a><br>".$current['details']."<br><br>";
+                                echo "-------------------------<br><br>";
+                            }
                         }else{
                             echo "No events scheduled";
                         }
@@ -205,7 +210,7 @@ $(function() {
 							 //encode the data into array.
 							$json = json_encode($array_data);
 							//displays all events from the database.
-							echo $json;
+							//echo $json;
 							
 							//for($row=1; $row<=$eventsQ; $row ++){
 								//echo "$username";

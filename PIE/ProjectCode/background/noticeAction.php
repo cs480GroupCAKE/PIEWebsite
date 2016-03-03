@@ -21,7 +21,7 @@ if(isset($_GET['accept'])){
         $database->query($enterConn);
     }else{
         $deleteConn = "DELETE FROM connections WHERE username = '$sender' AND sender = '$username';";
-        database->query($deleteConn);
+        $database->query($deleteConn);
     }
 }
     
