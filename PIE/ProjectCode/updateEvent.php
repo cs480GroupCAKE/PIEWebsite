@@ -14,6 +14,7 @@ echo ini_get('display_errors');
     session_start();
     require './database/database.php';
     include './background/profileQueries.php';
+    include './background/connectionsQueries.php';
     $current = array();
     $current = $_SESSION['current_event'];
     $details = $current['details'];
@@ -106,6 +107,17 @@ echo ini_get('display_errors');
                         <h2>Invite Connections</h2>
                         <hr><br><br>
                         <!-- add inputs here -->
+                        <?php
+                            echo '<table class="addcons">';
+                            for($i=0; $i<sizeof($current_contacts); $i++){
+                                $contact = $current_contacts[$i];
+                                echo '<tr>';
+                                echo '<td id="tbcheck"><input type="checkbox" id="iccb'.$i.'name="iccb'.$i.'"></td>
+                                      <td id="tbcontact"><label for="iccb'.$i.'">'.$contact.'</label></td></tr>';
+                            }
+                            echo "</table>";
+                                
+                        ?>
                         <br><br><br>
                         <!-- reference this in connection adding php -->
                         <input type='submit' value='Invite' name='submit'>
