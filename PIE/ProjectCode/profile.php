@@ -90,12 +90,12 @@ Currently needs links and header added and repositioning.
   //creates the actual slider using jquery API with modification.
 $(function() {
         var s = $("#slider").slider({
-            value:1,
+            value:0,
             min:0,
             max:10,
             step:1,
             slide: function(event, ui){
-               $("#myEvent").val(ui.value);		 
+               $("#myEvent").val(ui.value);
             }
         }); 
         $("#myEvent").val($("#slider").slider("value")); 
