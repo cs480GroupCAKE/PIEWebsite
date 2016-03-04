@@ -315,7 +315,11 @@ $(function() {
                     $current_dir = "./userImages/current/".$current_user."/";
                     $current_files = glob($current_dir."*.*");
                     
-                    echo "<img src='$current_files[0]' alt='Profile Picture' style='max-width:220px;max-height:220px;'>"
+                    echo "<div id='ppcontainer'>";
+                    echo "<img id='profilepic' src='$current_files[0]' alt='Profile Picture' >"; //style='max-width:220px;max-height:220px;'
+                    echo "<a href='editPhotos.php'>
+                          <img id='editpicbutton' src='./Images/edit_button.png' alt='Edit Pictures'>
+                          </a>";
                 ?>
                 <!--<img src="./Images/profileBlank.jpg" alt="Profile picture" style="width:220px;height:220px;">-->
             
