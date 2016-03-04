@@ -284,17 +284,29 @@ $(function() {
                 </div>
 
                 <div class="tabContent" id="instructions">
-                    <h2>Navigating Through Your Profile</h2>
+                    <h2>Navigating Your Profile</h2>
                     <div>
                         <ul>
-                            <li id="infoID">To add an event, click the drop down menu "Events" and select "Create Event"</li>
-                            <li id="infoID">After you've created your event, you will be able to view the details about your event
-                            and have a chance to edit or delete the event afterwards</li>
-                            <li id="infoID">To add a photo, click on the left drop down menu "Edit Profile" and select "Edit Photos"</li>
-                            <li id="infoID">To edit your description, click on the left drop down menu "Edit Description" and select "Edit Description"</li>
-                            <li id="infoID">To add a connection/friend,search for the connection located on top of the page</li>
-                            <li id="infoID">You can view the connections/friends you have by clicking "View Connection" on the left of the page</li>
-                            <li id="infoID">You can view your notifications by clicking "View Notifications" on the left side of the page</li>
+                            <li id="infoID">To add an event, click the "Events" button found on the left sidebar. Select "Create Event" 
+                                            and fill in the form data.</li>
+                            <li id="infoID">When you create an event, you will be able to view the details about that event as well as other 
+                                            events you might be attending in the "View All Events" button found under "Events" on the sidebar.</li>
+                            <li id="infoID">"View All Events" also allows you to edit or delete events after their creation.</li>
+                            <li id="infoID">To add a photo, click on the "Edit Profile" button found on the left sidebar and select "Edit Photos". 
+                                            You can also add photos by clicking on the "Edit" icon found on the bottom-right of your current profile picture.</li>
+                            <li id="infoID">To edit your profile's description, click on the "Edit Profile" button found on the left sidebar and 
+                                            select "Edit Description".</li>
+                            <li id="infoID">To find connections, or friends, search for the connection's username using the text area and search button 
+                                            located in the center of the header (found on the top of the page).</li>
+                            <li id="infoID">While viewing a user's profile, you can add them as a connection with the "Add Contact" button found on the 
+                                            top-right of the page (beneath the "Sign Out" button). If you have already added that user, you will 
+                                            not see the "Add Contact" button.</li>
+                            <li id="infoID">You can view your connections by clicking "View Connections" button found on on the sidebar on the left side of 
+                                            the page.</li>
+                            <li id="infoID">You can view your notifications by clicking "View Notifications" on the left side of the page. The notifications 
+                                            page displays information concerning connection invites and event invites.</li>
+                            <li id="infoID">If you have any questions or comments concerning the site, use the "Help" button found on the sidebar on the 
+                                            left side of the page. Fill out the form to send an e-mail to the site's developers.</li>
                         </ul>
                         <table>
                             <tr>
