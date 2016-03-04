@@ -14,16 +14,16 @@
 
 
 #slider{
-	/* max-width:750px;
-	min-width: 450px; */
-	
-	left:1%;
-	margin-left:25px;
-	margin-right:35px;
+    /* max-width:750px;
+    min-width: 450px; */
+
+    left:1%;
+    margin-left:25px;
+    margin-right:35px;
 }
 
 #sliderText{
-text-align:center;	
+text-align:center;
 }
 
 #infoID{

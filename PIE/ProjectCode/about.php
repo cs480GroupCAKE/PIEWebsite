@@ -10,6 +10,7 @@ the impact of the project to the current point. More work needs to be done on th
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/about.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/profile.css">
     
     <script src="tabs.js"></script>
 

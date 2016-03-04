@@ -22,6 +22,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/profile.css">
 
 </head>
 

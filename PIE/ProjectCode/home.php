@@ -4,7 +4,8 @@ to other areas of site included in navigation bar-->
 <html>
 <head>
     <title>Pie Home</title>
-    <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">       
+    <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/profile.css">
 
 </head>
 <body>

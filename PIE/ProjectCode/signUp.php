@@ -8,6 +8,7 @@ only a few are to make testing database code easier. Should catch handle and pri
 <head>
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/profile.css">
     
     <meta charset="utf-8">
     <title>Sign Up</title>
