@@ -32,7 +32,7 @@ echo ini_get('display_errors');
     
     //Use these in case the current profile picture is being removed
     $curr_dir = "../userImages/current/".$username."/";
-    $curr_files = glob($target_dir."*.*");
+    $curr_files = glob($curr_dir."*.*");
     $profile_blank = $curr_dir."profileBlank.jpg";
     
     $num_files = count($target_files);
@@ -43,21 +43,34 @@ echo ini_get('display_errors');
             if(isset($_POST['ppcb'.$j])) {
                 if(file_exists($target_files[$j])) {
                     //If the file is the user's current profile image, remove it from current, add default
-                    if(basename($curr_files[0]) == basename($target_files[$j])) {
-                        copy("./Images/profileBlank.jpg", $profile_blank);
-                        $setDefault = "INSERT INTO images (username, current) 
-                                       VALUES('$username','$profile_blank');";
-                        $remCurr = "DELETE FROM images WHERE current = '$curr_files[0]';";
+                    if(basename($curr_files[0]) === basename($target_files[$j])) {
+                        
+                        $setDefault = "UPDATE images SET current = '$profile_blank'
+                                       WHERE username = '$username';";
+                        //$remCurr = "DELETE FROM images WHERE current = '$curr_files[0]';";
+                        unlink($target_files[$j]);
                         unlink($curr_files[0]);
-                        if(!$database->query($remCurr) === TRUE) {
+                        copy("../Images/profileBlank.jpg", $profile_blank);
+                        /*if(!$database->query($remCurr) === TRUE) {
                             echo "Failed to remove the image URL from the database.";
-                        }
+                        }*/
                         if(!$database->query($setDefault) === TRUE) {
                             echo "Failed to add the blank image URL from the database.";
                         }
-                    }
                         
-                    unlink($target_files[$j]); 
+                    } else {
+                        unlink($target_files[$j]); 
+                    }
+                    
+                    /*Could be used to remove null image urls
+                    $remURLs = "DELETE FROM images WHERE username = '$username'
+                                AND profile IS NULL AND event IS NULL;";
+                    if($database->query($remURLs) === TRUE) {
+                        echo "URLS of null items have been removed.";
+                    } else {
+                        echo "Error: ".$ppRemove."<br>".$database->error;
+                    }*/
+                    
                     $remImg = "DELETE FROM images WHERE profile = '$target_files[$j]'";
                     if($database->query($remImg) === TRUE) {
                         //echo 'Images have been removed.';
