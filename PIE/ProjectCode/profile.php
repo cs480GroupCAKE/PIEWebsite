@@ -317,7 +317,30 @@ $(function() {
 
                 <div class="tabContent" id="photos">
                     <h2>Event Photos</h2>
-                    <p>Add event photos here</p>
+                    <!--<p>Add event photos here</p>-->
+                    <?php
+                        $event_dir = "./userImages/event/".$current_user."/";
+                        $event_images = glob($event_dir."*.*");
+                        
+                        
+                        if(ev_empty($event_dir)) {
+                            echo 'No event photos available';
+                        } else {
+                            echo '<table id="eptable">';
+                            for($i=0; $i<count($event_images); $i++) {
+                                echo '<tr>';
+                                echo '<td id="evimg"><img src="'.$event_images[$i].'" alt="Event Image '.$i.'" id="eventimg"><br><br></td></tr>';
+                            }
+                            echo '</table>';
+                        }
+                        
+                        function ev_empty($event_dir) {
+                            if(!is_readable($event_dir)) {
+                                return NULL;
+                            }
+                            return (count(scandir($event_dir)) == 2);
+                        }
+                    ?>
                 </div>
             </div>
             

@@ -193,8 +193,16 @@ body {
     left:185px;
     z-index:2;
 }
-/*
 
+#eptable {
+    margin:auto;
+}
+
+#evimg {
+    text-align:center;
+}
+
+/*
 TODO: OLD CODE USED FOR NAVIGATION BAR. LOT OF BULK CODE NOT NEEDED. DELETE AFTER GROUP REVIEWS.;
 
 body {
