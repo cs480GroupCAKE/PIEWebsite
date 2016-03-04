@@ -188,10 +188,12 @@ body {
 #editpicbutton {
     height:35px;
     width:35px;
-    position:absolute;
-    top:151px;
+    position:relative;
+    top:0%;
+    left:-16%;
+/*    top:151px;
     left:185px;
-    z-index:2;
+*/    z-index:2;
 }
 
 #eptable {

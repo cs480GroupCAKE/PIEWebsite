@@ -292,8 +292,8 @@ $(function() {
                             <li id="infoID">When you create an event, you will be able to view the details about that event as well as other 
                                             events you might be attending in the "View All Events" button found under "Events" on the sidebar.</li>
                             <li id="infoID">"View All Events" also allows you to edit or delete events after their creation.</li>
-                            <li id="infoID">To add a photo, click on the "Edit Profile" button found on the left sidebar and select "Edit Photos". 
-                                            You can also add photos by clicking on the "Edit" icon found on the bottom-right of your current profile picture.</li>
+                            <li id="infoID">To add or remove a photo, click on the "Edit Profile" button found on the left sidebar and select "Edit Photos". 
+                                            You can also manage photos by clicking on the "Edit" icon found on the bottom-right of your current profile picture.</li>
                             <li id="infoID">To edit your profile's description, click on the "Edit Profile" button found on the left sidebar and 
                                             select "Edit Description".</li>
                             <li id="infoID">To find connections, or friends, search for the connection's username using the text area and search button 
