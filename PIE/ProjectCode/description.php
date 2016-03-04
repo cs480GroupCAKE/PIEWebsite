@@ -33,8 +33,8 @@
                 Description:
                 <br>
                 <textarea id="description" class="input" name="description" maxlength="500" rows="10" cols="50"></textarea>
-                <br>
-                <input type="submit" name="submit" value="Add Description" class="big button blue">
+                <br><br>
+                <input id="button" type="submit" name="submit" value="Add Description">
             </form>
         </div>
         
