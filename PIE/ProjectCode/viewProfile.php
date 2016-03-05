@@ -105,7 +105,7 @@ stored in the database. Currently needs links and access to the viewed user's da
                 <ul id="tabs">
                     <!-- These may have to be set to hide depending on public/private profiles -->
                     <li><a href="#events">Events</a></li>
-                    <li><a href="#charts">Charts</a></li>
+                    <li><a href="#instructions">Instructions</a></li>
                     <li><a href="#photos">Event Photos</a></li>
                 </ul>
 
@@ -122,10 +122,27 @@ stored in the database. Currently needs links and access to the viewed user's da
                     </div>
                 </div>
 
-                <div class="tabContent" id="charts">
-                    <h2>Charts</h2>
+                <div class="tabContent" id="instructions">
+                    <h2>Viewing Profiles</h2>
                     <div>
-                        <p>Add charts here</p>
+                        <ul>
+                            <li id="infoID">To get back to your profile page, click the "Home" button located in the top-left
+                                            corner of the page.
+                            <li id="infoID">If a user is in your connections, you can view all of their profile pictures, 
+                                            their connections, and their events.</li>
+                            <li id="infoID">All of these options can be found on the sidebar on the left side of the page.</li>
+                            <li id="infoID">To add this person to your connections, click the "Add Contact" button found on the 
+                                            top-left of this page (below the "Sign Out" button).</li>
+                            <li id="infoID">More options will be allowed if a user is added to your connections.</li>
+                            <li id="infoID">If you have any questions, comments, or concerns, do not hesitate to e-mail our 
+                                            project team by using one of the "Help" buttons, which can be found on the top-left
+                                            of the page (Next to "About") or on the bottom of the sidebar on the left side of the
+                                            page.</li>
+                        </ul>
+                        <table>
+                            <tr>
+                            <td></td>
+                        </table>
                     </div>
                 </div>
 
