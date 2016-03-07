@@ -13,8 +13,12 @@ echo ini_get('display_errors');
     $username = $_SESSION['username'];
     
     //QUERIES
+<<<<<<< HEAD
     $searchQ = "Select contact, pending FROM connections WHERE username = '$username';";
     $search2Q = "SELECT username FROM connections WHERE contact = '$username';";
+=======
+    $searchQ = "Select contact, pending FROM connections WHERE username = '$username'";
+>>>>>>> origin/master
     $sub = mysqli_query($database, $searchQ);
     $sub2 = mysqli_query($database, $search2Q);
     
