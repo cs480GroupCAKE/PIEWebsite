@@ -13,8 +13,10 @@ echo ini_get('display_errors');
     $username = $_SESSION['username'];
     
     //QUERIES
-    $searchQ = "Select contact, pending FROM connections WHERE username = '$username' OR contact = '$username'";
+    $searchQ = "Select contact, pending FROM connections WHERE username = '$username';";
+    $search2Q = "SELECT username FROM connections WHERE contact = '$username';";
     $sub = mysqli_query($database, $searchQ);
+    $sub2 = mysqli_query($database, $search2Q);
     
     
     //RESULT ARRAYS
@@ -24,8 +26,13 @@ echo ini_get('display_errors');
     
     while($row = mysqli_fetch_row($sub)){
         $resArr[] = $row;
-        $pendArr[] = $row[1];
+        if($row[1] == 'Y'){
+            $pendArr[] = $row[0];
         }
+        }
+    while($row = mysqli_fetch_row($sub2)){
+    	$resArr[] = $row;
+    }
     for($i=0; $i<sizeof($resArr); $i++){
         if($resArr[$i][1]=='N'){
             $current_contacts[] = $resArr[$i][0];

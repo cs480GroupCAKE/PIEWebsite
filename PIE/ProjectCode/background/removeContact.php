@@ -17,13 +17,15 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
    $deleteUN = "DELETE FROM connections WHERE username = '$contact' AND contact = '$username'";
    
     
-    if($database->query($deleteContact)==TRUE){
-        header("Location:../viewConnections.php");
+    if($database->query($deleteContact)== 0){
+     echo "success1";
+       header("Location:../viewConnections.php");
     }else if($database->query($deleteUN)==TRUE){
-        header("Location:../viewConnections.php");
+    echo "success2";
+       header("Location:../viewConnections.php");
     }
    
     echo "SOMETHING WENT WRONG";
-        echo "error ".$enterConn."<br>".$database->error;
+    //echo "error ".$removeContact."<br>".$database->error;
     
 ?>

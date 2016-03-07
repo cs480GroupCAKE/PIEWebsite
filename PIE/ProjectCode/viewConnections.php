@@ -16,7 +16,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
     $format1 = "<a href='./viewProfile.php?vusername=";
     $format2 = "'>View Profile</a><br>";
     $delete1 = "<a href='./background/removeContact.php?contact=";
-    $delete2 = "'>Delete</a><br>";
+    $delete2 = "' class='confirmation'>Delete</a><br>";
 ?>
 <html>
 <head>
@@ -25,7 +25,11 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
     <?php require './background/connectionsQueries.php';
           //include './background/removeContact.php';?>
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
-
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    
+    <script src="confirmation.js"></script>
 </head>
 
 <body>
@@ -58,7 +62,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
                         <tr> 
                             <td><?php echo $contact;?></td><td>
                             <?php echo $link;?></td><td>
-                            <?php if($pendArr[$i]=='Y'){echo"Contact Pending";}else{echo $remove;}?>
+                            <?php if($resArr[$i][1]=='Y'){echo"Contact Pending";}else{echo $remove;}?>
                         </tr>
                             
                         <?php endfor; ?>

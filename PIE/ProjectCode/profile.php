@@ -48,7 +48,7 @@ Currently needs links and header added and repositioning.
             if($database->query($setDefault) === TRUE) {
                 //no need to do anything
             } else {
-                echo "Error: ".$profile."<br>".$database->error;
+                //echo "Error: ".$profile."<br>".$database->error;
             }
         }
         
@@ -90,7 +90,6 @@ Currently needs links and header added and repositioning.
  
   <script>
   //creates the actual slider using jquery API with modification.
-  /*
 $(function() {
         var s = $("#slider").slider({
             value:0,
@@ -115,7 +114,7 @@ $(function() {
         //shows number of events we are incrementing by.
         $("#myEvent").val($("#slider").slider("value")); 
         }); 
-});*/
+});
   </script>
 
 </head>
@@ -185,7 +184,7 @@ $(function() {
                     <h2>Events</h2>
                     <div>
                         <p><?php 
-                            if(sizeof(eventArr)>0){
+                            if($eventArr[0]!=NULL){
                             foreach($eventArr as $current){
                                 echo "<a>Name: </a>".$current['eventname']."<br>";
                                 echo "<a>Created By: </a>".$current['username']."<br>";
@@ -198,7 +197,7 @@ $(function() {
                             echo "No events scheduled";
                         }
                     
-                            $result = mysqli_query($database, $eventsQ);
+                            /*$result = mysqli_query($database, $eventsQ);
                             if (!$result) {
                             echo("Nothing found");
                              }
@@ -209,7 +208,7 @@ $(function() {
                             //encode the data into array.
                             $json = json_encode($array_data);
                             //displays all events from the database.
-                            echo $json;
+                           // echo $json;
                             //for($row=1; $row<=$eventsQ; $row ++){
                                 //echo "$username";
                             //}
@@ -217,8 +216,8 @@ $(function() {
                                 $_POST['next'];
                                 //echo "$eventdate";
                             }
-                        ?>
-                        </p>
+                       
+              /*          </p>
                     <!--    <p>  <php include './background/profileQueries.php' ?>
                         session_start();
                         loop through array with the number of events
@@ -233,11 +232,13 @@ $(function() {
                     <label for="myEvent">Upcoming Events:</label>
                     <input type="text" id="myEvent"  readonly style="border:0; color:#FFF; background-color:#006D89; font-weight:bold;">
                 </p> 
+              
                 <div id="slider">
-                </div>  
+                </div>
+                  ?>  
                             <?php 
                             $result = mysqli_query($database, $eventsQ);
-                            if (!$result) {
+                            if ($result == NULL) {
                             echo("Nothing found");
                             }
                             //data converted into array
@@ -245,7 +246,7 @@ $(function() {
                             $array_data[] = $row;
                            }
                             //encode the data into array.
-                            $json = json_encode($array_data);
+                         //   $json = json_encode($array_data);
                             //displays all events from the database.
                             //echo $json;
                             
@@ -258,32 +259,35 @@ $(function() {
                             //echo "$eventdate";
                             
                             }
-                        ?>
-                        </p>
+                       */
+                      //  </p>
                         
-                    <!--    <p>  <php include './background/profileQueries.php' ?>
+                     //  <p>  
                         
-                        session_start();
-                        
+                      /*  
+                     <!--- 
                         loop through array with the number of events
                         for($accessEvents=1;$accessEvents<=$events.length();$accessEvents++){
                             echo "one of the events we found in DB is $accessEvents";
                             $_POST['sliderText'];
                         }
-                        
+                     
                         </p>
-                        -->
+                       
                 <!-- text for the events slider -->
-                <!--<p class="sliderText">
+                <p class="sliderText">
                     <label for="myEvent">Upcoming Events:</label>
                     <input type="text" id="myEvent"  readonly style="border:0; color:#FFF; background-color:#006D89; font-weight:bold;">
                 </p> 
                 <div id="slider">
                 </div>  
             <button name="previous" id="previous" type="submit" >Previous Event</button>
-            <button name="next" id="next"type="submit">Next Event</button>-->
-            
+            <button name="next" id="next"type="submit">Next Event</button>
+              --->
+              */ 
+                    ?>
                     </div>
+                    
                 </div>
 
                 <div class="tabContent" id="instructions">
