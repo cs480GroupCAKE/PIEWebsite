@@ -26,58 +26,56 @@ the impact of the project to the current point. More work needs to be done on th
             <h1>Making Outings as Easy as PIE</h1>
         </div>
         
-        <div id='divCenter'>
-            <div id='body'>
-                <div id='image'>
-                    <img class="displayCenter" src="./Images/pie.jpg" alt="PIE" style="width:400px;height:228px;">
-                </div>
+        <div id='body'>
+            <div id='image'>
+                <img class="displayCenter" src="./Images/pie.jpg" alt="PIE" style="width:400px;height:228px;">
+            </div>
 
-                <ul id="tabs">
-                    <li><a href="#vision">Our Vision</a></li>
-                    <li><a href="#events">PIE Events</a></li>
-                    <li><a href="#impact">Impact</a></li>
-                </ul>
+            <ul id="tabs">
+                <li><a href="#vision">Our Vision</a></li>
+                <li><a href="#events">PIE Events</a></li>
+                <li><a href="#impact">Impact</a></li>
+            </ul>
 
-                <div class="tabContent" id="vision">
-                    <h2>Vision statement</h2>
-                    <div>
-                        <p>Rapidly advancing technology has allowed people to remain connected, 
-                            even over long distances. However, these changes have also led to an 
-                            increasingly isolated group: the elderly. As the general population 
-                            is becoming more mobile, socializing with friends and family is becoming 
-                            more difficult for this group. This project proposes a simple solution to 
-                            this problem: the promotion of networking and social outings via an 
-                            easy-to-use website.</p>
-                        <p>We welcome you to contact us on this site through our help page. Or check
-                            out our <a href="http://caketeamcwu.wix.com/cake">team website</a> and find 
-                            out who we are.</p>
-                    </div>
+            <div class="tabContent" id="vision">
+                <h2>Vision statement</h2>
+                <div>
+                    <p>Rapidly advancing technology has allowed people to remain connected, 
+                        even over long distances. However, these changes have also led to an 
+                        increasingly isolated group: the elderly. As the general population 
+                        is becoming more mobile, socializing with friends and family is becoming 
+                        more difficult for this group. This project proposes a simple solution to 
+                        this problem: the promotion of networking and social outings via an 
+                        easy-to-use website.</p>
+                    <p>We welcome you to contact us on this site through our help page. Or check
+                        out our <a href="http://caketeamcwu.wix.com/cake">team website</a> and find 
+                        out who we are.</p>
                 </div>
+            </div>
 
-                <div class="tabContent" id="impact">
-                    <h2>Impact</h2>
-                    <div>
-                        <p>Our goal is build stronger communities by making sure the most vunerable
-                            are not left isolated. We believe that promoting positive social outings
-                            will have a major impact on the quality of life for all members of society</p>
-                        <!--<p>Here is an example of the of the impact we have had in Ellensburg, WA:</p>
-                        <p style="color:red">NEED TO ADD MAYBE LATER-----------------------</p>-->
-                    </div>
+            <div class="tabContent" id="impact">
+                <h2>Impact</h2>
+                <div>
+                    <p>Our goal is build stronger communities by making sure the most vunerable
+                        are not left isolated. We believe that promoting positive social outings
+                        will have a major impact on the quality of life for all members of society</p>
+                    <p>Here is an example of the of the impact we have had in Ellensburg, WA</p>
+                    <p style="color:red">NEED TO ADD MAYBE LATER-----------------------</p>
                 </div>
+            </div>
 
-                <div class="tabContent" id="events">
-                    <h2>Events</h2>
-                    <p>Our user created events are meant to strengthen community bonds and reduce
-                        the negative impacts of social isolation. </p>
-                    <p>There are a variety of event types from Restaurant outings, to Picnics in
-                        park, there is something for everyone. Events can be made public and open
-                        to all or private and only shared with a select few. The event creator is 
-                        responsible for selecting the appropiate privacy level.</p>
-                    <p>There are also "Mini-Events". These are located on our Deals page and include
-                        local deals offered by participating local businesses. The idea here is to create
-                        a connection between the businesses of the community and its senior residents.</p>
-                    <p><a href="./sampleEvent.php">Here is what a typical Event may look like</a></p>
-                </div>
+            <div class="tabContent" id="events">
+                <h2>Events</h2>
+                <p>Our user created events are meant to strengthen community bonds and reduce
+                    the negative impacts of social isolation. </p>
+                <p>There are a variety of event types from Restaurant outings, to Picnics in
+                    park, there is something for everyone. Events can be made public and open
+                    to all or private and only shared with a select few. The event creator is 
+                    responsible for selecting the appropiate privacy level.</p>
+                <p>There are also "Mini-Events". These are located on our Deals page and include
+                    local deals offered by participating local businesses. The idea here is to create
+                    a connection between the businesses of the community and its senior residents.</p>
+                <p><a href="SampleEvent.html">Here is what a typical Event may look like</a></p>
             </div>
         </div>
         
