@@ -32,9 +32,11 @@ Currently needs links and header added and repositioning.
         //$username = mysqli_real_escape_string($database,$_REQUST['username']);
         
         //Make directories for user if they don't exist.
-        mkdir("./userImages/profile/".$current_user."/");
-        mkdir("./userImages/event/".$current_user."/");
-        mkdir("./userImages/current/".$current_user."/");
+        if(!file_exists("./userImages/profile/".$current_user."/")) {
+            mkdir("./userImages/profile/".$current_user."/");
+            mkdir("./userImages/event/".$current_user."/");
+            mkdir("./userImages/current/".$current_user."/");
+        }
         
         $curdir = "./userImages/current/".$current_user."/";
         $profile_blank = $curdir."profileBlank.jpg";
