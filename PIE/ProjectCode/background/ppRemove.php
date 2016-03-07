@@ -29,15 +29,12 @@ echo ini_get('display_errors');
     //Set target directory, get all files from that folder
     $target_dir = "../userImages/profile/".$username."/";
     $target_files = glob($target_dir."*.*");
-<<<<<<< HEAD
     
     //Use these in case the current profile picture is being removed
     $curr_dir = "../userImages/current/".$username."/";
     $curr_files = glob($curr_dir."*.*");
     $profile_blank = $curr_dir."profileBlank.jpg";
     
-=======
->>>>>>> parent of dd05aa8... l
     $num_files = count($target_files);
 
     //If submit is pressed, remove the images
@@ -45,7 +42,6 @@ echo ini_get('display_errors');
         for($j=0; $j<$num_files; $j++) {
             if(isset($_POST['ppcb'.$j])) {
                 if(file_exists($target_files[$j])) {
-<<<<<<< HEAD
                     //If the file is the user's current profile image, remove it from current, add default
                     if(basename($curr_files[0]) === basename($target_files[$j])) {
                         
@@ -75,9 +71,6 @@ echo ini_get('display_errors');
                         echo "Error: ".$ppRemove."<br>".$database->error;
                     }*/
                     
-=======
-                    unlink($target_files[$j]); 
->>>>>>> parent of dd05aa8... l
                     $remImg = "DELETE FROM images WHERE profile = '$target_files[$j]'";
                     if($database->query($remImg) === TRUE) {
                         //echo 'Images have been removed.';
