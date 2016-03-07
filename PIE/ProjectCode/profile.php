@@ -90,6 +90,7 @@ Currently needs links and header added and repositioning.
  
   <script>
   //creates the actual slider using jquery API with modification.
+  /*
 $(function() {
         var s = $("#slider").slider({
             value:0,
@@ -114,7 +115,7 @@ $(function() {
         //shows number of events we are incrementing by.
         $("#myEvent").val($("#slider").slider("value")); 
         }); 
-});
+});*/
   </script>
 
 </head>
@@ -273,14 +274,14 @@ $(function() {
                         </p>
                         -->
                 <!-- text for the events slider -->
-                <p class="sliderText">
+                <!--<p class="sliderText">
                     <label for="myEvent">Upcoming Events:</label>
                     <input type="text" id="myEvent"  readonly style="border:0; color:#FFF; background-color:#006D89; font-weight:bold;">
                 </p> 
                 <div id="slider">
                 </div>  
             <button name="previous" id="previous" type="submit" >Previous Event</button>
-            <button name="next" id="next"type="submit">Next Event</button>
+            <button name="next" id="next"type="submit">Next Event</button>-->
             
                     </div>
                 </div>
