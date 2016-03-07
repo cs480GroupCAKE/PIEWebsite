@@ -13,12 +13,8 @@ echo ini_get('display_errors');
     $username = $_SESSION['username'];
     
     //QUERIES
-
     $searchQ = "Select contact, pending FROM connections WHERE username = '$username';";
     $search2Q = "SELECT username FROM connections WHERE contact = '$username';";
-
-    $searchQ = "Select contact, pending FROM connections WHERE username = '$username'";
-
     $sub = mysqli_query($database, $searchQ);
     $sub2 = mysqli_query($database, $search2Q);
     
@@ -35,7 +31,7 @@ echo ini_get('display_errors');
         }
         }
     while($row = mysqli_fetch_row($sub2)){
-        $resArr[] = $row;
+    	$resArr[] = $row;
     }
     for($i=0; $i<sizeof($resArr); $i++){
         if($resArr[$i][1]=='N'){

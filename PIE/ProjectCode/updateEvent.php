@@ -21,6 +21,7 @@ echo ini_get('display_errors');
     $date = explode("-",$current['date']);
     $date_formatted = $date[1]."/".$date[2]."/".$date[0];
     
+    echo $_SESSION['delete'];
 ?>
 
 <!DOCTYPE PHP>

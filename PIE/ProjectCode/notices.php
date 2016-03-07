@@ -69,7 +69,6 @@ echo ini_get('display_errors');
             </thead>
             <tbody>
                 <?php
-<<<<<<< HEAD
                     //TESTING LEAVE IN echo sizeof($pendArr);
                     for($i=0; $i<sizeof($pendArr);$i++):
                        // if($resArr[$i][0]=='Y'){//{continue;}
@@ -77,14 +76,6 @@ echo ini_get('display_errors');
                             $sentTo = $pendArr[$i];
                             $status = "Pending";
                       //  }
-=======
-                    //TESTING LEAVE IN echo sizeof($connArr);
-                    for($i=0; $i<sizeof($resArr);$i++):
-                        if($pendArr[$i]=='N'){continue;}
-                        $notice = "Pending Connection";
-                        $sentTo = $resArr[$i];
-                        $status = "Pending";
->>>>>>> origin/master
                 ?>
                 <tr> 
                     <td><?php echo $notice;?></td><td><?php echo $sentTo;?></td>

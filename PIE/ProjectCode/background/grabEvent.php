@@ -15,8 +15,8 @@ echo ini_get('display_errors');
     
     $id = $_GET['id'];
     $d = $_GET['d'];
-    echo $d;
-    if($d == 't'){
+    
+    if($d=='t'){
         $_SESSION['delete'] = 'true';
         header("Location:./createEvent.php");
     }
@@ -30,6 +30,5 @@ echo ini_get('display_errors');
        // echo sizeof($_SESSION['current_event']);
         header('Location:../updateEvent.php');
     }else{
-        echo "error ".$grabEvent."<br>".$database->error;
-    }
+        echo "error ".$eventsQ."<br>".$database->error;
     }

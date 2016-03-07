@@ -21,21 +21,13 @@ if(isset($_GET['accept'])){
     if($action == 'true'){
         $enterConn = "UPDATE connections SET pending='N' WHERE username='$sender' AND contact='$username';";
         $database->query($enterConn);
-<<<<<<< HEAD
     /*else if($action == 'attend'){
-=======
-    }else if($action == 'attend'){
->>>>>>> origin/master
         $attendEvent = "SELECT attending FROM events WHERE id = '$eventid';";
         $string = $databse->query($attendEvent);
         $string = $string." ".$username;
         $insertEvent = "UPDATE events SET attending='$string' WHERE id='$eventid';";
         $database->query($insertEvent);
-<<<<<<< HEAD
        */ 
-=======
-        
->>>>>>> origin/master
     }else{
         $deleteConn = "DELETE FROM connections WHERE username = '$sender' AND sender = '$username';";
         $database->query($deleteConn);
