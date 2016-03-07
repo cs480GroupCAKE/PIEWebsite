@@ -6,9 +6,7 @@
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/events.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
-    <link rel="stylesheet" type="text/css" href="./stylesheets/popup.css">
-    <script src="./popup.js"></script>
-
+    
     <!-- I think we should stick to one events page (unless there is another one that does 
     something different?).  ---TN 2/2/16 6:41 PM---
     I ended up commenting this code  because it is easy for a user to enter an invalid date
@@ -159,23 +157,6 @@
                 <input id='button' type="submit" name="submit" value="Create Event">
             </form>
             <!--<button onclick="goBack()">Go Back</button>-->
-
-            <!-- This is used for the connection invites for events -->
-            <div id='invpopupDiv'>
-                <div id='popupInnerDiv'>
-                    <form action='#' id='popupform' method='post' name='invpopupform'><!--enctype='multipart/form-data'-->
-                        <img id='close' src='./Images/close_button.png' onclick='invite_div_hide()'>
-                        <h2>Invite Connections</h2>
-                        <hr><br><br>
-                        <!-- add inputs here -->
-                        <br><br><br>
-                        <!-- reference this in connection adding php -->
-                        <input type='submit' value='Invite' name='submit'>
-                    </form>
-                </div>
-            </div>
-        
-        <button id='popupbutton' onclick='invite_div_show()'>Invite Connections</button>
 
             <script>
                 function goBack(){

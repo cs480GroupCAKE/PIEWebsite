@@ -73,7 +73,7 @@ echo ini_get('display_errors');
                     for($i=0; $i<sizeof($resArr);$i++):
                         if($pendArr[$i]=='N'){continue;}
                         $notice = "Pending Connection";
-                        $sentTo = $resArr[$i];
+                        $sentTo = $resArr[$i][0];
                         $status = "Pending";
                 ?>
                 <tr> 

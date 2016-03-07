@@ -70,7 +70,7 @@ stored in the database. Currently needs links and access to the viewed user's da
                     $found = FALSE;
                     $pending = FALSE;
                     for($i = 0; $i<count($resArr); $i++){
-                        if($resArr[$i] == $vusername){
+                        if($resArr[$i][0] == $vusername){
                             $found = TRUE;
                             if($pendArr[$i] == 'Y'){                            
                                 $pending = TRUE;
