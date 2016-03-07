@@ -62,7 +62,7 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
                         <tr> 
                             <td><?php echo $contact;?></td><td>
                             <?php echo $link;?></td><td>
-                            <?php if($pendArr[$i]=='Y'){echo"Contact Pending";}else{echo $remove;}?>
+                            <?php if($resArr[$i][1]=='Y'){echo"Contact Pending";}else{echo $remove;}?>
                         </tr>
                             
                         <?php endfor; ?>
