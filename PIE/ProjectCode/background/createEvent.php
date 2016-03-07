@@ -19,19 +19,21 @@ require '../database/database.php';
     //$arr = array();
     $arr = $_SESSION['current_event'];
     $id = $arr['eventid'];
-    $delete = $_SESSION['delete'];
-    
-    $deleteEvent = "DELETE FROM events WHERE eventid='$id';";
+    if(isset($_SESSION['delete'])){
+        $delete = $_SESSION['delete'];
+        $deleteEvent = "DELETE FROM events WHERE eventid='$id';";
             
-    if($delete=='true'){
-        if($database->query($deleteEvent)==TRUE){
-            unset($_SESSION['delete']);
-            unset($_SESSION['current_event']);
-            header("Location:../viewAllEvents");
-        }else{
-            echo "error".$updateEvent.$database->error;
+        if($delete=='true'){
+            if($database->query($deleteEvent)==TRUE){
+                unset($_SESSION['delete']);
+                unset($_SESSION['current_event']);
+                header("Location:../viewAllEvents");
+            }else{
+                echo "error".$updateEvent.$database->error;
+            }
         }
     }
+    
 
 /* This was used for the old dropdown date picker
     $mos = $_POST['mos'];
