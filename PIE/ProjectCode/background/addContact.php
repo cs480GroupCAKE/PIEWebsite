@@ -21,8 +21,9 @@ echo ini_get('display_errors');
     $decline = "<a href='./background/noticeAction.php?accept=false&sender=".$sender."'>Decline</a>";
     $notice = "Connection request";
     $pending = "Y";
+    $view = "<a href='./viewProfile?vusername=".$recipient."'>View Profile</a>";
     
-    $insert = "INSERT INTO notifications VALUES('$recipient','$sender',\"$accept\",\"$decline\",'$notice');";
+    $insert = "INSERT INTO notifications VALUES('$recipient','$sender',\"$accept\",\"$decline\",'$notice',\"$view\");";
     $insertPend = "INSERT INTO connections VALUES('$sender','$recipient','$pending');";
     
     echo "something";

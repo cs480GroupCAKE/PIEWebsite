@@ -23,6 +23,7 @@ echo ini_get('display_errors');
     <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/popup.css">
     <script src="./popup.js"></script>
+    
 </head>
 
 <body>
@@ -230,6 +231,11 @@ echo ini_get('display_errors');
         </div>
 
         <h1>Edit Images</h1>
+        
+        <p>The largest image you may upload is 500KB due to limited space.
+        <br> 
+        You may upload the following image formats: jpeg, jpg, png, and gifs.
+        </p>
 
         <button id='popupbutton' onclick='addPP_div_show()'>Add Profile Photos</button>
         <button id='popupbutton' onclick='addEP_div_show()'>Add Event Photos</button>

@@ -59,9 +59,9 @@ the impact of the project to the current point. More work needs to be done on th
                     <div>
                         <p>Our goal is build stronger communities by making sure the most vunerable
                             are not left isolated. We believe that promoting positive social outings
-                            will have a major impact on the quality of life for all members of society</p>
-                        <p>Here is an example of the of the impact we have had in Ellensburg, WA</p>
-                        <p style="color:red">NEED TO ADD MAYBE LATER-----------------------</p>
+                            will have a major impact on the quality of life for all members of society.</p>
+                        <!--<p>Here is an example of the of the impact we have had in Ellensburg, WA</p>
+                        <p style="color:red">NEED TO ADD MAYBE LATER-----------------------</p>-->
                     </div>
                 </div>
 
@@ -76,7 +76,7 @@ the impact of the project to the current point. More work needs to be done on th
                     <p>There are also "Mini-Events". These are located on our Deals page and include
                         local deals offered by participating local businesses. The idea here is to create
                         a connection between the businesses of the community and its senior residents.</p>
-                    <p><a href="SampleEvent.html">Here is what a typical Event may look like</a></p>
+                    <p><a href="./sampleEvent">Here is what a typical Event may look like</a></p>
                 </div>
             </div>
         </div>

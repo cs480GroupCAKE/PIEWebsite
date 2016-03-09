@@ -8,6 +8,11 @@
     <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/popup.css">
     <script src="./popup.js"></script>
+    
+    <?php
+        require './background/connectionsQueries.php';
+        session_start();
+    ?>
 
     <!-- I think we should stick to one events page (unless there is another one that does 
     something different?).  ---TN 2/2/16 6:41 PM---
@@ -115,11 +120,11 @@
         <div id='body'>
             <form action="./background/createEvent.php" method="post">
 
-                Event Name:<br>
+                *Event Name:<br>
                 <input type="text" name="eventname" placeholder='Event Name' required>
                 <br><br>
 
-                Date:<br>
+                *Date:<br>
                 <!-- This will be used for the jQuery calendar datepicker -->
                 <input type="text" name="eventdate" id="datepicker" placeholder='Select Date' required>
                 <br><br>
@@ -145,7 +150,7 @@
                 <input type="text" name="time" placeholder='Event Time'>
                 <br><br>
                 
-                Location:<br>
+                *Location:<br>
                 <input type="text" name="location" required placeholder="Event Location" required>
                 <br><br>
             
@@ -156,27 +161,55 @@
                 <!--<textarea rows="4" cols="50" name="eventdetails">
                 </textarea>--> 
 
+                Invites:<br>
+                    <div style="width:250px; height:200px; overflow:scroll; position:relative; left:40%; border-style:double;">
+                        <table id="conntb">
+                        <?php
+                            for($i=0; $i<count($resArr); $i++) {
+                                $contact = $resArr[$i][0];
+                                echo '<tr>';
+                                echo '<td id="ctcheck"><input type="checkbox" id="ctcb'.$i.'" name="ctcb[]" value="'.$contact.'"></td>
+                                      <td id="ctname"><label for="ctcb'.$i.'">'.$contact.'</label></td></tr>';
+                            }
+                        ?>
+                        </table>
+                    </div>
+                <br><br>
+
                 <input id='button' type="submit" name="submit" value="Create Event">
+		<br><br><br><br><br>
+                <div id='copyright'> 
+                Text boxes that have "*" next to them are required fields.
+                </div>
             </form>
             <!--<button onclick="goBack()">Go Back</button>-->
 
             <!-- This is used for the connection invites for events -->
-            <div id='invpopupDiv'>
+            <!--<div id='invpopupDiv'>
                 <div id='popupInnerDiv'>
-                    <form action='#' id='popupform' method='post' name='invpopupform'><!--enctype='multipart/form-data'-->
-                        <img id='close' src='./Images/close_button.png' onclick='invite_div_hide()'>
+                    <form action="#" id='popupform' name='invpopupform'><enctype='multipart/form-data'-->
+                        <!--<img id='close' src='./Images/close_button.png' onclick='invite_div_hide()'>
                         <h2>Invite Connections</h2>
                         <hr><br><br>
-                        <!-- add inputs here -->
-                        <br><br><br>
-                        <!-- reference this in connection adding php -->
-                        <input type='submit' value='Invite' name='submit'>
-                    </form>
+                        <table id="conntb">
+                        <?php
+                            for($i=0; $i<count($resArr); $i++) {
+                                $contact = $resArr[$i][0];
+                                echo '<tr>';
+                                echo '<td id="ctcheck"><input type="checkbox" id="ctcb'.$i.'" name="ctcb[]" value="'.$contact.'"></td>
+                                      <td id="ctname"><label for="ctcb'.$i.'">'.$contact.'</label></td></tr>';
+                            }
+                        ?>
+                        </table>
+                        <br><br><br>-->
+                        <!-- reference this in connection adding php
+                        <input type='submit' value='Invite' name='submit'> -->
+                    <!--</form>
                 </div>
-            </div>
+            </div>-->
         
-        <button id='popupbutton' onclick='invite_div_show()'>Invite Connections</button>
-
+        <!--<button id='popupbutton' onclick='invite_div_show()'>Invite Connections</button>-->
+	<br><br><br><br><br>
             <script>
                 function goBack(){
                     window.history.back();

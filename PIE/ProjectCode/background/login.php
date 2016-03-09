@@ -19,11 +19,9 @@ if successful success message is displayed, otherwise password or username error
 <?php
 
     session_start();
-    $_SESSION['username'] = 'username';
 
     $username =  $_POST["username"]; 
     $password = $_POST["password"];
-
 
 	 /*
 DO NOT REMOVE KEEP COMMENTED OUT UNLESS NEEDED FOR DEBUGGING
@@ -50,10 +48,10 @@ checks if mysqli installed, troubleshooting
 
     if(password_verify($password, $currentPass)) {
         $_SESSION['username'] = $username;
-        header("Location:../profile.php");//work to be done here, should redirect and such, right now simple
+        header("Location:../profile");//work to be done here, should redirect and such, right now simple
     } else {
         //will return to page and error message shown
-        die(header("Location:../loginPage.php?loginFailedPass=true&reason=invalidPass"));
+        die(header("Location:../loginPage?loginFailedPass=true&reason=invalidPass"));
     }
 
     //header("Location:welcome.html");

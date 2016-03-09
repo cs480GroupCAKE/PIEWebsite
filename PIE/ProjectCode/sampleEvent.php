@@ -9,6 +9,7 @@ in order to give an idea of the layour of events and how they work. -->
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/popup.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/profile.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
 
 </head>
 
@@ -25,9 +26,12 @@ in order to give an idea of the layour of events and how they work. -->
         <div id='divCenter'>
             <div id='body'>
                 <div id='image'>
-                    <img src="./Images/sample_event.png" alt="Sample Event" style="position:relative; right:100px;">
+                    <img src="./Images/sample_event.png" alt="Sample Event" style="position:relative; right:200px;">
                     <br><br>
-                    <p><a href="./about.php" style="color:blue; text-decoration:underline;">Back</a></p>
+                    <p>
+                    <button id='button' onclick="location='./about'">Back</button>
+                    <!-- <a href="./about" style="color:blue; text-decoration:underline;">Back</a></p>
+                    --->
                 </div>
             </div>
         </div>

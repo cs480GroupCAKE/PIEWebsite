@@ -14,8 +14,27 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
    $sender = $_GET['sender'];
    $action = $_GET['accept'];
    $username = $_SESSION['username'];
-   $eventid = $_GET['eventid'];
-   $deleteNotice = "DELETE FROM notifications WHERE username = '$username' AND sender = '$sender';";
+   $eventid = $_GET['id'];
+   $event_action = $_GET['eaccept'];
+   $delete_invite = "DELETE FROM notifications WHERE eventid='$eventid' and username='$username';";
+   $delete_conn_req = "DELETE FROM notifications WHERE notice='Connection request' AND sender='$sender' AND username='$username'";
+   
+   if($eventid != NULL){
+       if($event_action == 't'){
+           $get_attending = "SELECT attending FROM events WHERE eventid='$eventid';";
+           $attarr = mysqli_fetch_assoc(mysqli_query($database, $get_attending));
+           $attending = $attarr['attending'].":".$username;
+           $insert_attending = "UPDATE events SET attending='$attending' WHERE eventid='$eventid';";
+           if($database->query($insert_attending)==FALSE){
+               echo "error ".$insert_attending."<br>".$database->error;
+           }
+       }
+       $database->query($delete_invite);
+       header("Location:../notices");
+       die();
+   }
+   
+   
    
 if(isset($_GET['accept'])){
     if($action == 'true'){
@@ -34,7 +53,7 @@ if(isset($_GET['accept'])){
     }
 }
     
-    if($database->query($deleteNotice)==TRUE){
+    if($database->query($delete_conn_req)==TRUE){
         header("Location:../notices.php");
     }
     echo "SOMETHING";

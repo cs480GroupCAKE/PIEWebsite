@@ -95,11 +95,35 @@ echo ini_get('display_errors');
                 <!--<textarea rows="4" cols="50" name="eventdetails">
                 </textarea>--> 
 
+                Invites:<br>
+                    <div style="width:250px; height:200px; overflow:scroll; position:relative; left:40%; border-style:double;">
+                        <table id="conntb">
+                        <?php
+                            for($i=0; $i<count($resArr); $i++) {
+                                $contact = $resArr[$i][0];
+                                echo '<tr>';
+                                echo '<td id="ctcheck"><input type="checkbox" id="ctcb'.$i.'" name="ctcb[]" value="'.$contact.'"></td>
+                                      <td id="ctname"><label for="ctcb'.$i.'">'.$contact.'</label></td></tr>';
+                            }
+                        ?>
+                        </table>
+                    </div>
+                <br><br>
+
                 <input id='button' type="submit" name="submit" value="Update Event">
             </form>
+
+		<br><br><br><br><br>
+                <div id='copyright'> 
+                Text boxes that have "*" next to them are required fields.
+                </div>
+            </form>
+        
+<?php /*        
+        
             <!--<button onclick="goBack()">Go Back</button>-->
 
-                        <!-- This is used for the connection invites for events -->
+                        <!-- This is used for the connection invites for events
             <div id='invpopupDiv'>
                 <div id='popupInnerDiv'>
                     <form action='#' id='popupform' method='post' name='invpopupform'><!--enctype='multipart/form-data'-->
@@ -126,7 +150,9 @@ echo ini_get('display_errors');
             </div>
         
         <button id='popupbutton' onclick='invite_div_show()'>Invite Connections</button>
-
+--->
+*/
+?>
             <script>
                 function goBack(){
                     window.history.back();

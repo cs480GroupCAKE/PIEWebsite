@@ -15,25 +15,33 @@ echo ini_get('display_errors');
 
 <html>
 <head>
-    <title>Events</title>
+    <title>View Events</title>
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
-    <div id='cssmenu'>
-        <?php require './background/loggedcheck.php';
+
+        <?php 
               require './background/profileQueries.php';
+              require './background/connectionsQueries.php';
               session_start();
         ?>
-    </div>
 </head>
 
 <body>
+    <div id='container'>
     
+    <div id='header'>
+        <div id='cssmenu'>
+            <?php require './background/loggedcheck.php'; ?>
+        </div>
+    </div>
+    
+    <div id='body'>
     <div class='divCenter'>
         <h2>Events</h2>
         <?php if(sizeof($eventArr) != 0): ?>
         <table class='cen-table'>
             <thead>
                 <tr>
-                    <th>Name</th><th>Date</th><th>Location</th><th>Attending</th><th>Edit</th><th>Delete</th>
+                    <th>Name</th><th>Date</th><th>Location</th><th>Attending</th><th>Edit/View</th><th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,13 +52,24 @@ echo ini_get('display_errors');
                         $name = $eventArr[$i]['eventname'];
                         $date = $eventArr[$i]['date'];
                         $location = $eventArr[$i]['location'];
-                        $attending = "tobeimplemented";
-                        $edit = "<a href='./background/grabEvent.php?id=".$id."'>Edit</a>";
+                        //$attending = "tobeimplemented";
+                        $edit = "<a href='./background/grabEvent.php?id=".$id."'>Edit/View</a>";
                         $delete = "<a href='./background/grabEvent.php?id=".$id."&d=t'>Delete</a>";
                 ?>
                 <tr> 
                     <td><?php echo $name;?></td><td><?php echo $date;?></td>
-                    <td><?php echo $location;?></td><td><?php echo $attending;?></td>
+                    <td><?php echo $location;?></td>
+                    
+                    <td><?php 
+                            echo "<select>";
+                            echo "<option value='none'>None</option>";
+                                      /*
+                                      for($j=0; $j<sizeof($resArr); $j++) {
+                                          echo "<option value='c".$j."' style='min-width:30px;'>".$resArr[$j][0]."</option>";
+                                      }*/
+                                  echo "</select>";
+                        ?></td>
+                    
                     <td><?php echo $edit;?></td><td><?php echo $delete;?></td>
                 </tr>
                     
@@ -64,11 +83,28 @@ echo ini_get('display_errors');
         ?>
     </div>
     
-    
+    <script type="text/javascript">
+    /*
+        var checkList = document.getElementById('dropcheck');
+        checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
+            if(checkList.classList.contains('visible')) {
+                checkList.classList.remove('visible');
+            } else {
+                checkList.classList.add('visible');
+            }
+        }
+        
+        checkList.onblur = function(evt) {
+            checkList.classList.remove('visible');
+        }*/
+    </script>
+    </div>
+        <div id='footer'>
+        	<?php include './templates/footer.php'?>
+    	</div>
+    </div>
 </body>
 
 
-    <div id='footer'>
-        <?php include './templates/footer.php'?>
-    </div>
+
 </html>

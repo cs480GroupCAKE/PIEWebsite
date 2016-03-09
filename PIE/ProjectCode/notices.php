@@ -32,7 +32,7 @@ echo ini_get('display_errors');
         <table class='cen-table'>
             <thead>
                 <tr>
-                    <th>Notice</th><th>Sender</th><th>Accept</th><th>Decline</th>
+                    <th>Notice</th><th>Sender</th><th>View</th><th>Accept</th><th>Decline</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,10 +43,12 @@ echo ini_get('display_errors');
                         $sender = $connArr[$i]['sender'];
                         $accept = $connArr[$i]['accept'];
                         $decline = $connArr[$i]['decline'];
+                        $view = $connArr[$i]['view'];
                 ?>
                 <tr> 
                     <td><?php echo $notice;?></td><td><?php echo $sender;?></td>
-                    <td><?php echo $accept;?></td><td><?php echo $decline;?></td>
+                    <td><?php echo $view;?></td><td><?php echo $accept;?></td>
+                    <td><?php echo $decline;?></td>
                 </tr>
                     
                 <?php endfor; ?>

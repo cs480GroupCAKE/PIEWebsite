@@ -10,6 +10,10 @@
 <head>
     <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/buttons.css">
+    <?php 
+    session_start();
+    $current_desc = $_SESSION['current_d']; 
+    ?>
     
     <meta charset="utf-8">
 
@@ -32,7 +36,8 @@
             <form action="./background/editdescription.php" method="post">
                 Description:
                 <br>
-                <textarea id="description" class="input" name="description" maxlength="500" rows="10" cols="50"></textarea>
+                <textarea id="description" class="input" name="description" 
+                maxlength="500" rows="10" cols="50"><?php echo $current_desc;?></textarea>
                 <br><br>
                 <input id="button" type="submit" name="submit" value="Add Description">
             </form>

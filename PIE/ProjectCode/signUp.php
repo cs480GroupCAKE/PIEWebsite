@@ -147,7 +147,7 @@ only a few are to make testing database code easier. Should catch handle and pri
                 <input type="text" name="lastname">
                 <br>
                 <br>
-                Username:
+                *Username:
                 <br>
                 <input type="text" name="username" required placeholder>
                 <br>
@@ -159,7 +159,7 @@ only a few are to make testing database code easier. Should catch handle and pri
                 </a>
                 
                 <br>
-                Email:
+                *Email:
                 <br>
                 <input type="text" name="email" required placeholder>
                 <br>
@@ -170,12 +170,12 @@ only a few are to make testing database code easier. Should catch handle and pri
                 </a>
                 
                 <br>
-                Password:
+                *Password:
                 <br>
                 <input type="password" name="password" required placeholder>
                 <br>
                 <br>
-                Re-enter Password:
+                *Re-enter Password:
                 <br>
                 <input type="password" name="passwordVerify" required placeholder>
                 <br>
@@ -210,7 +210,12 @@ only a few are to make testing database code easier. Should catch handle and pri
                 
                 
                 <br>
-                <input id='button' type="submit" name="submit" value="Create Profile">
+                <input id='button' type="submit" name="submit" value="Submit">
+                <br><br><br><br><br>
+                <div id='copyright'> 
+                	Text boxes that have "*" next to them are required fields.
+                </div>
+                <br><br><br><br>
             </form>
         </div>
     

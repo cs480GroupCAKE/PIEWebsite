@@ -15,11 +15,8 @@ echo ini_get('display_errors');
     
     $id = $_GET['id'];
     $d = $_GET['d'];
+    $view_single = $_GET['vse'];
     
-    if($d=='t'){
-        $_SESSION['delete'] = 'true';
-        header("Location:./createEvent.php");
-    }
     
     $eventQ = "SELECT * FROM events WHERE eventid = '$id';";
     //$current_event = array();
@@ -28,7 +25,17 @@ echo ini_get('display_errors');
     if($current_event = mysqli_fetch_assoc($subQ)){
         $_SESSION['current_event'] = $current_event;
        // echo sizeof($_SESSION['current_event']);
-        header('Location:../updateEvent.php');
     }else{
         echo "error ".$eventsQ."<br>".$database->error;
     }
+    
+    if($d=='t'){
+        $_SESSION['delete'] = 'true';
+        header("Location:./createEvent.php");
+        die();
+    }else if($view_single == 't'){
+        header("Location:../viewSingleEvent");
+        die();
+    }
+
+    header('Location:../updateEvent.php');

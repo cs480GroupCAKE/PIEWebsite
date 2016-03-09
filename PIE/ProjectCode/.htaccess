@@ -1,1 +1,9 @@
 IndexIgnore * 
+RewriteEngine on
+RewriteCond %{HTTP_HOST} pie.navhost\.com [NC]
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^(.*)$ /home.php/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]

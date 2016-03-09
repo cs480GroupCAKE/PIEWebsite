@@ -57,13 +57,12 @@ stored in the database. Currently needs links and access to the viewed user's da
             <div id='cssmenu'>
                 <?php include './templates/headerLogged.php'; ?>
             </div>
-    
             <div id='headingCenter'>
                 <h1>Viewing <?php echo $vusername."'s profile"; ?></h1>
             </div>
         </div>
     
-        <div id='body'>
+        <div id='body'> 
             <!--button will need to change to fit styling of rest site-->
             <div id='divRight'>
                 <h3><?php 
@@ -113,11 +112,20 @@ stored in the database. Currently needs links and access to the viewed user's da
                     <h2>Events</h2>
                     <div>
                         <p><?php 
-                           if($eventname != NULL){ 
-                               echo $eventinfo;
-                           }else{
-                               echo "No events scheduled";
-                           }
+                            if($eventArr[0]!=NULL){
+                            foreach($eventArr as $current){
+                                echo "<a>Name: </a>".$current['eventname']."<br>";
+                                echo "<a>Created By: </a>".$current['username']."<br>";
+                                echo "<a>Location: </a>".$current['location']."<br>";
+                                echo "<a>Date: </a>".$current['date']."<br>";
+                                echo "<a>Time: </a>".$current['time']."<br>";
+                                echo "<a>Attending: </a><br>".$current['attending']."<br><br>";
+                                echo "<a>--Details--</a><br>".$current['details']."<br><br>";
+                                echo "-------------------------<br><br>";
+                            }
+                        }else{
+                            echo "No events scheduled";
+                        }
                        ?></p>
                     </div>
                 </div>
@@ -127,7 +135,7 @@ stored in the database. Currently needs links and access to the viewed user's da
                     <div>
                         <ul>
                             <li id="infoID">To get back to your profile page, click the "Home" button located in the top-left
-                                            corner of the page.
+                                            corner of the page.</li>
                             <li id="infoID">If a user is in your connections, you can view all of their profile pictures, 
                                             their connections, and their events.</li>
                             <li id="infoID">All of these options can be found on the sidebar on the left side of the page.</li>
@@ -142,6 +150,7 @@ stored in the database. Currently needs links and access to the viewed user's da
                         <table>
                             <tr>
                             <td></td>
+                            </tr>
                         </table>
                     </div>
                 </div>
@@ -160,7 +169,7 @@ stored in the database. Currently needs links and access to the viewed user's da
                             echo '<table id="eptable">';
                             for($i=0; $i<count($event_images); $i++) {
                                 echo '<tr>';
-                                echo '<td id="evimg"><img src="'.$event_images[$i].'" alt="Event Image '.$i.'" id="eventimg"><br><br></td></tr>';
+                                echo '<td id="evimg"><img src="'.$event_images[$i].'" style="max-width:430px; max-height:800px;" alt="Event Image '.$i.'" id="eventimg"><br><br></td></tr>';
                             }
                             echo '</table>';
                         }
@@ -174,7 +183,6 @@ stored in the database. Currently needs links and access to the viewed user's da
                     ?>
                 </div>
             </div>
-
             
             <!-- This is the dropdown menu. Needs links to each page. CSS will need changing for color and font. -->
             <div id='divLeft'>
@@ -198,10 +206,13 @@ stored in the database. Currently needs links and access to the viewed user's da
                                 <li><a href='#'>Past Events</a></li>
                             </ul>
                         </li>
-                        <li><a href='#'>Help</a></li>
+                        <li><a href='./helpPage'>Help</a></li>
                     </ul>
                 </div>
             </div>
+            
+
+            
         </div>
     
         <div id='footer'>

@@ -3,9 +3,9 @@
 <html>
     <head>
         <ul>
-            <li><a href="./profile.php">Home</a></li>
-            <li><a href="./about.php">About</a></li>
-            <li><a href="./helpPage.php">Help</a></li>
+            <li><a href="./profile">Home</a></li>
+            <li><a href="./about">About</a></li>
+            <li><a href="./helpPage">Help</a></li>
             
             <ul style="float:right; list-style-type:none;">
                 <li style="border-left: 1px solid #ffffff; min-height:65px;"><a href="./background/signout.php">Sign Out</a></li>

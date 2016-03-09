@@ -18,7 +18,7 @@ to other areas of site included in navigation bar-->
         </div>
     
         <div id='headingCenter'>
-            <h1>Welcome to Personal Interactive Environment</h1>
+            <h1>Welcome to Personal Interactive Experience</h1>
             <h2>P.I.E.</h2>
         </div>
     </div>

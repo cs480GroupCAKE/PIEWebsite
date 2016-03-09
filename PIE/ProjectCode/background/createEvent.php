@@ -22,12 +22,17 @@ require '../database/database.php';
     $delete = $_SESSION['delete'];
     
     $deleteEvent = "DELETE FROM events WHERE eventid='$id';";
-            
+/*   
+     echo "$delete = '$delete'<br>";
+     echo "session[] = ".$_SESSION['delete']."<br>";
+*/          
     if($delete=='true'){
         if($database->query($deleteEvent)==TRUE){
+            echo "in if statement";
             unset($_SESSION['delete']);
             unset($_SESSION['current_event']);
             header("Location:../viewAllEvents");
+            die();
         }else{
             echo "error".$updateEvent.$database->error;
         }
@@ -67,27 +72,64 @@ require '../database/database.php';
     $eventname = $_POST["eventname"];
     $details = $_POST["eventdetails"];
     $location = $_POST['location'];
+    
+    //invites
     $time = $_POST['time'];
+    $list = $_POST['ctcb'];
+    $inviteNotice = "Event Invitation";
+    $acceptInvite = "<a href='./background/noticeAction?id=".$id."&eaccept=t'>Attend</a>";
+    $declineInvite = "<a href='./background/noticeAction?id=".$id."&eaccept=f'>Decline Invite</a>";
+    $view = "<a href='./background/grabEvent?id=".$id."&vse=t'>View Event</a>";
+    
     
     $updateEvent = "UPDATE events SET username='$username', eventname='$eventname',details='$details',
-                    date='$eventdate', location='$location', time='$time' attending='$attending' WHERE eventid='$id';";
+                    date='$eventdate', location='$location', time='$time' WHERE eventid='$id';";
     
-    $enterEvent = "INSERT INTO events (username, eventname, details, date, location, time, attending) 
-                   VALUES('$username','$eventname','$details','$eventdate', '$location', '$time', '$attending')";
+    $enterEvent = "INSERT INTO events (username, eventname, details, date, location, time) 
+                   VALUES('$username','$eventname','$details','$eventdate', '$location', '$time');";
     
-    
+    $grab_id = "SELECT eventid FROM events ORDER BY eventid DESC";
+
+   
     if($id == NULL){
         if($database->query($enterEvent)===TRUE){
-            header("Location:../viewAllEvents.php");
+            
+            $row = mysqli_query($database, $grab_id);
+            $idarr= mysqli_fetch_assoc($row);
+            $id=$idarr['eventid'];
+            
+            $user_up = "UPDATE user SET events=events + ':".$id."' WHERE username='$username'";
+            echo $user_up;
+            if($database->query($user_up)==FALSE){
+                echo "error ".$user_up."<br>".$database->error;
+                die();
+            }
+            
         }else{
             echo "error ".$createEvent."<br>".$database->error;
-        }    
+        }                     
+        
     }else{
         if($database->query($updateEvent)==TRUE){
             unset($_SESSION['current_event']);
-            header("Location:../viewAllEvents.php");
         }else{
             echo "error".$updateEvent.$database->error;
         }
     }
+    
+    $acceptInvite = "<a href='./background/noticeAction?id=".$id."&eaccept=t'>Attend</a>";
+    $declineInvite = "<a href='./background/noticeAction?id=".$id."&eaccept=f'>Decline Invite</a>";
+    $view = "<a href='./background/grabEvent?id=".$id."&vse=t'>View Event</a>";
+            
+    $inviteEventA = "Insert INTO notifications (username, sender, accept, decline, notice, view, eventid)
+                     Values('";
+    $inviteEventB = "', '$username',\"$acceptInvite\",\"$declineInvite\",'$inviteNotice',\"$view\", '$id');";
+    
+    foreach($list as $tempUser){
+       if($database->query($inviteEventA.$tempUser.$inviteEventB)==FALSE){
+       echo "error".$createEvent."<br>".$database->error;
+       }
+    }    
+            
+    header("Location:../viewAllEvents.php");
 ?>

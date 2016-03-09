@@ -14,24 +14,23 @@
     $userArr = mysqli_fetch_assoc(mysqli_query($database, $descriptionQ));
     //$eventsArr = array();
     //eventsAssoc
-    $eventsArr = mysqli_fetch_array(mysqli_query($database, $eventsQ));
+    $subQ = mysqli_query($database, $eventsQ);
     //$i = 0;
     
+    $eventArr = array();
     
+    while($row = mysqli_fetch_assoc($subQ)){
+        $date = explode("-",$row['date']);
+        $date_formatted = $date[1]."/".$date[2]."/".$date[0];
+        $row['date'] = $date_formatted;
+        $eventArr[] = $row;
+    }
     
 
     //ELEMENTS
     $descRes = $userArr['description'];
     $vusername = $userArr['username'];
     $dob = $userArr['birthdate'];
-    
-    $eventname = $eventsArr['eventname'];
-    $eventtype = $eventsArr['type'];
-    $eventuser = $eventsArr['username'];
-    $eventdate = $eventsArr['date'];
-    $eventdetails = $eventsArr['details'];
-    $eventinfo = "Event Name: ".$eventname."<br>Type: ".$eventtype."<br>Date: ".$eventdate."<br>Created By: ".$eventuser."<br>Details: ".$eventdetails."<br><br>";
-    
    
 ?>
 

@@ -17,9 +17,15 @@ Currently needs links and header added and repositioning.
 
 <html>
 <head>
-    <?php 
-        $view = False;
+    <?php
         session_start();
+        if(isset($_SESSION['username']) == FALSE) {
+            header("Location:./home"); 
+            die();
+        }
+        unset($_SESSION['current_event']);
+        $view = False;
+
         /*Code for debugging
         if(isset($_SESSION['username'])){
             echo "Session Active".$_SESSION['username'];
@@ -143,6 +149,7 @@ $(function() {
                 <p>
                 <?php
                      if($descRes!=NULL){
+                     	$_SESSION['current_d'] = $descRes;
                          echo $descRes;
                      }else{
                          echo "Click Edit Description in the left menu to add your description";
@@ -188,8 +195,10 @@ $(function() {
                             foreach($eventArr as $current){
                                 echo "<a>Name: </a>".$current['eventname']."<br>";
                                 echo "<a>Created By: </a>".$current['username']."<br>";
+                                echo "<a>Location: </a>".$current['location']."<br>";
                                 echo "<a>Date: </a>".$current['date']."<br>";
                                 echo "<a>Time: </a>".$current['time']."<br>";
+                                echo "<a>Attending: </a><br>".$current['attending']."<br><br>";
                                 echo "<a>--Details--</a><br>".$current['details']."<br><br>";
                                 echo "-------------------------<br><br>";
                             }
@@ -336,7 +345,7 @@ $(function() {
                             echo '<table id="eptable">';
                             for($i=0; $i<count($event_images); $i++) {
                                 echo '<tr>';
-                                echo '<td id="evimg"><img src="'.$event_images[$i].'" alt="Event Image '.$i.'" id="eventimg"><br><br></td></tr>';
+                                echo '<td id="evimg"><img src="'.$event_images[$i].'" style="max-width:430px; max-height:800px;" alt="Event Image '.$i.'" id="eventimg"><br><br></td></tr>';
                             }
                             echo '</table>';
                         }
@@ -359,7 +368,7 @@ $(function() {
                     
                     echo "<div id='ppcontainer'>";
                     echo "<img id='profilepic' src='$current_files[0]' alt='Profile Picture' >"; //style='max-width:220px;max-height:220px;'
-                    echo "<a href='editPhotos.php'>
+                    echo "<a href='editPhotos'>
                           <img id='editpicbutton' src='./Images/edit_button.png' alt='Edit Pictures'>
                           </a>";
                 ?>
@@ -369,19 +378,19 @@ $(function() {
                     <ul>
                         <li class='has-sub'><a href='#'>Events</a>
                             <ul>
-                                <li><a href='events.php'>Create Event</a></li>
-                                <li><a href='viewAllEvents.php'>View All Events</a></li>
+                                <li><a href='events'>Create Event</a></li>
+                                <li><a href='viewAllEvents'>View All Events</a></li>
                             </ul>
                         </li>
                         <li class='has-sub'><a href='#'>Edit Profile</a>
                             <ul>
-                                <li><a href='editPhotos.php'>Edit Photos</a></li>
-                                <li><a href='description.php'>Edit Description</a></li>
+                                <li><a href='editPhotos'>Edit Photos</a></li>
+                                <li><a href='description'>Edit Description</a></li>
                             </ul>
                         </li>
-                        <li><a href='viewConnections.php'>View Connections</a></li>
-                        <li><a href='notices.php'>View Notifications</a></li>
-                        <li><a href='helpPage.php'>Help</a></li>
+                        <li><a href='viewConnections'>View Connections</a></li>
+                        <li><a href='notices'>View Notifications</a></li>
+                        <li><a href='helpPage'>Help</a></li>
                     </ul>
                 </div>
             </div>
