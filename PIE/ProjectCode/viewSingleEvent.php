@@ -50,7 +50,7 @@ echo ini_get('display_errors');
                         echo "<a>--Details--</a><br>".$current['details']."<br><br>";
                     ?>
                 </div>
-                <button id='button' onclick="location='./notices'">Back</button>
+                <button id='button' onclick="location='./viewAllEvents'">Back</button>
             </div>
         </div>
         

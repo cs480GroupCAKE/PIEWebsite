@@ -11,6 +11,11 @@ KEEP THIS CODE HERE AND COMMENTED OUT, FOR DEBUGGING
 
 <?php
     //Global PHP vars
+    session_start();
+    if(isset($_SESSION['username']) == FALSE) {
+        header("Location:./home"); 
+        die();
+    }
     $user = "placeholder for username in array";
     $noResults = "Your search return no results. Please check spelling and try again.";
     $format1 = "<a href='./viewProfile.php?vusername=";

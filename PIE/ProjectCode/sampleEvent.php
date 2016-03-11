@@ -19,21 +19,17 @@ in order to give an idea of the layour of events and how they work. -->
             <div id='cssmenu'>
                 <?php require './background/loggedcheck.php'; ?>
             </div>
-            
-            <h1>Sample Event</h1>
         </div>
         
-        <div id='divCenter'>
-            <div id='body'>
+        <div id='body'>
+            <h1>Sample Event</h1>
                 <div id='image'>
-                    <img src="./Images/sample_event.png" alt="Sample Event" style="position:relative; right:200px;">
-                    <br><br>
-                    <p>
-                    <button id='button' onclick="location='./about'">Back</button>
-                    <!-- <a href="./about" style="color:blue; text-decoration:underline;">Back</a></p>
-                    --->
+                    <img class="displayCenter" src="./Images/sample_event.png" alt="Sample Event" style="width:937.555px;height:246.5px;">
                 </div>
-            </div>
+                <br><br><br>
+                <button id='button' onclick="location='./about'">Back</button>
+                <!-- <a href="./about" style="color:blue; text-decoration:underline;">Back</a></p>
+                --->
         </div>
         
         <div id='footer'>

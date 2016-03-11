@@ -14,7 +14,7 @@ session_start();
     
     $username = $_SESSION['username'];
     
-        $insertDesc = "UPDATE user SET description='$desc' 
+        $insertDesc = "UPDATE user SET description=\"$desc\" 
         WHERE username = '$username';";
     
      if($database->query($insertDesc)===TRUE){

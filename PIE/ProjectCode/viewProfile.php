@@ -12,12 +12,20 @@ echo ini_get('display_errors');
 ?>
 <!--
 This file contains the profile page of users that are being viewed by their connections. This page will be populated through information 
-stored in the database. Currently needs links and access to the viewed user's data.
+stored in the database. Currently needs links and access to the viewed users data.
 -->
 
 <html>
 <head>
     <?php 
+        session_start();
+        if(isset($_SESSION['username'])){
+            $current_user = $_SESSION['username'];
+        }else{
+            header("Location:./about");
+            exit;
+        }
+        
         if(isset($_GET['vusername'])){
             $vusername = $_GET['vusername'];
         }
@@ -28,7 +36,7 @@ stored in the database. Currently needs links and access to the viewed user's da
             header('Location:searchError.php');
         }
         $_SESSION['vusername'] = $vusername;
-        $current_user = $_SESSION['username'];
+        
        
     ?>
     <title>View Profile</title>
@@ -114,6 +122,7 @@ stored in the database. Currently needs links and access to the viewed user's da
                         <p><?php 
                             if($eventArr[0]!=NULL){
                             foreach($eventArr as $current){
+                            if($current['eventname'] == NULL){continue;}
                                 echo "<a>Name: </a>".$current['eventname']."<br>";
                                 echo "<a>Created By: </a>".$current['username']."<br>";
                                 echo "<a>Location: </a>".$current['location']."<br>";

@@ -14,25 +14,36 @@ require '../database/database.php';
   
     session_start();
     if(isset($_SESSION['username'])){
-        echo "Session Active ".$_SESSION['username'];
+        $username = $_SESSION['username'];
     }
-    //$arr = array();
+
     $arr = $_SESSION['current_event'];
     $id = $arr['eventid'];
     $delete = $_SESSION['delete'];
-    
     $deleteEvent = "DELETE FROM events WHERE eventid='$id';";
-/*   
-     echo "$delete = '$delete'<br>";
-     echo "session[] = ".$_SESSION['delete']."<br>";
-*/          
+        
     if($delete=='true'){
         if($database->query($deleteEvent)==TRUE){
-            echo "in if statement";
-            unset($_SESSION['delete']);
-            unset($_SESSION['current_event']);
-            header("Location:../viewAllEvents");
-            die();
+        
+           unset($_SESSION['delete']);   
+          
+           $get_events = "SELECT events FROM user WHERE username='".$username."';";
+           echo "q ".$get_events;
+           if($temp_arr = mysqli_fetch_assoc(mysqli_query($database, $get_events))){
+           echo "some";
+           }else{
+               echo "error ".$get_events."<br>".$databse->error; 
+           }
+           $updated_events = str_replace($id, "", $temp_arr['events']);
+           $updated_events = str_replace("::", ":", $updated_events);      
+           $remove_eventQ = "UPDATE user SET events = '".$updated_events."' WHERE username='".$username."'";
+           if($database->query($remove_eventQ)==TRUE){
+           header("Location:../viewAllEvents");
+           die();
+           }else{
+                echo "error ".$remove_eventQ."<br>".$database->error; 
+           }
+
         }else{
             echo "error".$updateEvent.$database->error;
         }
@@ -86,7 +97,7 @@ require '../database/database.php';
                     date='$eventdate', location='$location', time='$time' WHERE eventid='$id';";
     
     $enterEvent = "INSERT INTO events (username, eventname, details, date, location, time) 
-                   VALUES('$username','$eventname','$details','$eventdate', '$location', '$time');";
+                   VALUES(\"$username\",\"$eventname\",\"$details\",'$eventdate', \"$location\", \"$time\");";
     
     $grab_id = "SELECT eventid FROM events ORDER BY eventid DESC";
 
@@ -97,14 +108,14 @@ require '../database/database.php';
             $row = mysqli_query($database, $grab_id);
             $idarr= mysqli_fetch_assoc($row);
             $id=$idarr['eventid'];
-            
-            $user_up = "UPDATE user SET events=events + ':".$id."' WHERE username='$username'";
+                       
+            $user_up = "UPDATE user SET events=concat(ifnull(events, ''),':".$id."')  WHERE username='$username';";
             echo $user_up;
-            if($database->query($user_up)==FALSE){
+            if($database->query($user_up)!=TRUE){
                 echo "error ".$user_up."<br>".$database->error;
                 die();
             }
-            
+      
         }else{
             echo "error ".$createEvent."<br>".$database->error;
         }                     

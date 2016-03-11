@@ -50,11 +50,21 @@ echo ini_get('display_errors');
                     for($i=0; $i<sizeof($eventArr);$i++):
                         $id = $eventArr[$i]['eventid'];
                         $name = $eventArr[$i]['eventname'];
+                        if($name == NULL){continue;}
                         $date = $eventArr[$i]['date'];
                         $location = $eventArr[$i]['location'];
                         //$attending = "tobeimplemented";
-                        $edit = "<a href='./background/grabEvent.php?id=".$id."'>Edit/View</a>";
-                        $delete = "<a href='./background/grabEvent.php?id=".$id."&d=t'>Delete</a>";
+                        if($eventArr[$i]['username'] == $_SESSION['username']){
+                            $edit = "<a href='./background/grabEvent.php?id=".$id."'>Edit</a>";
+                        }else{
+                            $edit = "<a href='./background/grabEvent.php?vse=t&id=".$id."'>View</a>";
+                        }
+                         if($eventArr[$i]['username'] == $_SESSION['username']){
+                            $delete = "<a href='./background/grabEvent.php?id=".$id."&d=t'>Delete</a>";
+                        }else{
+                            $delete = "";
+                        }
+                        
                 ?>
                 <tr> 
                     <td><?php echo $name;?></td><td><?php echo $date;?></td>
@@ -62,12 +72,13 @@ echo ini_get('display_errors');
                     
                     <td><?php 
                             echo "<select>";
-                            echo "<option value='none'>None</option>";
-                                      /*
-                                      for($j=0; $j<sizeof($resArr); $j++) {
-                                          echo "<option value='c".$j."' style='min-width:30px;'>".$resArr[$j][0]."</option>";
-                                      }*/
-                                  echo "</select>";
+                            echo "<option value='none'>View</option>";
+                            
+                                $att = explode(":", $eventArr[$i]['attending']);
+                                foreach($att as $attc) {
+                                   echo "<option value='c' style='min-width:30px;'>".$attc."</option>";
+                                }
+                            echo "</select>";
                         ?></td>
                     
                     <td><?php echo $edit;?></td><td><?php echo $delete;?></td>

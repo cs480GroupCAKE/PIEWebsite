@@ -162,7 +162,7 @@
                 </textarea>--> 
 
                 Invites:<br>
-                    <div style="width:250px; height:200px; overflow:scroll; position:relative; left:40%; border-style:double;">
+                    <div style="width:250px; height:200px; overflow:scroll; position:relative; left:35%; border-style:double;">
                         <table id="conntb">
                         <?php
                             for($i=0; $i<count($resArr); $i++) {

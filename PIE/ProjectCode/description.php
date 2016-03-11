@@ -23,7 +23,7 @@
 
     <div id='container'>
         <div id='header'>
-            <title>Sign Up</title>
+            <title>Description</title>
     
             <div id='cssmenu'>
                 <?php include './templates/headerLogged.php'?>

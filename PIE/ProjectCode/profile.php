@@ -47,6 +47,9 @@ Currently needs links and header added and repositioning.
         $curdir = "./userImages/current/".$current_user."/";
         $profile_blank = $curdir."profileBlank.jpg";
         
+//        echo sizeof($event_id_arr);
+        
+        
         if(dir_empty($curdir)) {
             copy("./Images/profileBlank.jpg", $profile_blank);
             $setDefault = "INSERT INTO images (username, current) 
@@ -193,12 +196,20 @@ $(function() {
                         <p><?php 
                             if($eventArr[0]!=NULL){
                             foreach($eventArr as $current){
+                                if($current['eventname'] == NULL){continue;}
                                 echo "<a>Name: </a>".$current['eventname']."<br>";
                                 echo "<a>Created By: </a>".$current['username']."<br>";
                                 echo "<a>Location: </a>".$current['location']."<br>";
                                 echo "<a>Date: </a>".$current['date']."<br>";
                                 echo "<a>Time: </a>".$current['time']."<br>";
-                                echo "<a>Attending: </a><br>".$current['attending']."<br><br>";
+                                echo "<a>Attending: </a>";
+                                $att = explode(":", $current['attending']);
+                                echo "<div style='width:250px; height:200px; overflow:scroll; position:relative; left:30%; border-style:double;'>";
+                                    foreach($att as $attc) {
+                                        echo $attc."<br>";
+                                    }
+                                echo "</div>";
+                                echo "<br>";
                                 echo "<a>--Details--</a><br>".$current['details']."<br><br>";
                                 echo "-------------------------<br><br>";
                             }

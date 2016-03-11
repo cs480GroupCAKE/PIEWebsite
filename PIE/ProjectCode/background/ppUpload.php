@@ -55,8 +55,8 @@ echo ini_get('display_errors');
         $uploadOk = 0;
     }
     
-    //Check that file does not exceed a certain size (currently 500KB)
-    if($_FILES["ppuploadfile"]["size"] > 500000) {
+    //Check that file does not exceed a certain size (currently 1MB)
+    if($_FILES["ppuploadfile"]["size"] > 1000000) {
         echo "Sorry, the file you are trying to upload is too large.<br>";
         $uploadOk = 0;
     }

@@ -232,7 +232,7 @@ echo ini_get('display_errors');
 
         <h1>Edit Images</h1>
         
-        <p>The largest image you may upload is 500KB due to limited space.
+        <p>The largest image you may upload is 1MB due to limited space.
         <br> 
         You may upload the following image formats: jpeg, jpg, png, and gifs.
         </p>
